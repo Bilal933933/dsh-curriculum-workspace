@@ -1,0 +1,842 @@
+version: 1
+units:
+- id: plan_of_001
+  title: توزيع منهج التربية الدينية — مستوى أول
+  authority: official
+  kind: pdf
+  source: plans_src/official/رياض الأطفال/مستوى أول/التربية الدينية.pdf
+  text_dir: توزيع_رسمي_التربية_الدينية_مستوى_أول_رياض_الأطفال
+  pages: 8
+  status: pending
+  pages_converted: 0
+  stage: رياض الأطفال
+  grade: مستوى أول
+  subject: التربية الدينية
+  role: plan
+  note: null
+- id: plan_of_002
+  title: توزيع منهج الرياضيات — مستوى أول
+  authority: official
+  kind: pdf
+  source: plans_src/official/رياض الأطفال/مستوى أول/الرياضيات.pdf
+  text_dir: توزيع_رسمي_الرياضيات_مستوى_أول_رياض_الأطفال
+  pages: 1
+  status: pending
+  pages_converted: 0
+  stage: رياض الأطفال
+  grade: مستوى أول
+  subject: الرياضيات
+  role: plan
+  note: null
+- id: plan_of_003
+  title: توزيع منهج اللغة العربية — مستوى أول
+  authority: official
+  kind: pdf
+  source: plans_src/official/رياض الأطفال/مستوى أول/اللغة العربية.pdf
+  text_dir: توزيع_رسمي_اللغة_العربية_مستوى_أول_رياض_الأطفال
+  pages: 9
+  status: pending
+  pages_converted: 0
+  stage: رياض الأطفال
+  grade: مستوى أول
+  subject: اللغة العربية
+  role: plan
+  note: null
+- id: plan_of_004
+  title: توزيع منهج غير محدد — مستوى أول
+  authority: official
+  kind: pdf
+  source: plans_src/official/رياض الأطفال/مستوى أول/غير محدد.pdf
+  text_dir: توزيع_رسمي_غير_محدد_مستوى_أول_رياض_الأطفال
+  pages: 1
+  status: pending
+  pages_converted: 0
+  stage: رياض الأطفال
+  grade: مستوى أول
+  subject: غير محدد
+  role: plan
+  note: null
+- id: plan_of_005
+  title: توزيع منهج الرياضيات — مستوى ثان
+  authority: official
+  kind: pdf
+  source: plans_src/official/رياض الأطفال/مستوى ثان/الرياضيات.pdf
+  text_dir: توزيع_رسمي_الرياضيات_مستوى_ثان_رياض_الأطفال
+  pages: 3
+  status: pending
+  pages_converted: 0
+  stage: رياض الأطفال
+  grade: مستوى ثان
+  subject: الرياضيات
+  role: plan
+  note: null
+- id: plan_of_006
+  title: توزيع منهج التربية الدينية — الصف الأول الابتدائي
+  authority: official
+  kind: pdf
+  source: plans_src/official/الابتدائية/الصف الأول الابتدائي/التربية الدينية.pdf
+  text_dir: توزيع_رسمي_التربية_الدينية_الصف_الأول_الابتدائي
+  pages: 2
+  status: pending
+  pages_converted: 0
+  stage: الابتدائية
+  grade: الصف الأول الابتدائي
+  subject: التربية الدينية
+  role: plan
+  note: null
+- id: plan_of_007
+  title: توزيع منهج الرياضيات — الصف الأول الابتدائي
+  authority: official
+  kind: pdf
+  source: plans_src/official/الابتدائية/الصف الأول الابتدائي/الرياضيات.pdf
+  text_dir: توزيع_رسمي_الرياضيات_الصف_الأول_الابتدائي
+  pages: 7
+  status: pending
+  pages_converted: 0
+  stage: الابتدائية
+  grade: الصف الأول الابتدائي
+  subject: الرياضيات
+  role: plan
+  note: null
+- id: plan_of_008
+  title: توزيع منهج اللغة الإنجليزية — الصف الأول الابتدائي
+  authority: official
+  kind: pdf
+  source: plans_src/official/الابتدائية/الصف الأول الابتدائي/اللغة الإنجليزية.pdf
+  text_dir: توزيع_رسمي_اللغة_الإنجليزية_الصف_الأول_الابتدائي
+  pages: 7
+  status: pending
+  pages_converted: 0
+  stage: الابتدائية
+  grade: الصف الأول الابتدائي
+  subject: اللغة الإنجليزية
+  role: plan
+  note: null
+- id: plan_of_009
+  title: توزيع منهج اللغة العربية — الصف الأول الابتدائي
+  authority: official
+  kind: pdf
+  source: plans_src/official/الابتدائية/الصف الأول الابتدائي/اللغة العربية.pdf
+  text_dir: توزيع_رسمي_اللغة_العربية_الصف_الأول_الابتدائي
+  pages: 8
+  status: pending
+  pages_converted: 0
+  stage: الابتدائية
+  grade: الصف الأول الابتدائي
+  subject: اللغة العربية
+  role: plan
+  note: null
+- id: plan_of_010
+  title: توزيع منهج التربية الدينية — الصف الثالث الابتدائي
+  authority: official
+  kind: pdf
+  source: plans_src/official/الابتدائية/الصف الثالث الابتدائي/التربية الدينية.pdf
+  text_dir: توزيع_رسمي_التربية_الدينية_الصف_الثالث_الابتدائي
+  pages: 7
+  status: pending
+  pages_converted: 0
+  stage: الابتدائية
+  grade: الصف الثالث الابتدائي
+  subject: التربية الدينية
+  role: plan
+  note: null
+- id: plan_of_011
+  title: توزيع منهج الرياضيات — الصف الثالث الابتدائي
+  authority: official
+  kind: pdf
+  source: plans_src/official/الابتدائية/الصف الثالث الابتدائي/الرياضيات.pdf
+  text_dir: توزيع_رسمي_الرياضيات_الصف_الثالث_الابتدائي
+  pages: 10
+  status: pending
+  pages_converted: 0
+  stage: الابتدائية
+  grade: الصف الثالث الابتدائي
+  subject: الرياضيات
+  role: plan
+  note: null
+- id: plan_of_012
+  title: توزيع منهج اللغة العربية — الصف الثالث الابتدائي
+  authority: official
+  kind: pdf
+  source: plans_src/official/الابتدائية/الصف الثالث الابتدائي/اللغة العربية.pdf
+  text_dir: توزيع_رسمي_اللغة_العربية_الصف_الثالث_الابتدائي
+  pages: 15
+  status: pending
+  pages_converted: 0
+  stage: الابتدائية
+  grade: الصف الثالث الابتدائي
+  subject: اللغة العربية
+  role: plan
+  note: null
+- id: plan_of_013
+  title: توزيع منهج اللغة العربية — الصف الثاني الابتدائي
+  authority: official
+  kind: pdf
+  source: plans_src/official/الابتدائية/الصف الثاني الابتدائي/اللغة العربية.pdf
+  text_dir: توزيع_رسمي_اللغة_العربية_الصف_الثاني_الابتدائي
+  pages: 13
+  status: pending
+  pages_converted: 0
+  stage: الابتدائية
+  grade: الصف الثاني الابتدائي
+  subject: اللغة العربية
+  role: plan
+  note: null
+- id: plan_of_014
+  title: توزيع منهج التربية الدينية — الصف الخامس الابتدائي
+  authority: official
+  kind: pdf
+  source: plans_src/official/الابتدائية/الصف الخامس الابتدائي/التربية الدينية.pdf
+  text_dir: توزيع_رسمي_التربية_الدينية_الصف_الخامس_الابتدائي
+  pages: 14
+  status: pending
+  pages_converted: 0
+  stage: الابتدائية
+  grade: الصف الخامس الابتدائي
+  subject: التربية الدينية
+  role: plan
+  note: null
+- id: plan_of_015
+  title: توزيع منهج الدراسات الاجتماعية — الصف الخامس الابتدائي
+  authority: official
+  kind: pdf
+  source: plans_src/official/الابتدائية/الصف الخامس الابتدائي/الدراسات الاجتماعية.pdf
+  text_dir: توزيع_رسمي_الدراسات_الاجتماعية_الصف_الخامس_الابتدائي
+  pages: 3
+  status: pending
+  pages_converted: 0
+  stage: الابتدائية
+  grade: الصف الخامس الابتدائي
+  subject: الدراسات الاجتماعية
+  role: plan
+  note: null
+- id: plan_of_016
+  title: توزيع منهج الرياضيات — الصف الخامس الابتدائي
+  authority: official
+  kind: pdf
+  source: plans_src/official/الابتدائية/الصف الخامس الابتدائي/الرياضيات.pdf
+  text_dir: توزيع_رسمي_الرياضيات_الصف_الخامس_الابتدائي
+  pages: 10
+  status: pending
+  pages_converted: 0
+  stage: الابتدائية
+  grade: الصف الخامس الابتدائي
+  subject: الرياضيات
+  role: plan
+  note: null
+- id: plan_of_017
+  title: توزيع منهج العلوم — الصف الخامس الابتدائي
+  authority: official
+  kind: pdf
+  source: plans_src/official/الابتدائية/الصف الخامس الابتدائي/العلوم.pdf
+  text_dir: توزيع_رسمي_العلوم_الصف_الخامس_الابتدائي
+  pages: 3
+  status: pending
+  pages_converted: 0
+  stage: الابتدائية
+  grade: الصف الخامس الابتدائي
+  subject: العلوم
+  role: plan
+  note: null
+- id: plan_of_018
+  title: توزيع منهج اللغة العربية — الصف الخامس الابتدائي
+  authority: official
+  kind: pdf
+  source: plans_src/official/الابتدائية/الصف الخامس الابتدائي/اللغة العربية.pdf
+  text_dir: توزيع_رسمي_اللغة_العربية_الصف_الخامس_الابتدائي
+  pages: 18
+  status: pending
+  pages_converted: 0
+  stage: الابتدائية
+  grade: الصف الخامس الابتدائي
+  subject: اللغة العربية
+  role: plan
+  note: null
+- id: plan_of_019
+  title: توزيع منهج التربية الدينية — الصف الرابع الابتدائي
+  authority: official
+  kind: pdf
+  source: plans_src/official/الابتدائية/الصف الرابع الابتدائي/التربية الدينية.pdf
+  text_dir: توزيع_رسمي_التربية_الدينية_الصف_الرابع_الابتدائي
+  pages: 16
+  status: pending
+  pages_converted: 0
+  stage: الابتدائية
+  grade: الصف الرابع الابتدائي
+  subject: التربية الدينية
+  role: plan
+  note: null
+- id: plan_of_020
+  title: توزيع منهج الدراسات الاجتماعية — الصف الرابع الابتدائي
+  authority: official
+  kind: pdf
+  source: plans_src/official/الابتدائية/الصف الرابع الابتدائي/الدراسات الاجتماعية.pdf
+  text_dir: توزيع_رسمي_الدراسات_الاجتماعية_الصف_الرابع_الابتدائي
+  pages: 5
+  status: pending
+  pages_converted: 0
+  stage: الابتدائية
+  grade: الصف الرابع الابتدائي
+  subject: الدراسات الاجتماعية
+  role: plan
+  note: null
+- id: plan_of_021
+  title: توزيع منهج الرياضيات — الصف الرابع الابتدائي
+  authority: official
+  kind: pdf
+  source: plans_src/official/الابتدائية/الصف الرابع الابتدائي/الرياضيات.pdf
+  text_dir: توزيع_رسمي_الرياضيات_الصف_الرابع_الابتدائي
+  pages: 11
+  status: pending
+  pages_converted: 0
+  stage: الابتدائية
+  grade: الصف الرابع الابتدائي
+  subject: الرياضيات
+  role: plan
+  note: null
+- id: plan_of_022
+  title: توزيع منهج العلوم — الصف الرابع الابتدائي
+  authority: official
+  kind: pdf
+  source: plans_src/official/الابتدائية/الصف الرابع الابتدائي/العلوم.pdf
+  text_dir: توزيع_رسمي_العلوم_الصف_الرابع_الابتدائي
+  pages: 3
+  status: pending
+  pages_converted: 0
+  stage: الابتدائية
+  grade: الصف الرابع الابتدائي
+  subject: العلوم
+  role: plan
+  note: null
+- id: plan_of_023
+  title: توزيع منهج اللغة العربية — الصف الرابع الابتدائي
+  authority: official
+  kind: pdf
+  source: plans_src/official/الابتدائية/الصف الرابع الابتدائي/اللغة العربية.pdf
+  text_dir: توزيع_رسمي_اللغة_العربية_الصف_الرابع_الابتدائي
+  pages: 15
+  status: pending
+  pages_converted: 0
+  stage: الابتدائية
+  grade: الصف الرابع الابتدائي
+  subject: اللغة العربية
+  role: plan
+  note: null
+- id: plan_of_024
+  title: توزيع منهج التربية الدينية — الصف السادس الابتدائي
+  authority: official
+  kind: pdf
+  source: plans_src/official/الابتدائية/الصف السادس الابتدائي/التربية الدينية.pdf
+  text_dir: توزيع_رسمي_التربية_الدينية_الصف_السادس_الابتدائي
+  pages: 13
+  status: pending
+  pages_converted: 0
+  stage: الابتدائية
+  grade: الصف السادس الابتدائي
+  subject: التربية الدينية
+  role: plan
+  note: null
+- id: plan_of_025
+  title: توزيع منهج الدراسات الاجتماعية — الصف السادس الابتدائي
+  authority: official
+  kind: pdf
+  source: plans_src/official/الابتدائية/الصف السادس الابتدائي/الدراسات الاجتماعية.pdf
+  text_dir: توزيع_رسمي_الدراسات_الاجتماعية_الصف_السادس_الابتدائي
+  pages: 9
+  status: pending
+  pages_converted: 0
+  stage: الابتدائية
+  grade: الصف السادس الابتدائي
+  subject: الدراسات الاجتماعية
+  role: plan
+  note: null
+- id: plan_of_026
+  title: توزيع منهج الرياضيات — الصف السادس الابتدائي
+  authority: official
+  kind: pdf
+  source: plans_src/official/الابتدائية/الصف السادس الابتدائي/الرياضيات.pdf
+  text_dir: توزيع_رسمي_الرياضيات_الصف_السادس_الابتدائي
+  pages: 10
+  status: pending
+  pages_converted: 0
+  stage: الابتدائية
+  grade: الصف السادس الابتدائي
+  subject: الرياضيات
+  role: plan
+  note: null
+- id: plan_of_027
+  title: توزيع منهج العلوم — الصف السادس الابتدائي
+  authority: official
+  kind: pdf
+  source: plans_src/official/الابتدائية/الصف السادس الابتدائي/العلوم.pdf
+  text_dir: توزيع_رسمي_العلوم_الصف_السادس_الابتدائي
+  pages: 4
+  status: pending
+  pages_converted: 0
+  stage: الابتدائية
+  grade: الصف السادس الابتدائي
+  subject: العلوم
+  role: plan
+  note: null
+- id: plan_of_028
+  title: توزيع منهج اللغة العربية — الصف السادس الابتدائي
+  authority: official
+  kind: pdf
+  source: plans_src/official/الابتدائية/الصف السادس الابتدائي/اللغة العربية.pdf
+  text_dir: توزيع_رسمي_اللغة_العربية_الصف_السادس_الابتدائي
+  pages: 17
+  status: pending
+  pages_converted: 0
+  stage: الابتدائية
+  grade: الصف السادس الابتدائي
+  subject: اللغة العربية
+  role: plan
+  note: null
+- id: plan_of_029
+  title: توزيع منهج التربية الدينية — الصف الأول الإعدادي
+  authority: official
+  kind: pdf
+  source: plans_src/official/الإعدادية/الصف الأول الإعدادي/التربية الدينية.pdf
+  text_dir: توزيع_رسمي_التربية_الدينية_الصف_الأول_الإعدادي
+  pages: 8
+  status: pending
+  pages_converted: 0
+  stage: الإعدادية
+  grade: الصف الأول الإعدادي
+  subject: التربية الدينية
+  role: plan
+  note: null
+- id: plan_of_030
+  title: توزيع منهج الدراسات الاجتماعية — الصف الأول الإعدادي
+  authority: official
+  kind: pdf
+  source: plans_src/official/الإعدادية/الصف الأول الإعدادي/الدراسات الاجتماعية.pdf
+  text_dir: توزيع_رسمي_الدراسات_الاجتماعية_الصف_الأول_الإعدادي
+  pages: 9
+  status: pending
+  pages_converted: 0
+  stage: الإعدادية
+  grade: الصف الأول الإعدادي
+  subject: الدراسات الاجتماعية
+  role: plan
+  note: null
+- id: plan_of_031
+  title: توزيع منهج الرياضيات — الصف الأول الإعدادي
+  authority: official
+  kind: pdf
+  source: plans_src/official/الإعدادية/الصف الأول الإعدادي/الرياضيات.pdf
+  text_dir: توزيع_رسمي_الرياضيات_الصف_الأول_الإعدادي
+  pages: 12
+  status: pending
+  pages_converted: 0
+  stage: الإعدادية
+  grade: الصف الأول الإعدادي
+  subject: الرياضيات
+  role: plan
+  note: null
+- id: plan_of_032
+  title: توزيع منهج العلوم — الصف الأول الإعدادي
+  authority: official
+  kind: pdf
+  source: plans_src/official/الإعدادية/الصف الأول الإعدادي/العلوم.pdf
+  text_dir: توزيع_رسمي_العلوم_الصف_الأول_الإعدادي
+  pages: 12
+  status: pending
+  pages_converted: 0
+  stage: الإعدادية
+  grade: الصف الأول الإعدادي
+  subject: العلوم
+  role: plan
+  note: null
+- id: plan_of_033
+  title: توزيع منهج اللغة الألمانية — الصف الأول الإعدادي
+  authority: official
+  kind: pdf
+  source: plans_src/official/الإعدادية/الصف الأول الإعدادي/اللغة الألمانية.pdf
+  text_dir: توزيع_رسمي_اللغة_الألمانية_الصف_الأول_الإعدادي
+  pages: 1
+  status: pending
+  pages_converted: 0
+  stage: الإعدادية
+  grade: الصف الأول الإعدادي
+  subject: اللغة الألمانية
+  role: plan
+  note: null
+- id: plan_of_034
+  title: توزيع منهج اللغة الإنجليزية — الصف الأول الإعدادي
+  authority: official
+  kind: pdf
+  source: plans_src/official/الإعدادية/الصف الأول الإعدادي/اللغة الإنجليزية.pdf
+  text_dir: توزيع_رسمي_اللغة_الإنجليزية_الصف_الأول_الإعدادي
+  pages: 15
+  status: pending
+  pages_converted: 0
+  stage: الإعدادية
+  grade: الصف الأول الإعدادي
+  subject: اللغة الإنجليزية
+  role: plan
+  note: null
+- id: plan_of_035
+  title: توزيع منهج اللغة العربية — الصف الأول الإعدادي
+  authority: official
+  kind: pdf
+  source: plans_src/official/الإعدادية/الصف الأول الإعدادي/اللغة العربية.pdf
+  text_dir: توزيع_رسمي_اللغة_العربية_الصف_الأول_الإعدادي
+  pages: 15
+  status: pending
+  pages_converted: 0
+  stage: الإعدادية
+  grade: الصف الأول الإعدادي
+  subject: اللغة العربية
+  role: plan
+  note: null
+- id: plan_of_036
+  title: توزيع منهج اللغة الفرنسية — الصف الأول الإعدادي
+  authority: official
+  kind: pdf
+  source: plans_src/official/الإعدادية/الصف الأول الإعدادي/اللغة الفرنسية.pdf
+  text_dir: توزيع_رسمي_اللغة_الفرنسية_الصف_الأول_الإعدادي
+  pages: 4
+  status: pending
+  pages_converted: 0
+  stage: الإعدادية
+  grade: الصف الأول الإعدادي
+  subject: اللغة الفرنسية
+  role: plan
+  note: null
+- id: plan_of_037
+  title: توزيع منهج غير محدد — الصف الأول الإعدادي
+  authority: official
+  kind: pdf
+  source: plans_src/official/الإعدادية/الصف الأول الإعدادي/غير محدد.pdf
+  text_dir: توزيع_رسمي_غير_محدد_الصف_الأول_الإعدادي
+  pages: 6
+  status: pending
+  pages_converted: 0
+  stage: الإعدادية
+  grade: الصف الأول الإعدادي
+  subject: غير محدد
+  role: plan
+  note: null
+- id: plan_of_038
+  title: توزيع منهج التربية الدينية — الصف الثالث الإعدادي
+  authority: official
+  kind: pdf
+  source: plans_src/official/الإعدادية/الصف الثالث الإعدادي/التربية الدينية.pdf
+  text_dir: توزيع_رسمي_التربية_الدينية_الصف_الثالث_الإعدادي
+  pages: 12
+  status: pending
+  pages_converted: 0
+  stage: الإعدادية
+  grade: الصف الثالث الإعدادي
+  subject: التربية الدينية
+  role: plan
+  note: null
+- id: plan_of_039
+  title: توزيع منهج الدراسات الاجتماعية — الصف الثالث الإعدادي
+  authority: official
+  kind: pdf
+  source: plans_src/official/الإعدادية/الصف الثالث الإعدادي/الدراسات الاجتماعية.pdf
+  text_dir: توزيع_رسمي_الدراسات_الاجتماعية_الصف_الثالث_الإعدادي
+  pages: 8
+  status: pending
+  pages_converted: 0
+  stage: الإعدادية
+  grade: الصف الثالث الإعدادي
+  subject: الدراسات الاجتماعية
+  role: plan
+  note: null
+- id: plan_of_040
+  title: توزيع منهج الرياضيات — الصف الثالث الإعدادي
+  authority: official
+  kind: pdf
+  source: plans_src/official/الإعدادية/الصف الثالث الإعدادي/الرياضيات.pdf
+  text_dir: توزيع_رسمي_الرياضيات_الصف_الثالث_الإعدادي
+  pages: 14
+  status: pending
+  pages_converted: 0
+  stage: الإعدادية
+  grade: الصف الثالث الإعدادي
+  subject: الرياضيات
+  role: plan
+  note: null
+- id: plan_of_041
+  title: توزيع منهج العلوم — الصف الثالث الإعدادي
+  authority: official
+  kind: pdf
+  source: plans_src/official/الإعدادية/الصف الثالث الإعدادي/العلوم.pdf
+  text_dir: توزيع_رسمي_العلوم_الصف_الثالث_الإعدادي
+  pages: 15
+  status: pending
+  pages_converted: 0
+  stage: الإعدادية
+  grade: الصف الثالث الإعدادي
+  subject: العلوم
+  role: plan
+  note: null
+- id: plan_of_042
+  title: توزيع منهج اللغة العربية — الصف الثالث الإعدادي
+  authority: official
+  kind: pdf
+  source: plans_src/official/الإعدادية/الصف الثالث الإعدادي/اللغة العربية.pdf
+  text_dir: توزيع_رسمي_اللغة_العربية_الصف_الثالث_الإعدادي
+  pages: 9
+  status: pending
+  pages_converted: 0
+  stage: الإعدادية
+  grade: الصف الثالث الإعدادي
+  subject: اللغة العربية
+  role: plan
+  note: null
+- id: plan_of_043
+  title: توزيع منهج الدراسات الاجتماعية — الصف الثاني الإعدادي
+  authority: official
+  kind: pdf
+  source: plans_src/official/الإعدادية/الصف الثاني الإعدادي/الدراسات الاجتماعية.pdf
+  text_dir: توزيع_رسمي_الدراسات_الاجتماعية_الصف_الثاني_الإعدادي
+  pages: 6
+  status: pending
+  pages_converted: 0
+  stage: الإعدادية
+  grade: الصف الثاني الإعدادي
+  subject: الدراسات الاجتماعية
+  role: plan
+  note: null
+- id: plan_of_044
+  title: توزيع منهج الرياضيات — الصف الثاني الإعدادي
+  authority: official
+  kind: pdf
+  source: plans_src/official/الإعدادية/الصف الثاني الإعدادي/الرياضيات.pdf
+  text_dir: توزيع_رسمي_الرياضيات_الصف_الثاني_الإعدادي
+  pages: 12
+  status: pending
+  pages_converted: 0
+  stage: الإعدادية
+  grade: الصف الثاني الإعدادي
+  subject: الرياضيات
+  role: plan
+  note: null
+- id: plan_of_045
+  title: توزيع منهج العلوم — الصف الثاني الإعدادي
+  authority: official
+  kind: pdf
+  source: plans_src/official/الإعدادية/الصف الثاني الإعدادي/العلوم.pdf
+  text_dir: توزيع_رسمي_العلوم_الصف_الثاني_الإعدادي
+  pages: 11
+  status: pending
+  pages_converted: 0
+  stage: الإعدادية
+  grade: الصف الثاني الإعدادي
+  subject: العلوم
+  role: plan
+  note: null
+- id: plan_of_046
+  title: توزيع منهج اللغة الإنجليزية — الصف الثاني الإعدادي
+  authority: official
+  kind: pdf
+  source: plans_src/official/الإعدادية/الصف الثاني الإعدادي/اللغة الإنجليزية.pdf
+  text_dir: توزيع_رسمي_اللغة_الإنجليزية_الصف_الثاني_الإعدادي
+  pages: 13
+  status: pending
+  pages_converted: 0
+  stage: الإعدادية
+  grade: الصف الثاني الإعدادي
+  subject: اللغة الإنجليزية
+  role: plan
+  note: null
+- id: plan_of_047
+  title: توزيع منهج اللغة العربية — الصف الثاني الإعدادي
+  authority: official
+  kind: pdf
+  source: plans_src/official/الإعدادية/الصف الثاني الإعدادي/اللغة العربية.pdf
+  text_dir: توزيع_رسمي_اللغة_العربية_الصف_الثاني_الإعدادي
+  pages: 6
+  status: pending
+  pages_converted: 0
+  stage: الإعدادية
+  grade: الصف الثاني الإعدادي
+  subject: اللغة العربية
+  role: plan
+  note: null
+- id: plan_of_048
+  title: توزيع منهج الأحياء — الصف الأول الثانوي
+  authority: official
+  kind: pdf
+  source: plans_src/official/الثانوي العام/الصف الأول الثانوي/الأحياء.pdf
+  text_dir: توزيع_رسمي_الأحياء_الصف_الأول_الثانوي
+  pages: 15
+  status: pending
+  pages_converted: 0
+  stage: الثانوي العام
+  grade: الصف الأول الثانوي
+  subject: الأحياء
+  role: plan
+  note: null
+- id: plan_of_049
+  title: توزيع منهج التاريخ — الصف الأول الثانوي
+  authority: official
+  kind: pdf
+  source: plans_src/official/الثانوي العام/الصف الأول الثانوي/التاريخ.pdf
+  text_dir: توزيع_رسمي_التاريخ_الصف_الأول_الثانوي
+  pages: 9
+  status: pending
+  pages_converted: 0
+  stage: الثانوي العام
+  grade: الصف الأول الثانوي
+  subject: التاريخ
+  role: plan
+  note: null
+- id: plan_of_050
+  title: توزيع منهج التربية الدينية — الصف الأول الثانوي
+  authority: official
+  kind: pdf
+  source: plans_src/official/الثانوي العام/الصف الأول الثانوي/التربية الدينية.pdf
+  text_dir: توزيع_رسمي_التربية_الدينية_الصف_الأول_الثانوي
+  pages: 9
+  status: pending
+  pages_converted: 0
+  stage: الثانوي العام
+  grade: الصف الأول الثانوي
+  subject: التربية الدينية
+  role: plan
+  note: null
+- id: plan_of_051
+  title: توزيع منهج العلوم — الصف الأول الثانوي
+  authority: official
+  kind: pdf
+  source: plans_src/official/الثانوي العام/الصف الأول الثانوي/العلوم.pdf
+  text_dir: توزيع_رسمي_العلوم_الصف_الأول_الثانوي
+  pages: 14
+  status: pending
+  pages_converted: 0
+  stage: الثانوي العام
+  grade: الصف الأول الثانوي
+  subject: العلوم
+  role: plan
+  note: null
+- id: plan_of_052
+  title: توزيع منهج الفيزياء — الصف الأول الثانوي
+  authority: official
+  kind: pdf
+  source: plans_src/official/الثانوي العام/الصف الأول الثانوي/الفيزياء.pdf
+  text_dir: توزيع_رسمي_الفيزياء_الصف_الأول_الثانوي
+  pages: 13
+  status: pending
+  pages_converted: 0
+  stage: الثانوي العام
+  grade: الصف الأول الثانوي
+  subject: الفيزياء
+  role: plan
+  note: null
+- id: plan_of_053
+  title: توزيع منهج الكيمياء — الصف الأول الثانوي
+  authority: official
+  kind: pdf
+  source: plans_src/official/الثانوي العام/الصف الأول الثانوي/الكيمياء.pdf
+  text_dir: توزيع_رسمي_الكيمياء_الصف_الأول_الثانوي
+  pages: 4
+  status: pending
+  pages_converted: 0
+  stage: الثانوي العام
+  grade: الصف الأول الثانوي
+  subject: الكيمياء
+  role: plan
+  note: null
+- id: plan_of_054
+  title: توزيع منهج اللغة الإنجليزية — الصف الأول الثانوي
+  authority: official
+  kind: pdf
+  source: plans_src/official/الثانوي العام/الصف الأول الثانوي/اللغة الإنجليزية.pdf
+  text_dir: توزيع_رسمي_اللغة_الإنجليزية_الصف_الأول_الثانوي
+  pages: 16
+  status: pending
+  pages_converted: 0
+  stage: الثانوي العام
+  grade: الصف الأول الثانوي
+  subject: اللغة الإنجليزية
+  role: plan
+  note: null
+- id: plan_of_055
+  title: توزيع منهج اللغة الإيطالية — الصف الأول الثانوي
+  authority: official
+  kind: pdf
+  source: plans_src/official/الثانوي العام/الصف الأول الثانوي/اللغة الإيطالية.pdf
+  text_dir: توزيع_رسمي_اللغة_الإيطالية_الصف_الأول_الثانوي
+  pages: 1
+  status: pending
+  pages_converted: 0
+  stage: الثانوي العام
+  grade: الصف الأول الثانوي
+  subject: اللغة الإيطالية
+  role: plan
+  note: null
+- id: plan_of_056
+  title: توزيع منهج اللغة العربية — الصف الأول الثانوي
+  authority: official
+  kind: pdf
+  source: plans_src/official/الثانوي العام/الصف الأول الثانوي/اللغة العربية.pdf
+  text_dir: توزيع_رسمي_اللغة_العربية_الصف_الأول_الثانوي
+  pages: 10
+  status: pending
+  pages_converted: 0
+  stage: الثانوي العام
+  grade: الصف الأول الثانوي
+  subject: اللغة العربية
+  role: plan
+  note: null
+- id: plan_of_057
+  title: توزيع منهج اللغة الفرنسية — الصف الأول الثانوي
+  authority: official
+  kind: pdf
+  source: plans_src/official/الثانوي العام/الصف الأول الثانوي/اللغة الفرنسية.pdf
+  text_dir: توزيع_رسمي_اللغة_الفرنسية_الصف_الأول_الثانوي
+  pages: 10
+  status: pending
+  pages_converted: 0
+  stage: الثانوي العام
+  grade: الصف الأول الثانوي
+  subject: اللغة الفرنسية
+  role: plan
+  note: null
+- id: plan_of_058
+  title: توزيع منهج التاريخ — الصف الثاني الثانوي
+  authority: official
+  kind: pdf
+  source: plans_src/official/الثانوي العام/الصف الثاني الثانوي/التاريخ.pdf
+  text_dir: توزيع_رسمي_التاريخ_الصف_الثاني_الثانوي
+  pages: 13
+  status: pending
+  pages_converted: 0
+  stage: الثانوي العام
+  grade: الصف الثاني الثانوي
+  subject: التاريخ
+  role: plan
+  note: null
+- id: plan_of_059
+  title: توزيع منهج الجغرافيا — الصف الثاني الثانوي
+  authority: official
+  kind: pdf
+  source: plans_src/official/الثانوي العام/الصف الثاني الثانوي/الجغرافيا.pdf
+  text_dir: توزيع_رسمي_الجغرافيا_الصف_الثاني_الثانوي
+  pages: 12
+  status: pending
+  pages_converted: 0
+  stage: الثانوي العام
+  grade: الصف الثاني الثانوي
+  subject: الجغرافيا
+  role: plan
+  note: null
+- id: plan_of_060
+  title: توزيع منهج اللغة العربية — الصف الثاني الثانوي
+  authority: official
+  kind: pdf
+  source: plans_src/official/الثانوي العام/الصف الثاني الثانوي/اللغة العربية.pdf
+  text_dir: توزيع_رسمي_اللغة_العربية_الصف_الثاني_الثانوي
+  pages: 9
+  status: pending
+  pages_converted: 0
+  stage: الثانوي العام
+  grade: الصف الثاني الثانوي
+  subject: اللغة العربية
+  role: plan
+  note: null

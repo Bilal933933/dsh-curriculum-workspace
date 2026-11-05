@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="{{LANG}}" dir="{{DIR}}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{TITLE}}</title>
+<style>
+{{STYLES}}
+</style>
+</head>
+<body>
+
+  <!-- ================= الغلاف ================= -->
+  <section class="cover">
+    <div class="kicker">{{KICKER}}</div>
+    <h1>{{TITLE}}</h1>
+    <div class="subtitle">{{SUBTITLE}}</div>
+    <div class="rule"></div>
+    <div class="meta">{{META}}</div>
+  </section>
+
+  <!-- ================= الفهرس ================= -->
+  <section class="toc-page">
+    <h2>فهرس المحتويات</h2>
+    <div class="toc">{{TOC}}</div>
+  </section>
+
+  <!-- ================= المحتوى ================= -->
+  <section class="content">
+{{BODY}}
+  </section>
+
+</body>
+</html>

@@ -1,0 +1,1593 @@
+﻿# ============================================================================
+# فهرس الكتب (Catalog) — الطبقة الأولى للاسترجاع
+# ----------------------------------------------------------------------------
+# هذا الملف هو نقطة الدخول لكل عملية استرجاع: منه تعرف المهارة أي كتاب
+# يُسأل عنه، وأين نصه، وأين فهرسه، وما مدى اكتمال تحويله.
+#
+# القواعد:
+#   - كل كتاب جديد يُضاف هنا أولًا، ثم يُنشأ له toc.yaml في meta/books/<id>/.
+#   - `pages_total` من المصدر (عدد صور الصفحات)، و`pages_converted` من الواقع.
+#   - `status` واحدة من: converted | partial | pending
+#   - لا تُذكر هنا معلومات غير موثّقة (لا مؤلف مجهول، لا سنة طبع بلا دليل).
+# ============================================================================
+
+version: 1
+updated: 2026-11-05
+
+books:
+  - id: balagha
+    title: "كيف تتقن البلاغة؟"
+    title_normalized: "كيف تتقن البلاغه"
+    author: "أحمد إسكندر"
+    publisher: "دار اللؤلؤة للنشر والتوزيع — المنصورة، مصر"
+    subject: "البلاغة: علم المعاني والبيان والبديع"
+    notes: "التطبيق من القرآن الكريم والسنة النبوية والشعر العربي."
+
+    source_pdf: "curriculum_raw/كيف_تتقن_البلاغة.pdf"
+    source_images: "curriculum_raw/كيف_تتقن_البلاغة_images"
+    text_dir: "output/كيف_تتقن_البلاغة"
+    index_dir: "index/كيف_تتقن_البلاغة/norm"
+    toc: "meta/books/balagha/toc.yaml"
+
+    pages_total: 528
+    pages_converted: 528
+    printed_page_offset: unknown
+    missing_pages: []
+    status: converted
+    status_note: "اكتمل التحويل: 528/528 (الصفحة 5 بسملة كُتبت يدويًّا)."
+
+  - id: nahw
+    title: "كيف تتقن النحو؟"
+    title_normalized: "كيف تتقن النحو"
+    author: "أحمد إسكندر"
+    publisher: "غير موثّق في الملفات المتاحة"
+    subject: "النحو والصرف"
+    notes: ""
+
+    source_pdf: "curriculum_raw/كيف_تتقن_النحو.pdf"
+    source_images: "curriculum_raw/كيف_تتقن_النحو_images"
+    text_dir: "output/كيف_تتقن_النحو"
+    index_dir: "index/كيف_تتقن_النحو/norm"
+    toc: "meta/books/nahw/toc.yaml"
+
+    pages_total: 553
+    pages_converted: 553
+    printed_page_offset: -1
+    missing_pages: []
+    status: converted
+    status_note: "الصفحتان 551 و552 ورق مسطّر بلا نص، كُتب لهما [صفحة فارغة]."
+
+  - id: sarf
+    title: "كيف تتقن الصرف؟"
+    title_normalized: "كيف تتقن الصرف"
+    author: "أحمد إسكندر"
+    publisher: "دار اللؤلؤة للنشر والتوزيع — المنصورة، مصر"
+    subject: "الصرف"
+    notes: "شامل - جامع - مبسط. التطبيق من القرآن الكريم والسنة النبوية."
+
+    source_pdf: "curriculum_raw/كيف_تتقن_الصرف.pdf"
+    source_images: "curriculum_raw/كيف_تتقن_الصرف_images"
+    text_dir: "output/كيف_تتقن_الصرف"
+    index_dir: "index/كيف_تتقن_الصرف/norm"
+    toc: "meta/books/sarf/toc.yaml"
+
+    pages_total: 617
+    pages_converted: 617
+    printed_page_offset: -1
+    missing_pages: []
+    status: converted
+    status_note: "اكتمل التحويل: 617/617 بلا صفحات فاشلة."
+
+  - id: arabic_p6_t1
+    title: "اللغة العربية — الصف السادس الابتدائي — الفصل الدراسي الأول"
+    title_normalized: "اللغه العربيه الصف السادس الابتدايي الفصل الدراسي الاول"
+    author: "وزارة التربية والتعليم والتعليم الفني — جمهورية مصر العربية"
+    publisher: "وزارة التربية والتعليم والتعليم الفني — مصر"
+    subject: "اللغة العربية: قراءة ونصوص وقواعد نحوية وإملائية وخط عربي"
+    notes: ""
+
+    source_pdf: "curriculum_raw/اللغة_العربية_الصف_السادس_ت1.pdf"
+    source_images: "curriculum_raw/اللغة_العربية_الصف_السادس_ت1_images"
+    text_dir: "output/اللغة_العربية_الصف_السادس_ت1"
+    index_dir: "index/اللغة_العربية_الصف_السادس_ت1/norm"
+    toc: "meta/books/arabic_p6_t1/toc.yaml"
+
+    pages_total: 154
+    pages_converted: 154
+    printed_page_offset: unknown
+    missing_pages: []
+    status: converted
+    status_note: "اكتمل التحويل: 154/154 (الصفحة 7 فاصل وحدة كُتب بعد إصلاح رفض النص القصير)."
+
+  - id: arabic_p3_t1
+    title: "اللغة العربية — الصف الثالث الابتدائي — الفصل الدراسي الأول"
+    title_normalized: "اللغه العربيه الصف الثالث الابتدايي الفصل الدراسي الاول"
+    author: "وزارة التربية والتعليم والتعليم الفني — جمهورية مصر العربية"
+    publisher: "وزارة التربية والتعليم والتعليم الفني — مصر"
+    subject: "اللغة العربية: قراءة ونصوص وقواعد نحوية وإملائية وخط عربي"
+    notes: ""
+
+    source_pdf: "curriculum_raw/اللغة_العربية_الصف_الثالث_ت1.pdf"
+    source_images: "curriculum_raw/اللغة_العربية_الصف_الثالث_ت1_images"
+    text_dir: "output/اللغة_العربية_الصف_الثالث_ت1"
+    index_dir: "index/اللغة_العربية_الصف_الثالث_ت1/norm"
+    toc: "meta/books/arabic_p3_t1/toc.yaml"
+
+    pages_total: 128
+    pages_converted: 128
+    printed_page_offset: unknown
+    missing_pages: []
+    status: converted
+    status_note: "اكتمل التحويل: 128/128."
+
+  - id: arabic_p4_t1
+    title: "اللغة العربية — الصف الرابع الابتدائي — الفصل الدراسي الأول"
+    title_normalized: "اللغه العربيه الصف الرابع الابتدايي الفصل الدراسي الاول"
+    author: "وزارة التربية والتعليم والتعليم الفني — جمهورية مصر العربية"
+    publisher: "وزارة التربية والتعليم والتعليم الفني — مصر"
+    subject: "اللغة العربية: قراءة ونصوص وقواعد نحوية وإملائية وخط عربي"
+    notes: ""
+
+    source_pdf: "curriculum_raw/اللغة_العربية_الصف_الرابع_ت1.pdf"
+    source_images: "curriculum_raw/اللغة_العربية_الصف_الرابع_ت1_images"
+    text_dir: "output/اللغة_العربية_الصف_الرابع_ت1"
+    index_dir: "index/اللغة_العربية_الصف_الرابع_ت1/norm"
+    toc: "meta/books/arabic_p4_t1/toc.yaml"
+
+    pages_total: 154
+    pages_converted: 154
+    printed_page_offset: unknown
+    missing_pages: []
+    status: converted
+    status_note: "اكتمل التحويل: 154/154."
+
+  - id: arabic_p5_t1
+    title: "اللغة العربية — الصف الخامس الابتدائي — الفصل الدراسي الأول"
+    title_normalized: "اللغه العربيه الصف الخامس الابتدايي الفصل الدراسي الاول"
+    author: "وزارة التربية والتعليم والتعليم الفني — جمهورية مصر العربية"
+    publisher: "وزارة التربية والتعليم والتعليم الفني — مصر"
+    subject: "اللغة العربية: قراءة ونصوص وقواعد نحوية وإملائية وخط عربي"
+    notes: ""
+
+    source_pdf: "curriculum_raw/اللغة_العربية_الصف_الخامس_ت1.pdf"
+    source_images: "curriculum_raw/اللغة_العربية_الصف_الخامس_ت1_images"
+    text_dir: "output/اللغة_العربية_الصف_الخامس_ت1"
+    index_dir: "index/اللغة_العربية_الصف_الخامس_ت1/norm"
+    toc: "meta/books/arabic_p5_t1/toc.yaml"
+
+    pages_total: 154
+    pages_converted: 154
+    printed_page_offset: unknown
+    missing_pages: []
+    status: converted
+    status_note: "اكتمل التحويل: 154/154."
+
+  - id: arabic_p2_t1
+    title: "اللغة العربية — الصف الثاني الابتدائي — الفصل الدراسي الأول"
+    title_normalized: "اللغه العربيه الصف الثاني الابتدايي الفصل الدراسي الاول"
+    author: "وزارة التربية والتعليم والتعليم الفني — جمهورية مصر العربية"
+    publisher: "وزارة التربية والتعليم والتعليم الفني — مصر"
+    subject: "اللغة العربية: قراءة ونصوص وقواعد نحوية وإملائية وخط عربي"
+    notes: ""
+
+    source_pdf: "curriculum_raw/اللغة_العربية_الصف_الثاني_ت1.pdf"
+    source_images: "curriculum_raw/اللغة_العربية_الصف_الثاني_ت1_images"
+    text_dir: "output/اللغة_العربية_الصف_الثاني_ت1"
+    index_dir: "index/اللغة_العربية_الصف_الثاني_ت1/norm"
+    toc: "meta/books/arabic_p2_t1/toc.yaml"
+
+    pages_total: 120
+    pages_converted: 120
+    printed_page_offset: unknown
+    missing_pages: []
+    status: converted
+    status_note: "اكتمل التحويل: 120/120."
+
+  - id: arabic_p1_t1
+    title: "اللغة العربية — الصف الأول الابتدائي — الفصل الدراسي الأول"
+    title_normalized: "اللغه العربيه الصف الاول الابتدايي الفصل الدراسي الاول"
+    author: "وزارة التربية والتعليم والتعليم الفني — جمهورية مصر العربية"
+    publisher: "وزارة التربية والتعليم والتعليم الفني — مصر"
+    subject: "اللغة العربية: قراءة ونصوص وقواعد نحوية وإملائية وخط عربي"
+    notes: ""
+
+    source_pdf: "curriculum_raw/اللغة_العربية_الصف_الأول_ت1.pdf"
+    source_images: "curriculum_raw/اللغة_العربية_الصف_الأول_ت1_images"
+    text_dir: "output/اللغة_العربية_الصف_الأول_ت1"
+    index_dir: "index/اللغة_العربية_الصف_الأول_ت1/norm"
+    toc: "meta/books/arabic_p1_t1/toc.yaml"
+
+    pages_total: 154
+    pages_converted: 154
+    printed_page_offset: unknown
+    missing_pages: []
+    status: converted
+    status_note: "اكتمل التحويل: 154/154."
+
+  - id: arabic_prep1_t1
+    title: "اللغة العربية — الصف الأول الإعدادي — الفصل الدراسي الأول"
+    title_normalized: "اللغه العربيه الصف الاول الاعدادي الفصل الدراسي الاول"
+    author: "وزارة التربية والتعليم والتعليم الفني — جمهورية مصر العربية"
+    publisher: "وزارة التربية والتعليم والتعليم الفني — مصر"
+    subject: "اللغة العربية: قراءة ونصوص وقواعد نحوية وإملائية وخط عربي"
+    notes: ""
+
+    source_pdf: "curriculum_raw/اللغة_العربية_الصف_الأول_الإعدادي_ت1.pdf"
+    source_images: "curriculum_raw/اللغة_العربية_الصف_الأول_الإعدادي_ت1_images"
+    text_dir: "output/اللغة_العربية_الصف_الأول_الإعدادي_ت1"
+    index_dir: "index/اللغة_العربية_الصف_الأول_الإعدادي_ت1/norm"
+    toc: "meta/books/arabic_prep1_t1/toc.yaml"
+
+    pages_total: 142
+    pages_converted: 142
+    printed_page_offset: unknown
+    missing_pages: []
+    status: converted
+    status_note: "اكتمل التحويل: 142/142."
+
+  - id: arabic_prep2_t1
+    title: "اللغة العربية — الصف الثاني الإعدادي — الفصل الدراسي الأول"
+    title_normalized: "اللغه العربيه الصف الثاني الاعدادي الفصل الدراسي الاول"
+    author: "وزارة التربية والتعليم والتعليم الفني — جمهورية مصر العربية"
+    publisher: "وزارة التربية والتعليم والتعليم الفني — مصر"
+    subject: "اللغة العربية: قراءة ونصوص وقواعد نحوية وإملائية وخط عربي"
+    notes: ""
+
+    source_pdf: "curriculum_raw/اللغة_العربية_الصف_الثاني_الإعدادي_ت1.pdf"
+    source_images: "curriculum_raw/اللغة_العربية_الصف_الثاني_الإعدادي_ت1_images"
+    text_dir: "output/اللغة_العربية_الصف_الثاني_الإعدادي_ت1"
+    index_dir: "index/اللغة_العربية_الصف_الثاني_الإعدادي_ت1/norm"
+    toc: "meta/books/arabic_prep2_t1/toc.yaml"
+
+    pages_total: 162
+    pages_converted: 162
+    printed_page_offset: unknown
+    missing_pages: []
+    status: converted
+    status_note: "اكتمل التحويل: 162/162."
+
+  - id: arabic_prep3_t1
+    title: "اللغة العربية — الصف الثالث الإعدادي — الفصل الدراسي الأول"
+    title_normalized: "اللغه العربيه الصف الثالث الاعدادي الفصل الدراسي الاول"
+    author: "وزارة التربية والتعليم والتعليم الفني — جمهورية مصر العربية"
+    publisher: "وزارة التربية والتعليم والتعليم الفني — مصر"
+    subject: "اللغة العربية: قراءة ونصوص وقواعد نحوية وإملائية وخط عربي"
+    notes: ""
+
+    source_pdf: "curriculum_raw/اللغة_العربية_الصف_الثالث_الإعدادي_ت1.pdf"
+    source_images: "curriculum_raw/اللغة_العربية_الصف_الثالث_الإعدادي_ت1_images"
+    text_dir: "output/اللغة_العربية_الصف_الثالث_الإعدادي_ت1"
+    index_dir: "index/اللغة_العربية_الصف_الثالث_الإعدادي_ت1/norm"
+    toc: "meta/books/arabic_prep3_t1/toc.yaml"
+
+    pages_total: 162
+    pages_converted: 162
+    printed_page_offset: unknown
+    missing_pages: []
+    status: converted
+    status_note: "اكتمل التحويل: 162/162."
+
+  - id: erab_muyassar
+    title: "الإعراب الميسر في اللغة العربية"
+    title_normalized: "الاعراب الميسر في اللغه العربيه"
+    author: "د. محمد إبراهيم عبادة"
+    publisher: "غير موثّق في الملفات المتاحة"
+    subject: "النحو: الإعراب — مكوناته وأنواعه وعلاماته"
+    notes: ""
+
+    source_pdf: "curriculum_raw/الإعراب_الميسر.pdf"
+    source_images: "curriculum_raw/الإعراب_الميسر_images"
+    text_dir: "output/الإعراب_الميسر"
+    index_dir: "index/الإعراب_الميسر/norm"
+    toc: "meta/books/erab_muyassar/toc.yaml"
+
+    pages_total: 217
+    pages_converted: 217
+    printed_page_offset: unknown
+    missing_pages: []
+    status: converted
+    status_note: "اكتمل التحويل: 217/217."
+
+  - id: arabic_sec1_t1
+    title: "اللغة العربية — الصف الأول الثانوي — الفصل الدراسي الأول"
+    title_normalized: "اللغه العربيه الصف الاول الثانوي الفصل الدراسي الاول"
+    author: "وزارة التربية والتعليم والتعليم الفني — جمهورية مصر العربية"
+    publisher: "وزارة التربية والتعليم والتعليم الفني — مصر"
+    subject: "اللغة العربية: قراءة ونصوص وقواعد نحوية وإملائية وخط عربي"
+    notes: ""
+
+    source_pdf: "curriculum_raw/اللغة_العربية_الصف_الأول_الثانوي_ت1.pdf"
+    source_images: "curriculum_raw/اللغة_العربية_الصف_الأول_الثانوي_ت1_images"
+    text_dir: "output/اللغة_العربية_الصف_الأول_الثانوي_ت1"
+    index_dir: "index/اللغة_العربية_الصف_الأول_الثانوي_ت1/norm"
+    toc: "meta/books/arabic_sec1_t1/toc.yaml"
+
+    pages_total: 152
+    pages_converted: 152
+    printed_page_offset: unknown
+    missing_pages: []
+    status: converted
+    status_note: "اكتمل التحويل: 152/152."
+
+  - id: arabic_sec2_t1
+    title: "اللغة العربية — الصف الثاني الثانوي — الفصل الدراسي الأول"
+    title_normalized: "اللغه العربيه الصف الثاني الثانوي الفصل الدراسي الاول"
+    author: "وزارة التربية والتعليم والتعليم الفني — جمهورية مصر العربية"
+    publisher: "وزارة التربية والتعليم والتعليم الفني — مصر"
+    subject: "اللغة العربية: قراءة ونصوص وقواعد نحوية وإملائية وخط عربي"
+    notes: ""
+
+    source_pdf: "curriculum_raw/اللغة_العربية_الصف_الثاني_الثانوي_ت1.pdf"
+    source_images: "curriculum_raw/اللغة_العربية_الصف_الثاني_الثانوي_ت1_images"
+    text_dir: "output/اللغة_العربية_الصف_الثاني_الثانوي_ت1"
+    index_dir: "index/اللغة_العربية_الصف_الثاني_الثانوي_ت1/norm"
+    toc: "meta/books/arabic_sec2_t1/toc.yaml"
+
+    pages_total: 104
+    pages_converted: 104
+    printed_page_offset: unknown
+    missing_pages: []
+    status: converted
+    status_note: "اكتمل التحويل: 104/104."
+
+  - id: arabic_sec3_t1
+    title: "اللغة العربية — الصف الثالث الثانوي — الفصل الدراسي الأول"
+    title_normalized: "اللغه العربيه الصف الثالث الثانوي الفصل الدراسي الاول"
+    author: "غير موثّق"
+    publisher: "غير موثّق في الملفات المتاحة"
+    subject: ""
+    notes: ""
+
+    source_pdf: "curriculum_raw/اللغة_العربية_الصف_الثالث_الثانوي_ت1.pdf"
+    source_images: "curriculum_raw/اللغة_العربية_الصف_الثالث_الثانوي_ت1_images"
+    text_dir: "output/اللغة_العربية_الصف_الثالث_الثانوي_ت1"
+    index_dir: "index/اللغة_العربية_الصف_الثالث_الثانوي_ت1/norm"
+    toc: "meta/books/arabic_sec3_t1/toc.yaml"
+
+    pages_total: 232
+    pages_converted: 232
+    printed_page_offset: unknown
+    missing_pages: []
+    status: converted
+    status_note: "اكتمل التحويل: 232/232."
+
+  - id: math_prep3_t1
+    title: "الرياضيات — الصف الثالث الإعدادي — الفصل الدراسي الأول"
+    title_normalized: "الرياضيات الصف الثالث الاعدادي الفصل الدراسي الاول"
+    author: "وزارة التربية والتعليم والتعليم الفني — جمهورية مصر العربية"
+    publisher: "وزارة التربية والتعليم والتعليم الفني — مصر"
+    subject: "الرياضيات"
+    notes: ""
+
+    source_pdf: "curriculum_raw/الرياضيات_الصف_الثالث_الإعدادي_ت1.pdf"
+    source_images: "curriculum_raw/الرياضيات_الصف_الثالث_الإعدادي_ت1_images"
+    text_dir: "output/الرياضيات_الصف_الثالث_الإعدادي_ت1"
+    index_dir: "index/الرياضيات_الصف_الثالث_الإعدادي_ت1/norm"
+    toc: "meta/books/math_prep3_t1/toc.yaml"
+
+    pages_total: 114
+    pages_converted: 114
+    printed_page_offset: unknown
+    missing_pages: []
+    status: converted
+    status_note: "اكتمل التحويل: 114/114."
+
+  - id: studies_prep3_t1
+    title: "الدراسات الاجتماعية — الصف الثالث الإعدادي — الفصل الدراسي الأول"
+    title_normalized: "الدراسات الاجتماعيه الصف الثالث الاعدادي الفصل الدراسي الاول"
+    author: "وزارة التربية والتعليم والتعليم الفني — جمهورية مصر العربية"
+    publisher: "وزارة التربية والتعليم والتعليم الفني — مصر"
+    subject: "الدراسات الاجتماعية"
+    notes: ""
+
+    source_pdf: "curriculum_raw/الدراسات_الاجتماعية_الصف_الثالث_الإعدادي_ت1.pdf"
+    source_images: "curriculum_raw/الدراسات_الاجتماعية_الصف_الثالث_الإعدادي_ت1_images"
+    text_dir: "output/الدراسات_الاجتماعية_الصف_الثالث_الإعدادي_ت1"
+    index_dir: "index/الدراسات_الاجتماعية_الصف_الثالث_الإعدادي_ت1/norm"
+    toc: "meta/books/studies_prep3_t1/toc.yaml"
+
+    pages_total: 113
+    pages_converted: 113
+    printed_page_offset: unknown
+    missing_pages: []
+    status: converted
+    status_note: "اكتمل التحويل: 113/113."
+
+  - id: science_prep3_t1
+    title: "العلوم — الصف الثالث الإعدادي — الفصل الدراسي الأول"
+    title_normalized: "العلوم الصف الثالث الاعدادي الفصل الدراسي الاول"
+    author: "وزارة التربية والتعليم والتعليم الفني — جمهورية مصر العربية"
+    publisher: "وزارة التربية والتعليم والتعليم الفني — مصر"
+    subject: "العلوم"
+    notes: ""
+
+    source_pdf: "curriculum_raw/العلوم_الصف_الثالث_الإعدادي_ت1.pdf"
+    source_images: "curriculum_raw/العلوم_الصف_الثالث_الإعدادي_ت1_images"
+    text_dir: "output/العلوم_الصف_الثالث_الإعدادي_ت1"
+    index_dir: "index/العلوم_الصف_الثالث_الإعدادي_ت1/norm"
+    toc: "meta/books/science_prep3_t1/toc.yaml"
+
+    pages_total: 114
+    pages_converted: 114
+    printed_page_offset: unknown
+    missing_pages: []
+    status: converted
+    status_note: "اكتمل التحويل: 114/114."
+
+  - id: ict_prep3_t1
+    title: "تكنولوجيا المعلومات والاتصالات — الصف الثالث الإعدادي — الفصل الدراسي الأول"
+    title_normalized: "تكنولوجيا المعلومات والاتصالات الصف الثالث الاعدادي الفصل الدراسي الاول"
+    author: "وزارة التربية والتعليم والتعليم الفني — جمهورية مصر العربية"
+    publisher: "وزارة التربية والتعليم والتعليم الفني — مصر"
+    subject: "تكنولوجيا المعلومات"
+    notes: ""
+
+    source_pdf: "curriculum_raw/تكنولوجيا_المعلومات_الصف_الثالث_الإعدادي_ت1.pdf"
+    source_images: "curriculum_raw/تكنولوجيا_المعلومات_الصف_الثالث_الإعدادي_ت1_images"
+    text_dir: "output/تكنولوجيا_المعلومات_الصف_الثالث_الإعدادي_ت1"
+    index_dir: "index/تكنولوجيا_المعلومات_الصف_الثالث_الإعدادي_ت1/norm"
+    toc: "meta/books/ict_prep3_t1/toc.yaml"
+
+    pages_total: 96
+    pages_converted: 96
+    printed_page_offset: unknown
+    missing_pages: []
+    status: converted
+    status_note: "اكتمل التحويل: 96/96."
+
+  - id: media_edu_prep3_t1
+    title: "الإعلام التربوي — الصف الثالث الإعدادي — الفصل الدراسي الأول"
+    title_normalized: "الاعلام التربوي الصف الثالث الاعدادي الفصل الدراسي الاول"
+    author: "وزارة التربية والتعليم والتعليم الفني — جمهورية مصر العربية"
+    publisher: "وزارة التربية والتعليم والتعليم الفني — مصر"
+    subject: "الإعلام التربوي"
+    notes: ""
+
+    source_pdf: "curriculum_raw/الإعلام_التربوي_الصف_الثالث_الإعدادي_ت1.pdf"
+    source_images: "curriculum_raw/الإعلام_التربوي_الصف_الثالث_الإعدادي_ت1_images"
+    text_dir: "output/الإعلام_التربوي_الصف_الثالث_الإعدادي_ت1"
+    index_dir: "index/الإعلام_التربوي_الصف_الثالث_الإعدادي_ت1/norm"
+    toc: "meta/books/media_edu_prep3_t1/toc.yaml"
+
+    pages_total: 86
+    pages_converted: 86
+    printed_page_offset: unknown
+    missing_pages: []
+    status: converted
+    status_note: "اكتمل التحويل: 86/86."
+
+  - id: religion_islamic_prep3_t1
+    title: "التربية الدينية الإسلامية — الصف الثالث الإعدادي — الفصل الدراسي الأول"
+    title_normalized: "التربيه الدينيه الاسلاميه الصف الثالث الاعدادي الفصل الدراسي الاول"
+    author: "وزارة التربية والتعليم والتعليم الفني — جمهورية مصر العربية"
+    publisher: "وزارة التربية والتعليم والتعليم الفني — مصر"
+    subject: "التربية الدينية الإسلامية"
+    notes: ""
+
+    source_pdf: "curriculum_raw/التربية_الدينية_الإسلامية_الصف_الثالث_الإعدادي_ت1.pdf"
+    source_images: "curriculum_raw/التربية_الدينية_الإسلامية_الصف_الثالث_الإعدادي_ت1_images"
+    text_dir: "output/التربية_الدينية_الإسلامية_الصف_الثالث_الإعدادي_ت1"
+    index_dir: "index/التربية_الدينية_الإسلامية_الصف_الثالث_الإعدادي_ت1/norm"
+    toc: "meta/books/religion_islamic_prep3_t1/toc.yaml"
+
+    pages_total: 82
+    pages_converted: 82
+    printed_page_offset: unknown
+    missing_pages: []
+    status: converted
+    status_note: "اكتمل التحويل: 82/82."
+
+  - id: math_prep2_t1
+    title: "الرياضيات — الصف الثاني الإعدادي — الفصل الدراسي الأول"
+    title_normalized: "الرياضيات الصف الثاني الاعدادي الفصل الدراسي الاول"
+    author: "وزارة التربية والتعليم والتعليم الفني — جمهورية مصر العربية"
+    publisher: "وزارة التربية والتعليم والتعليم الفني — مصر"
+    subject: "الرياضيات"
+    notes: ""
+
+    source_pdf: "curriculum_raw/الرياضيات_الصف_الثاني_الإعدادي_ت1.pdf"
+    source_images: "curriculum_raw/الرياضيات_الصف_الثاني_الإعدادي_ت1_images"
+    text_dir: "output/الرياضيات_الصف_الثاني_الإعدادي_ت1"
+    index_dir: "index/الرياضيات_الصف_الثاني_الإعدادي_ت1/norm"
+    toc: "meta/books/math_prep2_t1/toc.yaml"
+
+    pages_total: 130
+    pages_converted: 130
+    printed_page_offset: unknown
+    missing_pages: []
+    status: converted
+    status_note: "اكتمل التحويل: 130/130."
+
+  - id: science_prep2_t1
+    title: "العلوم — الصف الثاني الإعدادي — الفصل الدراسي الأول"
+    title_normalized: "العلوم الصف الثاني الاعدادي الفصل الدراسي الاول"
+    author: "وزارة التربية والتعليم والتعليم الفني — جمهورية مصر العربية"
+    publisher: "وزارة التربية والتعليم والتعليم الفني — مصر"
+    subject: "العلوم"
+    notes: ""
+
+    source_pdf: "curriculum_raw/العلوم_الصف_الثاني_الإعدادي_ت1.pdf"
+    source_images: "curriculum_raw/العلوم_الصف_الثاني_الإعدادي_ت1_images"
+    text_dir: "output/العلوم_الصف_الثاني_الإعدادي_ت1"
+    index_dir: "index/العلوم_الصف_الثاني_الإعدادي_ت1/norm"
+    toc: "meta/books/science_prep2_t1/toc.yaml"
+
+    pages_total: 106
+    pages_converted: 106
+    printed_page_offset: unknown
+    missing_pages: []
+    status: converted
+    status_note: "اكتمل التحويل: 106/106."
+
+  - id: studies_prep2_t1
+    title: "الدراسات الاجتماعية — الصف الثاني الإعدادي — الفصل الدراسي الأول"
+    title_normalized: "الدراسات الاجتماعيه الصف الثاني الاعدادي الفصل الدراسي الاول"
+    author: "وزارة التربية والتعليم والتعليم الفني — جمهورية مصر العربية"
+    publisher: "وزارة التربية والتعليم والتعليم الفني — مصر"
+    subject: "الدراسات الاجتماعية"
+    notes: ""
+
+    source_pdf: "curriculum_raw/الدراسات_الاجتماعية_الصف_الثاني_الإعدادي_ت1.pdf"
+    source_images: "curriculum_raw/الدراسات_الاجتماعية_الصف_الثاني_الإعدادي_ت1_images"
+    text_dir: "output/الدراسات_الاجتماعية_الصف_الثاني_الإعدادي_ت1"
+    index_dir: "index/الدراسات_الاجتماعية_الصف_الثاني_الإعدادي_ت1/norm"
+    toc: "meta/books/studies_prep2_t1/toc.yaml"
+
+    pages_total: 106
+    pages_converted: 106
+    printed_page_offset: unknown
+    missing_pages: []
+    status: converted
+    status_note: "اكتمل التحويل: 106/106."
+
+  - id: ict_prep2_t1
+    title: "تكنولوجيا المعلومات والاتصالات — الصف الثاني الإعدادي — الفصل الدراسي الأول"
+    title_normalized: "تكنولوجيا المعلومات والاتصالات الصف الثاني الاعدادي الفصل الدراسي الاول"
+    author: "وزارة التربية والتعليم والتعليم الفني — جمهورية مصر العربية"
+    publisher: "وزارة التربية والتعليم والتعليم الفني — مصر"
+    subject: "تكنولوجيا المعلومات والاتصالات"
+    notes: ""
+
+    source_pdf: "curriculum_raw/تكنولوجيا_المعلومات_الصف_الثاني_الإعدادي_ت1.pdf"
+    source_images: "curriculum_raw/تكنولوجيا_المعلومات_الصف_الثاني_الإعدادي_ت1_images"
+    text_dir: "output/تكنولوجيا_المعلومات_الصف_الثاني_الإعدادي_ت1"
+    index_dir: "index/تكنولوجيا_المعلومات_الصف_الثاني_الإعدادي_ت1/norm"
+    toc: "meta/books/ict_prep2_t1/toc.yaml"
+
+    pages_total: 93
+    pages_converted: 93
+    printed_page_offset: unknown
+    missing_pages: []
+    status: converted
+    status_note: "اكتمل التحويل: 93/93."
+
+  - id: religion_islamic_prep2_t1
+    title: "التربية الدينية الإسلامية — الصف الثاني الإعدادي — الفصل الدراسي الأول"
+    title_normalized: "التربيه الدينيه الاسلاميه الصف الثاني الاعدادي الفصل الدراسي الاول"
+    author: "وزارة التربية والتعليم والتعليم الفني — جمهورية مصر العربية"
+    publisher: "وزارة التربية والتعليم والتعليم الفني — مصر"
+    subject: "التربية الدينية الإسلامية"
+    notes: ""
+
+    source_pdf: "curriculum_raw/التربية_الدينية_الإسلامية_الصف_الثاني_الإعدادي_ت1.pdf"
+    source_images: "curriculum_raw/التربية_الدينية_الإسلامية_الصف_الثاني_الإعدادي_ت1_images"
+    text_dir: "output/التربية_الدينية_الإسلامية_الصف_الثاني_الإعدادي_ت1"
+    index_dir: "index/التربية_الدينية_الإسلامية_الصف_الثاني_الإعدادي_ت1/norm"
+    toc: "meta/books/religion_islamic_prep2_t1/toc.yaml"
+
+    pages_total: 80
+    pages_converted: 80
+    printed_page_offset: unknown
+    missing_pages: []
+    status: converted
+    status_note: "اكتمل التحويل: 80/80."
+
+  - id: industry_skills_prep2_t1
+    title: "مهارات الصناعة وريادة الأعمال — الصف الثاني الإعدادي — الفصل الدراسي الأول"
+    title_normalized: "مهارات الصناعه ورياده الاعمال الصف الثاني الاعدادي الفصل الدراسي الاول"
+    author: "وزارة التربية والتعليم والتعليم الفني — جمهورية مصر العربية"
+    publisher: "وزارة التربية والتعليم والتعليم الفني — مصر"
+    subject: "مهارات الصناعة وريادة الأعمال"
+    notes: ""
+
+    source_pdf: "curriculum_raw/مهارات_الصناعة_الصف_الثاني_الإعدادي_ت1.pdf"
+    source_images: "curriculum_raw/مهارات_الصناعة_الصف_الثاني_الإعدادي_ت1_images"
+    text_dir: "output/مهارات_الصناعة_الصف_الثاني_الإعدادي_ت1"
+    index_dir: "index/مهارات_الصناعة_الصف_الثاني_الإعدادي_ت1/norm"
+    toc: "meta/books/industry_skills_prep2_t1/toc.yaml"
+
+    pages_total: 46
+    pages_converted: 46
+    printed_page_offset: unknown
+    missing_pages: []
+    status: converted
+    status_note: "اكتمل التحويل: 46/46."
+
+  - id: agriculture_skills_prep2_t1
+    title: "مهارات الزراعة وريادة الأعمال — الصف الثاني الإعدادي — الفصل الدراسي الأول"
+    title_normalized: "مهارات الزراعه ورياده الاعمال الصف الثاني الاعدادي الفصل الدراسي الاول"
+    author: "وزارة التربية والتعليم والتعليم الفني — جمهورية مصر العربية"
+    publisher: "وزارة التربية والتعليم والتعليم الفني — مصر"
+    subject: "مهارات الزراعة وريادة الأعمال"
+    notes: ""
+
+    source_pdf: "curriculum_raw/مهارات_الزراعة_الصف_الثاني_الإعدادي_ت1.pdf"
+    source_images: "curriculum_raw/مهارات_الزراعة_الصف_الثاني_الإعدادي_ت1_images"
+    text_dir: "output/مهارات_الزراعة_الصف_الثاني_الإعدادي_ت1"
+    index_dir: "index/مهارات_الزراعة_الصف_الثاني_الإعدادي_ت1/norm"
+    toc: "meta/books/agriculture_skills_prep2_t1/toc.yaml"
+
+    pages_total: 56
+    pages_converted: 56
+    printed_page_offset: unknown
+    missing_pages: []
+    status: converted
+    status_note: "اكتمل التحويل: 56/56."
+
+  - id: math_p1_t1
+    title: "الرياضيات — الصف الأول الابتدائي — الفصل الدراسي الأول"
+    title_normalized: "الرياضيات الصف الاول الابتدايي الفصل الدراسي الاول"
+    author: "وزارة التربية والتعليم والتعليم الفني — جمهورية مصر العربية"
+    publisher: "وزارة التربية والتعليم والتعليم الفني — مصر"
+    subject: "الرياضيات"
+    notes: ""
+
+    source_pdf: "curriculum_raw/الرياضيات_الصف_الأول_الابتدائي_ت1.pdf"
+    source_images: "curriculum_raw/الرياضيات_الصف_الأول_الابتدائي_ت1_images"
+    text_dir: "output/الرياضيات_الصف_الأول_الابتدائي_ت1"
+    index_dir: "index/الرياضيات_الصف_الأول_الابتدائي_ت1/norm"
+    toc: "meta/books/math_p1_t1/toc.yaml"
+
+    pages_total: 96
+    pages_converted: 96
+    printed_page_offset: unknown
+    missing_pages: []
+    status: converted
+    status_note: "اكتمل التحويل: 96/96."
+
+  - id: religion_islamic_p1_t1
+    title: "التربية الدينية الإسلامية — الصف الأول الابتدائي — الفصل الدراسي الأول"
+    title_normalized: "التربيه الدينيه الاسلاميه الصف الاول الابتدايي الفصل الدراسي الاول"
+    author: "وزارة التربية والتعليم والتعليم الفني — جمهورية مصر العربية"
+    publisher: "وزارة التربية والتعليم والتعليم الفني — مصر"
+    subject: "التربية الدينية الإسلامية"
+    notes: ""
+
+    source_pdf: "curriculum_raw/التربية_الدينية_الإسلامية_الصف_الأول_الابتدائي_ت1.pdf"
+    source_images: "curriculum_raw/التربية_الدينية_الإسلامية_الصف_الأول_الابتدائي_ت1_images"
+    text_dir: "output/التربية_الدينية_الإسلامية_الصف_الأول_الابتدائي_ت1"
+    index_dir: "index/التربية_الدينية_الإسلامية_الصف_الأول_الابتدائي_ت1/norm"
+    toc: "meta/books/religion_islamic_p1_t1/toc.yaml"
+
+    pages_total: 88
+    pages_converted: 88
+    printed_page_offset: unknown
+    missing_pages: []
+    status: converted
+    status_note: "اكتمل التحويل: 88/88."
+
+  - id: religion_islamic_p2_t1
+    title: "التربية الدينية الإسلامية — الصف الثاني الابتدائي — الفصل الدراسي الأول"
+    title_normalized: "التربيه الدينيه الاسلاميه الصف الثاني الابتدايي الفصل الدراسي الاول"
+    author: "وزارة التربية والتعليم والتعليم الفني — جمهورية مصر العربية"
+    publisher: "وزارة التربية والتعليم والتعليم الفني — مصر"
+    subject: "التربية الدينية الإسلامية"
+    notes: ""
+
+    source_pdf: "curriculum_raw/التربية_الدينية_الإسلامية_الصف_الثاني_الابتدائي_ت1.pdf"
+    source_images: "curriculum_raw/التربية_الدينية_الإسلامية_الصف_الثاني_الابتدائي_ت1_images"
+    text_dir: "output/التربية_الدينية_الإسلامية_الصف_الثاني_الابتدائي_ت1"
+    index_dir: "index/التربية_الدينية_الإسلامية_الصف_الثاني_الابتدائي_ت1/norm"
+    toc: "meta/books/religion_islamic_p2_t1/toc.yaml"
+
+    pages_total: 88
+    pages_converted: 88
+    printed_page_offset: unknown
+    missing_pages: []
+    status: converted
+    status_note: "اكتمل التحويل: 88/88."
+
+  - id: religion_islamic_p3_t1
+    title: "التربية الدينية الإسلامية — الصف الثالث الابتدائي — الفصل الدراسي الأول"
+    title_normalized: "التربيه الدينيه الاسلاميه الصف الثالث الابتدايي الفصل الدراسي الاول"
+    author: "وزارة التربية والتعليم والتعليم الفني — جمهورية مصر العربية"
+    publisher: "وزارة التربية والتعليم والتعليم الفني — مصر"
+    subject: "التربية الدينية الإسلامية"
+    notes: ""
+
+    source_pdf: "curriculum_raw/التربية_الدينية_الإسلامية_الصف_الثالث_الابتدائي_ت1.pdf"
+    source_images: "curriculum_raw/التربية_الدينية_الإسلامية_الصف_الثالث_الابتدائي_ت1_images"
+    text_dir: "output/التربية_الدينية_الإسلامية_الصف_الثالث_الابتدائي_ت1"
+    index_dir: "index/التربية_الدينية_الإسلامية_الصف_الثالث_الابتدائي_ت1/norm"
+    toc: "meta/books/religion_islamic_p3_t1/toc.yaml"
+
+    pages_total: 88
+    pages_converted: 88
+    printed_page_offset: unknown
+    missing_pages: []
+    status: converted
+    status_note: "اكتمل التحويل: 88/88."
+
+  - id: math_p3_t1
+    title: "الرياضيات — الصف الثالث الابتدائي — الفصل الدراسي الأول"
+    title_normalized: "الرياضيات الصف الثالث الابتدايي الفصل الدراسي الاول"
+    author: "وزارة التربية والتعليم والتعليم الفني — جمهورية مصر العربية"
+    publisher: "وزارة التربية والتعليم والتعليم الفني — مصر"
+    subject: "الرياضيات"
+    notes: ""
+
+    source_pdf: "curriculum_raw/الرياضيات_الصف_الثالث_الابتدائي_ت1.pdf"
+    source_images: "curriculum_raw/الرياضيات_الصف_الثالث_الابتدائي_ت1_images"
+    text_dir: "output/الرياضيات_الصف_الثالث_الابتدائي_ت1"
+    index_dir: "index/الرياضيات_الصف_الثالث_الابتدائي_ت1/norm"
+    toc: "meta/books/math_p3_t1/toc.yaml"
+
+    pages_total: 120
+    pages_converted: 120
+    printed_page_offset: unknown
+    missing_pages: []
+    status: converted
+    status_note: "اكتمل التحويل: 120/120."
+
+  - id: science_p4_t1
+    title: "العلوم — الصف الرابع الابتدائي — الفصل الدراسي الأول"
+    title_normalized: "العلوم الصف الرابع الابتدايي الفصل الدراسي الاول"
+    author: "وزارة التربية والتعليم والتعليم الفني — جمهورية مصر العربية"
+    publisher: "وزارة التربية والتعليم والتعليم الفني — مصر"
+    subject: "العلوم"
+    notes: ""
+
+    source_pdf: "curriculum_raw/العلوم_الصف_الرابع_الابتدائي_ت1.pdf"
+    source_images: "curriculum_raw/العلوم_الصف_الرابع_الابتدائي_ت1_images"
+    text_dir: "output/العلوم_الصف_الرابع_الابتدائي_ت1"
+    index_dir: "index/العلوم_الصف_الرابع_الابتدائي_ت1/norm"
+    toc: "meta/books/science_p4_t1/toc.yaml"
+
+    pages_total: 106
+    pages_converted: 106
+    printed_page_offset: unknown
+    missing_pages: []
+    status: converted
+    status_note: "اكتمل التحويل: 106/106."
+
+  - id: studies_p4_t1
+    title: "الدراسات الاجتماعية — الصف الرابع الابتدائي — الفصل الدراسي الأول"
+    title_normalized: "الدراسات الاجتماعيه الصف الرابع الابتدايي الفصل الدراسي الاول"
+    author: "وزارة التربية والتعليم والتعليم الفني — جمهورية مصر العربية"
+    publisher: "وزارة التربية والتعليم والتعليم الفني — مصر"
+    subject: "الدراسات الاجتماعية"
+    notes: ""
+
+    source_pdf: "curriculum_raw/الدراسات_الاجتماعية_الصف_الرابع_الابتدائي_ت1.pdf"
+    source_images: "curriculum_raw/الدراسات_الاجتماعية_الصف_الرابع_الابتدائي_ت1_images"
+    text_dir: "output/الدراسات_الاجتماعية_الصف_الرابع_الابتدائي_ت1"
+    index_dir: "index/الدراسات_الاجتماعية_الصف_الرابع_الابتدائي_ت1/norm"
+    toc: "meta/books/studies_p4_t1/toc.yaml"
+
+    pages_total: 114
+    pages_converted: 114
+    printed_page_offset: unknown
+    missing_pages: []
+    status: converted
+    status_note: "اكتمل التحويل: 114/114."
+
+  - id: ict_p4_t1
+    title: "تكنولوجيا المعلومات والاتصالات — الصف الرابع الابتدائي — الفصل الدراسي الأول"
+    title_normalized: "تكنولوجيا المعلومات والاتصالات الصف الرابع الابتدايي الفصل الدراسي الاول"
+    author: "وزارة التربية والتعليم والتعليم الفني — جمهورية مصر العربية"
+    publisher: "وزارة التربية والتعليم والتعليم الفني — مصر"
+    subject: "تكنولوجيا المعلومات والاتصالات"
+    notes: ""
+
+    source_pdf: "curriculum_raw/تكنولوجيا_المعلومات_والاتصالات_الصف_الرابع_الابتدائي_ت1.pdf"
+    source_images: "curriculum_raw/تكنولوجيا_المعلومات_والاتصالات_الصف_الرابع_الابتدائي_ت1_images"
+    text_dir: "output/تكنولوجيا_المعلومات_والاتصالات_الصف_الرابع_الابتدائي_ت1"
+    index_dir: "index/تكنولوجيا_المعلومات_والاتصالات_الصف_الرابع_الابتدائي_ت1/norm"
+    toc: "meta/books/ict_p4_t1/toc.yaml"
+
+    pages_total: 55
+    pages_converted: 55
+    printed_page_offset: unknown
+    missing_pages: []
+    status: converted
+    status_note: "اكتمل التحويل: 55/55."
+
+  - id: math_p4_t1
+    title: "الرياضيات — الصف الرابع الابتدائي — الفصل الدراسي الأول"
+    title_normalized: "الرياضيات الصف الرابع الابتدايي الفصل الدراسي الاول"
+    author: "وزارة التربية والتعليم والتعليم الفني — جمهورية مصر العربية"
+    publisher: "وزارة التربية والتعليم والتعليم الفني — مصر"
+    subject: "الرياضيات"
+    notes: ""
+
+    source_pdf: "curriculum_raw/الرياضيات_الصف_الرابع_الابتدائي_ت1.pdf"
+    source_images: "curriculum_raw/الرياضيات_الصف_الرابع_الابتدائي_ت1_images"
+    text_dir: "output/الرياضيات_الصف_الرابع_الابتدائي_ت1"
+    index_dir: "index/الرياضيات_الصف_الرابع_الابتدائي_ت1/norm"
+    toc: "meta/books/math_p4_t1/toc.yaml"
+
+    pages_total: 136
+    pages_converted: 136
+    printed_page_offset: unknown
+    missing_pages: []
+    status: converted
+    status_note: "اكتمل التحويل: 136/136."
+
+  - id: library_skills_p4_t1
+    title: "المكتبات ومهارات البحث — الصف الرابع الابتدائي — الفصل الدراسي الأول"
+    title_normalized: "المكتبات ومهارات البحث الصف الرابع الابتدايي الفصل الدراسي الاول"
+    author: "وزارة التربية والتعليم والتعليم الفني — جمهورية مصر العربية"
+    publisher: "وزارة التربية والتعليم والتعليم الفني — مصر"
+    subject: "المكتبات ومهارات البحث"
+    notes: ""
+
+    source_pdf: "curriculum_raw/المكتبات_ومهارات_البحث_الصف_الرابع_الابتدائي_ت1.pdf"
+    source_images: "curriculum_raw/المكتبات_ومهارات_البحث_الصف_الرابع_الابتدائي_ت1_images"
+    text_dir: "output/المكتبات_ومهارات_البحث_الصف_الرابع_الابتدائي_ت1"
+    index_dir: "index/المكتبات_ومهارات_البحث_الصف_الرابع_الابتدائي_ت1/norm"
+    toc: "meta/books/library_skills_p4_t1/toc.yaml"
+
+    pages_total: 40
+    pages_converted: 40
+    printed_page_offset: unknown
+    missing_pages: []
+    status: converted
+    status_note: "اكتمل التحويل: 40/40."
+
+  - id: family_skills_p4_t1
+    title: "مهارات إدارة الأسرة وريادة الأعمال — الصف الرابع الابتدائي — الفصل الدراسي الأول"
+    title_normalized: "مهارات اداره الاسره ورياده الاعمال الصف الرابع الابتدايي الفصل الدراسي الاول"
+    author: "وزارة التربية والتعليم والتعليم الفني — جمهورية مصر العربية"
+    publisher: "وزارة التربية والتعليم والتعليم الفني — مصر"
+    subject: "مهارات إدارة الأسرة وريادة الأعمال"
+    notes: ""
+
+    source_pdf: "curriculum_raw/مهارات_إدارة_الأسرة_الصف_الرابع_الابتدائي_ت1.pdf"
+    source_images: "curriculum_raw/مهارات_إدارة_الأسرة_الصف_الرابع_الابتدائي_ت1_images"
+    text_dir: "output/مهارات_إدارة_الأسرة_الصف_الرابع_الابتدائي_ت1"
+    index_dir: "index/مهارات_إدارة_الأسرة_الصف_الرابع_الابتدائي_ت1/norm"
+    toc: "meta/books/family_skills_p4_t1/toc.yaml"
+
+    pages_total: 64
+    pages_converted: 64
+    printed_page_offset: unknown
+    missing_pages: []
+    status: converted
+    status_note: "اكتمل التحويل: 64/64."
+
+  - id: science_p5_t1
+    title: "العلوم — الصف الخامس الابتدائي — الفصل الدراسي الأول"
+    title_normalized: "العلوم الصف الخامس الابتدايي الفصل الدراسي الاول"
+    author: "وزارة التربية والتعليم والتعليم الفني — جمهورية مصر العربية"
+    publisher: "وزارة التربية والتعليم والتعليم الفني — مصر"
+    subject: "العلوم"
+    notes: ""
+
+    source_pdf: "curriculum_raw/العلوم_الصف_الخامس_الابتدائي_ت1.pdf"
+    source_images: "curriculum_raw/العلوم_الصف_الخامس_الابتدائي_ت1_images"
+    text_dir: "output/العلوم_الصف_الخامس_الابتدائي_ت1"
+    index_dir: "index/العلوم_الصف_الخامس_الابتدائي_ت1/norm"
+    toc: "meta/books/science_p5_t1/toc.yaml"
+
+    pages_total: 113
+    pages_converted: 113
+    printed_page_offset: unknown
+    missing_pages: []
+    status: converted
+    status_note: "اكتمل التحويل: 113/113."
+
+  - id: math_p5_t1
+    title: "الرياضيات — الصف الخامس الابتدائي — الفصل الدراسي الأول"
+    title_normalized: "الرياضيات الصف الخامس الابتدايي الفصل الدراسي الاول"
+    author: "وزارة التربية والتعليم والتعليم الفني — جمهورية مصر العربية"
+    publisher: "وزارة التربية والتعليم والتعليم الفني — مصر"
+    subject: "الرياضيات"
+    notes: ""
+
+    source_pdf: "curriculum_raw/الرياضيات_الصف_الخامس_الابتدائي_ت1.pdf"
+    source_images: "curriculum_raw/الرياضيات_الصف_الخامس_الابتدائي_ت1_images"
+    text_dir: "output/الرياضيات_الصف_الخامس_الابتدائي_ت1"
+    index_dir: "index/الرياضيات_الصف_الخامس_الابتدائي_ت1/norm"
+    toc: "meta/books/math_p5_t1/toc.yaml"
+
+    pages_total: 142
+    pages_converted: 142
+    printed_page_offset: unknown
+    missing_pages: []
+    status: converted
+    status_note: "اكتمل التحويل: 142/142."
+
+  - id: library_skills_p5_t1
+    title: "المكتبات ومهارات البحث — الصف الخامس الابتدائي — الفصل الدراسي الأول"
+    title_normalized: "المكتبات ومهارات البحث الصف الخامس الابتدايي الفصل الدراسي الاول"
+    author: "وزارة التربية والتعليم والتعليم الفني — جمهورية مصر العربية"
+    publisher: "وزارة التربية والتعليم والتعليم الفني — مصر"
+    subject: "المكتبات ومهارات البحث"
+    notes: ""
+
+    source_pdf: "curriculum_raw/المكتبات_ومهارات_البحث_الصف_الخامس_الابتدائي_ت1.pdf"
+    source_images: "curriculum_raw/المكتبات_ومهارات_البحث_الصف_الخامس_الابتدائي_ت1_images"
+    text_dir: "output/المكتبات_ومهارات_البحث_الصف_الخامس_الابتدائي_ت1"
+    index_dir: "index/المكتبات_ومهارات_البحث_الصف_الخامس_الابتدائي_ت1/norm"
+    toc: "meta/books/library_skills_p5_t1/toc.yaml"
+
+    pages_total: 21
+    pages_converted: 21
+    printed_page_offset: unknown
+    missing_pages: []
+    status: converted
+    status_note: "اكتمل التحويل: 21/21."
+
+  - id: ict_p5_t1
+    title: "تكنولوجيا المعلومات والاتصالات — الصف الخامس الابتدائي — الفصل الدراسي الأول"
+    title_normalized: "تكنولوجيا المعلومات والاتصالات الصف الخامس الابتدايي الفصل الدراسي الاول"
+    author: "وزارة التربية والتعليم والتعليم الفني — جمهورية مصر العربية"
+    publisher: "وزارة التربية والتعليم والتعليم الفني — مصر"
+    subject: "تكنولوجيا المعلومات والاتصالات"
+    notes: ""
+
+    source_pdf: "curriculum_raw/تكنولوجيا_المعلومات_والاتصالات_الصف_الخامس_الابتدائي_ت1.pdf"
+    source_images: "curriculum_raw/تكنولوجيا_المعلومات_والاتصالات_الصف_الخامس_الابتدائي_ت1_images"
+    text_dir: "output/تكنولوجيا_المعلومات_والاتصالات_الصف_الخامس_الابتدائي_ت1"
+    index_dir: "index/تكنولوجيا_المعلومات_والاتصالات_الصف_الخامس_الابتدائي_ت1/norm"
+    toc: "meta/books/ict_p5_t1/toc.yaml"
+
+    pages_total: 46
+    pages_converted: 46
+    printed_page_offset: unknown
+    missing_pages: []
+    status: converted
+    status_note: "اكتمل التحويل: 46/46."
+
+  - id: agriculture_skills_p5_t1
+    title: "مهارات الزراعة وريادة الأعمال — الصف الخامس الابتدائي — الفصل الدراسي الأول"
+    title_normalized: "مهارات الزراعه ورياده الاعمال الصف الخامس الابتدايي الفصل الدراسي الاول"
+    author: "وزارة التربية والتعليم والتعليم الفني — جمهورية مصر العربية"
+    publisher: "وزارة التربية والتعليم والتعليم الفني — مصر"
+    subject: "مهارات الزراعة وريادة الأعمال"
+    notes: ""
+
+    source_pdf: "curriculum_raw/مهارات_الزراعة_الصف_الخامس_الابتدائي_ت1.pdf"
+    source_images: "curriculum_raw/مهارات_الزراعة_الصف_الخامس_الابتدائي_ت1_images"
+    text_dir: "output/مهارات_الزراعة_الصف_الخامس_الابتدائي_ت1"
+    index_dir: "index/مهارات_الزراعة_الصف_الخامس_الابتدائي_ت1/norm"
+    toc: "meta/books/agriculture_skills_p5_t1/toc.yaml"
+
+    pages_total: 35
+    pages_converted: 35
+    printed_page_offset: unknown
+    missing_pages: []
+    status: converted
+    status_note: "اكتمل التحويل: 35/35."
+
+  - id: agriculture_skills_p4_t1
+    title: "مهارات الزراعة وريادة الأعمال — الصف الرابع الابتدائي — الفصل الدراسي الأول"
+    title_normalized: "مهارات الزراعه ورياده الاعمال الصف الرابع الابتدايي الفصل الدراسي الاول"
+    author: "وزارة التربية والتعليم والتعليم الفني — جمهورية مصر العربية"
+    publisher: "وزارة التربية والتعليم والتعليم الفني — مصر"
+    subject: "مهارات الزراعة وريادة الأعمال"
+    notes: ""
+
+    source_pdf: "curriculum_raw/مهارات_الزراعة_الصف_الرابع_الابتدائي_ت1.pdf"
+    source_images: "curriculum_raw/مهارات_الزراعة_الصف_الرابع_الابتدائي_ت1_images"
+    text_dir: "output/مهارات_الزراعة_الصف_الرابع_الابتدائي_ت1"
+    index_dir: "index/مهارات_الزراعة_الصف_الرابع_الابتدائي_ت1/norm"
+    toc: "meta/books/agriculture_skills_p4_t1/toc.yaml"
+
+    pages_total: 33
+    pages_converted: 33
+    printed_page_offset: unknown
+    missing_pages: []
+    status: converted
+    status_note: "اكتمل التحويل: 33/33."
+
+  - id: drama_p4_t1
+    title: "التربية المسرحية — الصف الرابع الابتدائي — الفصل الدراسي الأول"
+    title_normalized: "التربيه المسرحيه الصف الرابع الابتدايي الفصل الدراسي الاول"
+    author: "وزارة التربية والتعليم والتعليم الفني — جمهورية مصر العربية"
+    publisher: "وزارة التربية والتعليم والتعليم الفني — مصر"
+    subject: "التربية المسرحية"
+    notes: ""
+
+    source_pdf: "curriculum_raw/التربية_المسرحية_الصف_الرابع_الابتدائي_ت1.pdf"
+    source_images: "curriculum_raw/التربية_المسرحية_الصف_الرابع_الابتدائي_ت1_images"
+    text_dir: "output/التربية_المسرحية_الصف_الرابع_الابتدائي_ت1"
+    index_dir: "index/التربية_المسرحية_الصف_الرابع_الابتدائي_ت1/norm"
+    toc: "meta/books/drama_p4_t1/toc.yaml"
+
+    pages_total: 51
+    pages_converted: 51
+    printed_page_offset: unknown
+    missing_pages: []
+    status: converted
+    status_note: "اكتمل التحويل: 51/51."
+
+  - id: family_skills_p5_t1
+    title: "مهارات إدارة الأسرة وريادة الأعمال — الصف الخامس الابتدائي — الفصل الدراسي الأول"
+    title_normalized: "مهارات اداره الاسره ورياده الاعمال الصف الخامس الابتدايي الفصل الدراسي الاول"
+    author: "وزارة التربية والتعليم والتعليم الفني — جمهورية مصر العربية"
+    publisher: "وزارة التربية والتعليم والتعليم الفني — مصر"
+    subject: "مهارات إدارة الأسرة وريادة الأعمال"
+    notes: ""
+
+    source_pdf: "curriculum_raw/مهارات_إدارة_الأسرة_الصف_الخامس_الابتدائي_ت1.pdf"
+    source_images: "curriculum_raw/مهارات_إدارة_الأسرة_الصف_الخامس_الابتدائي_ت1_images"
+    text_dir: "output/مهارات_إدارة_الأسرة_الصف_الخامس_الابتدائي_ت1"
+    index_dir: "index/مهارات_إدارة_الأسرة_الصف_الخامس_الابتدائي_ت1/norm"
+    toc: "meta/books/family_skills_p5_t1/toc.yaml"
+
+    pages_total: 56
+    pages_converted: 56
+    printed_page_offset: unknown
+    missing_pages: []
+    status: converted
+    status_note: "اكتمل التحويل: 56/56."
+
+  - id: math_p2_t1
+    title: "الرياضيات — الصف الثاني الابتدائي — الفصل الدراسي الأول"
+    title_normalized: "الرياضيات الصف الثاني الابتدايي الفصل الدراسي الاول"
+    author: "وزارة التربية والتعليم والتعليم الفني — جمهورية مصر العربية"
+    publisher: "وزارة التربية والتعليم والتعليم الفني — مصر"
+    subject: "الرياضيات"
+    notes: ""
+
+    source_pdf: "curriculum_raw/الرياضيات_الصف_الثاني_الابتدائي_ت1.pdf"
+    source_images: "curriculum_raw/الرياضيات_الصف_الثاني_الابتدائي_ت1_images"
+    text_dir: "output/الرياضيات_الصف_الثاني_الابتدائي_ت1"
+    index_dir: "index/الرياضيات_الصف_الثاني_الابتدائي_ت1/norm"
+    toc: "meta/books/math_p2_t1/toc.yaml"
+
+    pages_total: 128
+    pages_converted: 128
+    printed_page_offset: unknown
+    missing_pages: []
+    status: converted
+    status_note: "اكتمل التحويل: 128/128."
+
+  - id: drama_p5_t1
+    title: "التربية المسرحية — الصف الخامس الابتدائي — الفصل الدراسي الأول"
+    title_normalized: "التربيه المسرحيه الصف الخامس الابتدايي الفصل الدراسي الاول"
+    author: "وزارة التربية والتعليم والتعليم الفني — جمهورية مصر العربية"
+    publisher: "وزارة التربية والتعليم والتعليم الفني — مصر"
+    subject: "التربية المسرحية"
+    notes: ""
+
+    source_pdf: "curriculum_raw/التربية_المسرحية_الصف_الخامس_الابتدائي_ت1.pdf"
+    source_images: "curriculum_raw/التربية_المسرحية_الصف_الخامس_الابتدائي_ت1_images"
+    text_dir: "output/التربية_المسرحية_الصف_الخامس_الابتدائي_ت1"
+    index_dir: "index/التربية_المسرحية_الصف_الخامس_الابتدائي_ت1/norm"
+    toc: "meta/books/drama_p5_t1/toc.yaml"
+
+    pages_total: 63
+    pages_converted: 63
+    printed_page_offset: unknown
+    missing_pages: []
+    status: converted
+    status_note: "اكتمل التحويل: 63/63 (الصفحة 13 جدول تقييم ذاتي فشل عليها الموديل بتكرار انفلاتي ففُرّغت يدويًّا من الصورة)."
+
+  - id: religion_islamic_p5_t1
+    title: "التربية الدينية الإسلامية — الصف الخامس الابتدائي — الفصل الدراسي الأول"
+    title_normalized: "التربيه الدينيه الاسلاميه الصف الخامس الابتدايي الفصل الدراسي الاول"
+    author: "وزارة التربية والتعليم والتعليم الفني — جمهورية مصر العربية"
+    publisher: "وزارة التربية والتعليم والتعليم الفني — مصر"
+    subject: "التربية الدينية الإسلامية"
+    notes: ""
+
+    source_pdf: "curriculum_raw/التربية_الدينية_الإسلامية_الصف_الخامس_الابتدائي_ت1.pdf"
+    source_images: "curriculum_raw/التربية_الدينية_الإسلامية_الصف_الخامس_الابتدائي_ت1_images"
+    text_dir: "output/التربية_الدينية_الإسلامية_الصف_الخامس_الابتدائي_ت1"
+    index_dir: "index/التربية_الدينية_الإسلامية_الصف_الخامس_الابتدائي_ت1/norm"
+    toc: "meta/books/religion_islamic_p5_t1/toc.yaml"
+
+    pages_total: 96
+    pages_converted: 96
+    printed_page_offset: unknown
+    missing_pages: []
+    status: converted
+    status_note: "اكتمل التحويل: 96/96."
+
+  - id: studies_p5_t1
+    title: "الدراسات الاجتماعية — الصف الخامس الابتدائي — الفصل الدراسي الأول"
+    title_normalized: "الدراسات الاجتماعيه الصف الخامس الابتدايي الفصل الدراسي الاول"
+    author: "وزارة التربية والتعليم والتعليم الفني — جمهورية مصر العربية"
+    publisher: "وزارة التربية والتعليم والتعليم الفني — مصر"
+    subject: "الدراسات الاجتماعية"
+    notes: ""
+
+    source_pdf: "curriculum_raw/الدراسات_الاجتماعية_الصف_الخامس_الابتدائي_ت1.pdf"
+    source_images: "curriculum_raw/الدراسات_الاجتماعية_الصف_الخامس_الابتدائي_ت1_images"
+    text_dir: "output/الدراسات_الاجتماعية_الصف_الخامس_الابتدائي_ت1"
+    index_dir: "index/الدراسات_الاجتماعية_الصف_الخامس_الابتدائي_ت1/norm"
+    toc: "meta/books/studies_p5_t1/toc.yaml"
+
+    pages_total: 98
+    pages_converted: 98
+    printed_page_offset: unknown
+    missing_pages: []
+    status: converted
+    status_note: "اكتمل التحويل: 98/98."
+
+  - id: religion_islamic_p4_t1
+    title: "التربية الدينية الإسلامية — الصف الرابع الابتدائي — الفصل الدراسي الأول"
+    title_normalized: "التربيه الدينيه الاسلاميه الصف الرابع الابتدايي الفصل الدراسي الاول"
+    author: "وزارة التربية والتعليم والتعليم الفني — جمهورية مصر العربية"
+    publisher: "وزارة التربية والتعليم والتعليم الفني — مصر"
+    subject: "التربية الدينية الإسلامية"
+    notes: ""
+
+    source_pdf: "curriculum_raw/التربية_الدينية_الإسلامية_الصف_الرابع_الابتدائي_ت1.pdf"
+    source_images: "curriculum_raw/التربية_الدينية_الإسلامية_الصف_الرابع_الابتدائي_ت1_images"
+    text_dir: "output/التربية_الدينية_الإسلامية_الصف_الرابع_الابتدائي_ت1"
+    index_dir: "index/التربية_الدينية_الإسلامية_الصف_الرابع_الابتدائي_ت1/norm"
+    toc: "meta/books/religion_islamic_p4_t1/toc.yaml"
+
+    pages_total: 98
+    pages_converted: 98
+    printed_page_offset: unknown
+    missing_pages: []
+    status: converted
+    status_note: "اكتمل التحويل: 98/98 (الصفحة 77 نشاط تجويد فشل عليها الموديل بتكرار انفلاتي ففُرّغت يدويًّا من الصورة)."
+
+  - id: library_skills_p6_t1
+    title: "المكتبات ومهارات البحث — الصف السادس الابتدائي — الفصل الدراسي الأول"
+    title_normalized: "المكتبات ومهارات البحث الصف السادس الابتدايي الفصل الدراسي الاول"
+    author: "وزارة التربية والتعليم والتعليم الفني — جمهورية مصر العربية"
+    publisher: "وزارة التربية والتعليم والتعليم الفني — مصر"
+    subject: "المكتبات ومهارات البحث"
+    notes: ""
+
+    source_pdf: "curriculum_raw/المكتبات_ومهارات_البحث_الصف_السادس_الابتدائي_ت1.pdf"
+    source_images: "curriculum_raw/المكتبات_ومهارات_البحث_الصف_السادس_الابتدائي_ت1_images"
+    text_dir: "output/المكتبات_ومهارات_البحث_الصف_السادس_الابتدائي_ت1"
+    index_dir: "index/المكتبات_ومهارات_البحث_الصف_السادس_الابتدائي_ت1/norm"
+    toc: "meta/books/library_skills_p6_t1/toc.yaml"
+
+    pages_total: 42
+    pages_converted: 42
+    printed_page_offset: unknown
+    missing_pages: []
+    status: converted
+    status_note: "اكتمل التحويل: 42/42."
+
+  - id: agriculture_skills_p6_t1
+    title: "مهارات الزراعة وريادة الأعمال — الصف السادس الابتدائي — الفصل الدراسي الأول"
+    title_normalized: "مهارات الزراعه ورياده الاعمال الصف السادس الابتدايي الفصل الدراسي الاول"
+    author: "وزارة التربية والتعليم والتعليم الفني — جمهورية مصر العربية"
+    publisher: "وزارة التربية والتعليم والتعليم الفني — مصر"
+    subject: "مهارات الزراعة وريادة الأعمال"
+    notes: ""
+
+    source_pdf: "curriculum_raw/مهارات_الزراعة_الصف_السادس_الابتدائي_ت1.pdf"
+    source_images: "curriculum_raw/مهارات_الزراعة_الصف_السادس_الابتدائي_ت1_images"
+    text_dir: "output/مهارات_الزراعة_الصف_السادس_الابتدائي_ت1"
+    index_dir: "index/مهارات_الزراعة_الصف_السادس_الابتدائي_ت1/norm"
+    toc: "meta/books/agriculture_skills_p6_t1/toc.yaml"
+
+    pages_total: 41
+    pages_converted: 41
+    printed_page_offset: unknown
+    missing_pages: []
+    status: converted
+    status_note: "اكتمل التحويل: 41/41."
+
+  - id: ict_p6_t1
+    title: "تكنولوجيا المعلومات والاتصالات — الصف السادس الابتدائي — الفصل الدراسي الأول"
+    title_normalized: "تكنولوجيا المعلومات والاتصالات الصف السادس الابتدايي الفصل الدراسي الاول"
+    author: "وزارة التربية والتعليم والتعليم الفني — جمهورية مصر العربية"
+    publisher: "وزارة التربية والتعليم والتعليم الفني — مصر"
+    subject: "تكنولوجيا المعلومات والاتصالات"
+    notes: ""
+
+    source_pdf: "curriculum_raw/تكنولوجيا_المعلومات_والاتصالات_الصف_السادس_الابتدائي_ت1.pdf"
+    source_images: "curriculum_raw/تكنولوجيا_المعلومات_والاتصالات_الصف_السادس_الابتدائي_ت1_images"
+    text_dir: "output/تكنولوجيا_المعلومات_والاتصالات_الصف_السادس_الابتدائي_ت1"
+    index_dir: "index/تكنولوجيا_المعلومات_والاتصالات_الصف_السادس_الابتدائي_ت1/norm"
+    toc: "meta/books/ict_p6_t1/toc.yaml"
+
+    pages_total: 57
+    pages_converted: 57
+    printed_page_offset: unknown
+    missing_pages: []
+    status: converted
+    status_note: "اكتمل التحويل: 57/57."
+
+  - id: family_skills_p6_t1
+    title: "مهارات إدارة الأسرة وريادة الأعمال — الصف السادس الابتدائي — الفصل الدراسي الأول"
+    title_normalized: "مهارات اداره الاسره ورياده الاعمال الصف السادس الابتدايي الفصل الدراسي الاول"
+    author: "وزارة التربية والتعليم والتعليم الفني — جمهورية مصر العربية"
+    publisher: "وزارة التربية والتعليم والتعليم الفني — مصر"
+    subject: "مهارات إدارة الأسرة وريادة الأعمال"
+    notes: ""
+
+    source_pdf: "curriculum_raw/مهارات_إدارة_الأسرة_الصف_السادس_الابتدائي_ت1.pdf"
+    source_images: "curriculum_raw/مهارات_إدارة_الأسرة_الصف_السادس_الابتدائي_ت1_images"
+    text_dir: "output/مهارات_إدارة_الأسرة_الصف_السادس_الابتدائي_ت1"
+    index_dir: "index/مهارات_إدارة_الأسرة_الصف_السادس_الابتدائي_ت1/norm"
+    toc: "meta/books/family_skills_p6_t1/toc.yaml"
+
+    pages_total: 52
+    pages_converted: 52
+    printed_page_offset: unknown
+    missing_pages: []
+    status: converted
+    status_note: "اكتمل التحويل: 52/52."
+
+  - id: media_edu_p6_t1
+    title: "الإعلام التربوي — الصف السادس الابتدائي — الفصل الدراسي الأول"
+    title_normalized: "الاعلام التربوي الصف السادس الابتدايي الفصل الدراسي الاول"
+    author: "وزارة التربية والتعليم والتعليم الفني — جمهورية مصر العربية"
+    publisher: "وزارة التربية والتعليم والتعليم الفني — مصر"
+    subject: "الإعلام التربوي"
+    notes: ""
+
+    source_pdf: "curriculum_raw/الإعلام_التربوي_الصف_السادس_الابتدائي_ت1.pdf"
+    source_images: "curriculum_raw/الإعلام_التربوي_الصف_السادس_الابتدائي_ت1_images"
+    text_dir: "output/الإعلام_التربوي_الصف_السادس_الابتدائي_ت1"
+    index_dir: "index/الإعلام_التربوي_الصف_السادس_الابتدائي_ت1/norm"
+    toc: "meta/books/media_edu_p6_t1/toc.yaml"
+
+    pages_total: 63
+    pages_converted: 63
+    printed_page_offset: unknown
+    missing_pages: []
+    status: converted
+    status_note: "اكتمل التحويل: 63/63."
+
+  - id: religion_islamic_p6_t1
+    title: "التربية الدينية الإسلامية — الصف السادس الابتدائي — الفصل الدراسي الأول"
+    title_normalized: "التربيه الدينيه الاسلاميه الصف السادس الابتدايي الفصل الدراسي الاول"
+    author: "وزارة التربية والتعليم والتعليم الفني — جمهورية مصر العربية"
+    publisher: "وزارة التربية والتعليم والتعليم الفني — مصر"
+    subject: "التربية الدينية الإسلامية"
+    notes: ""
+
+    source_pdf: "curriculum_raw/التربية_الدينية_الإسلامية_الصف_السادس_الابتدائي_ت1.pdf"
+    source_images: "curriculum_raw/التربية_الدينية_الإسلامية_الصف_السادس_الابتدائي_ت1_images"
+    text_dir: "output/التربية_الدينية_الإسلامية_الصف_السادس_الابتدائي_ت1"
+    index_dir: "index/التربية_الدينية_الإسلامية_الصف_السادس_الابتدائي_ت1/norm"
+    toc: "meta/books/religion_islamic_p6_t1/toc.yaml"
+
+    pages_total: 98
+    pages_converted: 98
+    printed_page_offset: unknown
+    missing_pages: []
+    status: converted
+    status_note: "اكتمل التحويل: 98/98."
+
+  - id: science_p6_t1
+    title: "العلوم — الصف السادس الابتدائي — الفصل الدراسي الأول"
+    title_normalized: "العلوم الصف السادس الابتدايي الفصل الدراسي الاول"
+    author: "وزارة التربية والتعليم والتعليم الفني — جمهورية مصر العربية"
+    publisher: "وزارة التربية والتعليم والتعليم الفني — مصر"
+    subject: "العلوم"
+    notes: ""
+
+    source_pdf: "curriculum_raw/العلوم_الصف_السادس_الابتدائي_ت1.pdf"
+    source_images: "curriculum_raw/العلوم_الصف_السادس_الابتدائي_ت1_images"
+    text_dir: "output/العلوم_الصف_السادس_الابتدائي_ت1"
+    index_dir: "index/العلوم_الصف_السادس_الابتدائي_ت1/norm"
+    toc: "meta/books/science_p6_t1/toc.yaml"
+
+    pages_total: 98
+    pages_converted: 98
+    printed_page_offset: unknown
+    missing_pages: []
+    status: converted
+    status_note: "اكتمل التحويل: 98/98."
+
+  - id: studies_p6_t1
+    title: "الدراسات الاجتماعية — الصف السادس الابتدائي — الفصل الدراسي الأول"
+    title_normalized: "الدراسات الاجتماعيه الصف السادس الابتدايي الفصل الدراسي الاول"
+    author: "وزارة التربية والتعليم والتعليم الفني — جمهورية مصر العربية"
+    publisher: "وزارة التربية والتعليم والتعليم الفني — مصر"
+    subject: "الدراسات الاجتماعية"
+    notes: ""
+
+    source_pdf: "curriculum_raw/الدراسات_الاجتماعية_الصف_السادس_الابتدائي_ت1.pdf"
+    source_images: "curriculum_raw/الدراسات_الاجتماعية_الصف_السادس_الابتدائي_ت1_images"
+    text_dir: "output/الدراسات_الاجتماعية_الصف_السادس_الابتدائي_ت1"
+    index_dir: "index/الدراسات_الاجتماعية_الصف_السادس_الابتدائي_ت1/norm"
+    toc: "meta/books/studies_p6_t1/toc.yaml"
+
+    pages_total: 114
+    pages_converted: 114
+    printed_page_offset: unknown
+    missing_pages: []
+    status: converted
+    status_note: "اكتمل التحويل: 114/114."
+
+  - id: math_p6_t1
+    title: "الرياضيات — الصف السادس الابتدائي — الفصل الدراسي الأول"
+    title_normalized: "الرياضيات الصف السادس الابتدايي الفصل الدراسي الاول"
+    author: "وزارة التربية والتعليم والتعليم الفني — جمهورية مصر العربية"
+    publisher: "وزارة التربية والتعليم والتعليم الفني — مصر"
+    subject: "الرياضيات"
+    notes: ""
+
+    source_pdf: "curriculum_raw/الرياضيات_الصف_السادس_الابتدائي_ت1.pdf"
+    source_images: "curriculum_raw/الرياضيات_الصف_السادس_الابتدائي_ت1_images"
+    text_dir: "output/الرياضيات_الصف_السادس_الابتدائي_ت1"
+    index_dir: "index/الرياضيات_الصف_السادس_الابتدائي_ت1/norm"
+    toc: "meta/books/math_p6_t1/toc.yaml"
+
+    pages_total: 122
+    pages_converted: 122
+    printed_page_offset: unknown
+    missing_pages: []
+    status: converted
+    status_note: "اكتمل التحويل: 122/122 (الصفحة 4 فارغة أصلًا، والصفحة 22 صورة كاملة — فُرّغتا يدويًّا)."
+
+  - id: media_edu_prep1_t1
+    title: "الإعلام التربوي — الصف الأول الإعدادي — الفصل الدراسي الأول"
+    title_normalized: "الاعلام التربوي الصف الاول الاعدادي الفصل الدراسي الاول"
+    author: "وزارة التربية والتعليم والتعليم الفني — جمهورية مصر العربية"
+    publisher: "وزارة التربية والتعليم والتعليم الفني — مصر"
+    subject: "الإعلام التربوي"
+    notes: ""
+
+    source_pdf: "curriculum_raw/الإعلام_التربوي_الصف_الأول_الإعدادي_ت1.pdf"
+    source_images: "curriculum_raw/الإعلام_التربوي_الصف_الأول_الإعدادي_ت1_images"
+    text_dir: "output/الإعلام_التربوي_الصف_الأول_الإعدادي_ت1"
+    index_dir: "index/الإعلام_التربوي_الصف_الأول_الإعدادي_ت1/norm"
+    toc: "meta/books/media_edu_prep1_t1/toc.yaml"
+
+    pages_total: 58
+    pages_converted: 58
+    printed_page_offset: unknown
+    missing_pages: []
+    status: converted
+    status_note: "اكتمل التحويل: 58/58."
+
+  - id: drama_prep1_t1
+    title: "التربية المسرحية — الصف الأول الإعدادي — الفصل الدراسي الأول"
+    title_normalized: "التربيه المسرحيه الصف الاول الاعدادي الفصل الدراسي الاول"
+    author: "وزارة التربية والتعليم والتعليم الفني — جمهورية مصر العربية"
+    publisher: "وزارة التربية والتعليم والتعليم الفني — مصر"
+    subject: "التربية المسرحية"
+    notes: ""
+
+    source_pdf: "curriculum_raw/التربية_المسرحية_الصف_الأول_الإعدادي_ت1.pdf"
+    source_images: "curriculum_raw/التربية_المسرحية_الصف_الأول_الإعدادي_ت1_images"
+    text_dir: "output/التربية_المسرحية_الصف_الأول_الإعدادي_ت1"
+    index_dir: "index/التربية_المسرحية_الصف_الأول_الإعدادي_ت1/norm"
+    toc: "meta/books/drama_prep1_t1/toc.yaml"
+
+    pages_total: 49
+    pages_converted: 49
+    printed_page_offset: unknown
+    missing_pages: []
+    status: converted
+    status_note: "اكتمل التحويل: 49/49 (الصفحتان 12 و38 أُضيفتا بعد تصحيح العدّ)."
+
+  - id: religion_islamic_prep1_t1
+    title: "التربية الدينية الإسلامية — الصف الأول الإعدادي — الفصل الدراسي الأول"
+    title_normalized: "التربيه الدينيه الاسلاميه الصف الاول الاعدادي الفصل الدراسي الاول"
+    author: "وزارة التربية والتعليم والتعليم الفني — جمهورية مصر العربية"
+    publisher: "وزارة التربية والتعليم والتعليم الفني — مصر"
+    subject: "التربية الدينية الإسلامية"
+    notes: ""
+
+    source_pdf: "curriculum_raw/التربية_الدينية_الإسلامية_الصف_الأول_الإعدادي_ت1.pdf"
+    source_images: "curriculum_raw/التربية_الدينية_الإسلامية_الصف_الأول_الإعدادي_ت1_images"
+    text_dir: "output/التربية_الدينية_الإسلامية_الصف_الأول_الإعدادي_ت1"
+    index_dir: "index/التربية_الدينية_الإسلامية_الصف_الأول_الإعدادي_ت1/norm"
+    toc: "meta/books/religion_islamic_prep1_t1/toc.yaml"
+
+    pages_total: 96
+    pages_converted: 96
+    printed_page_offset: unknown
+    missing_pages: []
+    status: converted
+    status_note: "اكتمل التحويل: 96/96 (الصفحة 66 أُضيفت بعد تصحيح العدّ)."
+
+  - id: studies_prep1_t1
+    title: "الدراسات الاجتماعية — الصف الأول الإعدادي — الفصل الدراسي الأول"
+    title_normalized: "الدراسات الاجتماعيه الصف الاول الاعدادي الفصل الدراسي الاول"
+    author: "وزارة التربية والتعليم والتعليم الفني — جمهورية مصر العربية"
+    publisher: "وزارة التربية والتعليم والتعليم الفني — مصر"
+    subject: "الدراسات الاجتماعية"
+    notes: ""
+
+    source_pdf: "curriculum_raw/الدراسات_الاجتماعية_الصف_الأول_الإعدادي_ت1.pdf"
+    source_images: "curriculum_raw/الدراسات_الاجتماعية_الصف_الأول_الإعدادي_ت1_images"
+    text_dir: "output/الدراسات_الاجتماعية_الصف_الأول_الإعدادي_ت1"
+    index_dir: "index/الدراسات_الاجتماعية_الصف_الأول_الإعدادي_ت1/norm"
+    toc: "meta/books/studies_prep1_t1/toc.yaml"
+
+    pages_total: 110
+    pages_converted: 110
+    printed_page_offset: unknown
+    missing_pages: []
+    status: converted
+    status_note: "اكتمل التحويل: 110/110."
+
+  - id: math_prep1_t1
+    title: "الرياضيات — الصف الأول الإعدادي — الفصل الدراسي الأول"
+    title_normalized: "الرياضيات الصف الاول الاعدادي الفصل الدراسي الاول"
+    author: "وزارة التربية والتعليم والتعليم الفني — جمهورية مصر العربية"
+    publisher: "وزارة التربية والتعليم والتعليم الفني — مصر"
+    subject: "الرياضيات"
+    notes: ""
+
+    source_pdf: "curriculum_raw/الرياضيات_الصف_الأول_الإعدادي_ت1.pdf"
+    source_images: "curriculum_raw/الرياضيات_الصف_الأول_الإعدادي_ت1_images"
+    text_dir: "output/الرياضيات_الصف_الأول_الإعدادي_ت1"
+    index_dir: "index/الرياضيات_الصف_الأول_الإعدادي_ت1/norm"
+    toc: "meta/books/math_prep1_t1/toc.yaml"
+
+    pages_total: 121
+    pages_converted: 121
+    printed_page_offset: unknown
+    missing_pages: []
+    status: converted
+    status_note: "اكتمل التحويل: 121/121."
+
+  - id: science_prep1_t1
+    title: "العلوم — الصف الأول الإعدادي — الفصل الدراسي الأول"
+    title_normalized: "العلوم الصف الاول الاعدادي الفصل الدراسي الاول"
+    author: "وزارة التربية والتعليم والتعليم الفني — جمهورية مصر العربية"
+    publisher: "وزارة التربية والتعليم والتعليم الفني — مصر"
+    subject: "العلوم"
+    notes: ""
+
+    source_pdf: "curriculum_raw/العلوم_الصف_الأول_الإعدادي_ت1.pdf"
+    source_images: "curriculum_raw/العلوم_الصف_الأول_الإعدادي_ت1_images"
+    text_dir: "output/العلوم_الصف_الأول_الإعدادي_ت1"
+    index_dir: "index/العلوم_الصف_الأول_الإعدادي_ت1/norm"
+    toc: "meta/books/science_prep1_t1/toc.yaml"
+
+    pages_total: 102
+    pages_converted: 102
+    printed_page_offset: unknown
+    missing_pages: []
+    status: converted
+    status_note: "اكتمل التحويل: 102/102."
+
+  - id: library_skills_prep1_t1
+    title: "المكتبات ومهارات البحث — الصف الأول الإعدادي — الفصل الدراسي الأول"
+    title_normalized: "المكتبات ومهارات البحث الصف الاول الاعدادي الفصل الدراسي الاول"
+    author: "وزارة التربية والتعليم والتعليم الفني — جمهورية مصر العربية"
+    publisher: "وزارة التربية والتعليم والتعليم الفني — مصر"
+    subject: "المكتبات ومهارات البحث"
+    notes: ""
+
+    source_pdf: "curriculum_raw/المكتبات_ومهارات_البحث_الصف_الأول_الإعدادي_ت1.pdf"
+    source_images: "curriculum_raw/المكتبات_ومهارات_البحث_الصف_الأول_الإعدادي_ت1_images"
+    text_dir: "output/المكتبات_ومهارات_البحث_الصف_الأول_الإعدادي_ت1"
+    index_dir: "index/المكتبات_ومهارات_البحث_الصف_الأول_الإعدادي_ت1/norm"
+    toc: "meta/books/library_skills_prep1_t1/toc.yaml"
+
+    pages_total: 51
+    pages_converted: 51
+    printed_page_offset: unknown
+    missing_pages: []
+    status: converted
+    status_note: "اكتمل التحويل: 51/51."
+
+  - id: ict_prep1_t1
+    title: "تكنولوجيا المعلومات والاتصالات — الصف الأول الإعدادي — الفصل الدراسي الأول"
+    title_normalized: "تكنولوجيا المعلومات والاتصالات الصف الاول الاعدادي الفصل الدراسي الاول"
+    author: "وزارة التربية والتعليم والتعليم الفني — جمهورية مصر العربية"
+    publisher: "وزارة التربية والتعليم والتعليم الفني — مصر"
+    subject: "تكنولوجيا المعلومات والاتصالات"
+    notes: ""
+
+    source_pdf: "curriculum_raw/تكنولوجيا_المعلومات_والاتصالات_الصف_الأول_الإعدادي_ت1.pdf"
+    source_images: "curriculum_raw/تكنولوجيا_المعلومات_والاتصالات_الصف_الأول_الإعدادي_ت1_images"
+    text_dir: "output/تكنولوجيا_المعلومات_والاتصالات_الصف_الأول_الإعدادي_ت1"
+    index_dir: "index/تكنولوجيا_المعلومات_والاتصالات_الصف_الأول_الإعدادي_ت1/norm"
+    toc: "meta/books/ict_prep1_t1/toc.yaml"
+
+    pages_total: 109
+    pages_converted: 109
+    printed_page_offset: unknown
+    missing_pages: []
+    status: converted
+    status_note: "اكتمل التحويل: 109/109."
+
+  - id: industry_skills_prep1_t1
+    title: "مهارات الصناعة وريادة الأعمال — الصف الأول الإعدادي — الفصل الدراسي الأول"
+    title_normalized: "مهارات الصناعه ورياده الاعمال الصف الاول الاعدادي الفصل الدراسي الاول"
+    author: "وزارة التربية والتعليم والتعليم الفني — جمهورية مصر العربية"
+    publisher: "وزارة التربية والتعليم والتعليم الفني — مصر"
+    subject: "مهارات الصناعة وريادة الأعمال"
+    notes: ""
+
+    source_pdf: "curriculum_raw/مهارات_الصناعة_الصف_الأول_الإعدادي_ت1.pdf"
+    source_images: "curriculum_raw/مهارات_الصناعة_الصف_الأول_الإعدادي_ت1_images"
+    text_dir: "output/مهارات_الصناعة_الصف_الأول_الإعدادي_ت1"
+    index_dir: "index/مهارات_الصناعة_الصف_الأول_الإعدادي_ت1/norm"
+    toc: "meta/books/industry_skills_prep1_t1/toc.yaml"
+
+    pages_total: 60
+    pages_converted: 60
+    printed_page_offset: unknown
+    missing_pages: []
+    status: converted
+    status_note: "اكتمل التحويل: 60/60."
+
+  - id: drama_prep3_t1
+    title: "التربية المسرحية — الصف الثالث الإعدادي — الفصل الدراسي الأول"
+    title_normalized: "التربيه المسرحيه الصف الثالث الاعدادي الفصل الدراسي الاول"
+    author: "وزارة التربية والتعليم والتعليم الفني — جمهورية مصر العربية"
+    publisher: "وزارة التربية والتعليم والتعليم الفني — مصر"
+    subject: "التربية المسرحية"
+    notes: ""
+
+    source_pdf: "curriculum_raw/التربية_المسرحية_الصف_الثالث_الإعدادي_ت1.pdf"
+    source_images: "curriculum_raw/التربية_المسرحية_الصف_الثالث_الإعدادي_ت1_images"
+    text_dir: "output/التربية_المسرحية_الصف_الثالث_الإعدادي_ت1"
+    index_dir: "index/التربية_المسرحية_الصف_الثالث_الإعدادي_ت1/norm"
+    toc: "meta/books/drama_prep3_t1/toc.yaml"
+
+    pages_total: 75
+    pages_converted: 75
+    printed_page_offset: unknown
+    missing_pages: []
+    status: converted
+    status_note: "اكتمل التحويل: 75/75."
+
+  - id: library_skills_prep2_t1
+    title: "المكتبات ومهارات البحث — الصف الثاني الإعدادي — الفصل الدراسي الأول"
+    title_normalized: "المكتبات ومهارات البحث الصف الثاني الاعدادي الفصل الدراسي الاول"
+    author: "وزارة التربية والتعليم والتعليم الفني — جمهورية مصر العربية"
+    publisher: "وزارة التربية والتعليم والتعليم الفني — مصر"
+    subject: "المكتبات ومهارات البحث"
+    notes: ""
+
+    source_pdf: "curriculum_raw/المكتبات_ومهارات_البحث_الصف_الثاني_الإعدادي_ت1.pdf"
+    source_images: "curriculum_raw/المكتبات_ومهارات_البحث_الصف_الثاني_الإعدادي_ت1_images"
+    text_dir: "output/المكتبات_ومهارات_البحث_الصف_الثاني_الإعدادي_ت1"
+    index_dir: "index/المكتبات_ومهارات_البحث_الصف_الثاني_الإعدادي_ت1/norm"
+    toc: "meta/books/library_skills_prep2_t1/toc.yaml"
+
+    pages_total: 64
+    pages_converted: 64
+    printed_page_offset: unknown
+    missing_pages: []
+    status: converted
+    status_note: "اكتمل التحويل: 64/64."
+
+  - id: adwaa_ar_p5_t1
+    title: "الأضواء — اللغة العربية — الصف الخامس الابتدائي — الفصل الدراسي الأول"
+    title_normalized: "الاضواء اللغه العربيه الصف الخامس الابتدايي الفصل الدراسي الاول"
+    author: "نخبة من خبراء المناهج والتعليم"
+    publisher: "نهضة مصر — سلسلة الأضواء"
+    subject: "اللغة العربية: قراءة ونصوص ونحو وإملاء وتعبير"
+    notes: "كتاب خارجي (مساعد تعليمي) لا مقرر وزاري؛ يُذكر بوصفه مصدرًا مساعدًا ولا يُستشهد به بدل المقرر."
+
+    source_pdf: "curriculum_raw/الأضواء_اللغة_العربية_الصف_الخامس_الابتدائي_ت1.pdf"
+    source_images: "curriculum_raw/الأضواء_اللغة_العربية_الصف_الخامس_الابتدائي_ت1_images"
+    text_dir: "output/الأضواء_اللغة_العربية_الصف_الخامس_الابتدائي_ت1"
+    index_dir: "index/الأضواء_اللغة_العربية_الصف_الخامس_الابتدائي_ت1/norm"
+    toc: "meta/books/adwaa_ar_p5_t1/toc.yaml"
+
+    pages_total: 468
+    pages_converted: 468
+    missing_pages: []
+    status: converted
+    status_note: "اكتمل التحويل: 468/468."
+
+# المصادر الخارجية (غير الكتب المحلية). تُستدعى كطبقة ثالثة بعد المنهج
+# والمراجع المحلية — لا تُغني عنهما ولا تعارض المقرر.
+external_sources:
+  - id: shamela
+    type: mcp
+    name: "المكتبة الشاملة"
+    url: "https://mcp.shamela.ws"
+    connection: "dsh-home/profiles/web/cordis.patch.yml (plugin mcp-shamela)"
+    tools: [shamela_find, shamela_find_scoped, shamela_open, shamela_open_many]
+    role: fallback
+    scope: "مرجع تراثي: المعاجم، شروح البلاغة والنحو، التفسير، الحديث، السيرة، الفقه…"
+    use_when:
+      - "صفر نتائج محلية بعد التطبيع"
+      - "خلاف أو أقوال متعددة"
+      - "شاهد قرآني/حديثي/شعري موثّق"
+      - "كتاب أو مؤلف غير موجود محليًّا"
+      - "صفحة محلية ناقصة (مثل page_005 في البلاغة)"
+    citation: "رابط citation.markdown الذي يعيده الخادم"
+    notes: "قراءة فقط، بلا حساب؛ يُفتح المصدر ويُتحقق من السياق قبل الاعتماد."
+
+# ملاحظة بنيوية: الملفات المصدرية موجودة حاليًّا في curriculum_raw/ بجذر
+# مساحة العمل، لا في references/curriculum_raw/ كما تقرّر سياسة AGENTS.md.
+# لم يُنقل شيء؛ يُترك القرار للمستخدم.

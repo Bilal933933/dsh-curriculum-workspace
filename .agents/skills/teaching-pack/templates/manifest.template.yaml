@@ -1,0 +1,24 @@
+# قالب البيان — انسخه إلى مجلد الدرس باسم manifest.yaml واملأه
+
+lesson: "{{اسم الدرس كما في toc}}"
+grade: "{{الصف}}"
+subject: "{{المادة}}"
+term: "{{الترم}}"
+unit: "{{الوحدة}}"
+book: "{{id الكتاب من catalog.yaml}}"
+
+sources:
+  - book: "{{id الكتاب}}"
+    pages_file: []        # أرقام ملفات page_XXX.md داخل الدرس
+    pages_printed: ""     # أرقام مطبوعة إن كان printed_page_offset رقمًا، وإلا: "غير معروف (offset: unknown)"
+  # - book: "nahw"
+  #   pages_file: []
+  #   pages_printed: []
+  #   layer: "محلي — مرجع"
+  # - book: "shamela"
+  #   citation: ""        # رابط citation.markdown
+  #   layer: "خارجي — ليس من المقرر"
+
+range_note: ""            # يُملأ فقط إن استُخدم نطاق الوحدة كاملة
+status: "مسوّدة"          # مسوّدة | مراجَع
+created: "{{YYYY-MM-DD}}"

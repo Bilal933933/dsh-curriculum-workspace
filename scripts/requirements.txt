@@ -1,0 +1,9 @@
+# متطلبات طبقة توليد المستندات (scripts/documents/)
+# التثبيت داخل البيئة الافتراضية فقط:
+#   python -m venv scripts/.venv
+#   scripts\.venv\Scripts\python.exe -m pip install -r scripts/requirements.txt
+
+markdown==3.11.2
+
+# للعرض والفحص البصري فقط (scripts/documents/preview.py) — لا تدخل في توليد PDF
+pypdfium2==4.30.0

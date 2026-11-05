@@ -1,0 +1,250 @@
+/* ============================================================
+   base.css — الأساس الطباعي والهوية البصرية لكل مستند
+   يعتمد متغيّرات في :root، فيكفي تعديلها لتغيير الهوية كلها.
+   تُدمج داخل <style> عند البناء، فلا حاجة لمسار خارجي عند الطبع.
+   ============================================================ */
+
+:root {
+  /* الهوية */
+  --ink:        #18222c;   /* نص المتن */
+  --navy:       #0e2740;   /* العناوين الرئيسية */
+  --navy-mid:   #1c4a72;   /* العناوين الفرعية */
+  --gold:       #8a6414;   /* لمسة تمييز */
+  --rule:       #d5dde5;   /* خطوط فاصلة */
+  --soft:       #f3f6f9;   /* خلفية خفيفة */
+  --soft-2:     #eaf0f5;
+  --muted:      #5d6b78;
+
+  /* المقاسات */
+  --body-size:  12.6pt;
+  --body-lh:    1.95;
+}
+
+@page {
+  size: {{PAGE_SIZE}};
+  margin: 22mm 18mm 20mm 18mm;
+}
+
+* { box-sizing: border-box; }
+
+html, body { margin: 0; padding: 0; }
+
+body {
+  font-family: "Segoe UI", "Traditional Arabic", "Arial", sans-serif;
+  font-size: var(--body-size);
+  line-height: var(--body-lh);
+  color: var(--ink);
+  text-align: justify;
+  text-justify: inter-word;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ---------- النص ---------- */
+p {
+  margin: 0 0 3.4mm;
+  orphans: 2;
+  widows: 2;
+}
+
+strong { color: #0b1520; font-weight: 700; }
+
+em { color: var(--navy-mid); font-style: normal; }
+
+a { color: var(--navy-mid); text-decoration: none; }
+
+hr {
+  border: 0;
+  height: 1px;
+  background: var(--rule);
+  margin: 8mm 0;
+}
+
+/* ---------- العناوين ---------- */
+h1, h2, h3, h4 {
+  line-height: 1.45;
+  page-break-after: avoid;
+  color: var(--navy);
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 14.2pt;
+  color: var(--navy-mid);
+  margin: 7mm 0 2.5mm;
+}
+
+h4 {
+  font-size: 13pt;
+  color: var(--ink);
+  margin: 5mm 0 2mm;
+}
+
+/* ---------- القوائم ---------- */
+ul, ol {
+  margin: 0 0 3.8mm;
+  padding-right: 7mm;
+}
+
+li { margin: 1.2mm 0; }
+
+li::marker { color: var(--navy-mid); }
+
+/* ---------- الجداول ---------- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 4mm 0 6mm;
+  font-size: 11.4pt;
+  line-height: 1.65;
+  page-break-inside: avoid;
+}
+
+thead { display: table-header-group; }
+
+th, td {
+  border: 1px solid var(--rule);
+  padding: 2.4mm 2.6mm;
+  vertical-align: top;
+  text-align: right;
+}
+
+th {
+  background: var(--navy);
+  color: #fff;
+  font-weight: 700;
+  border-color: var(--navy);
+}
+
+tbody tr:nth-child(even) { background: var(--soft); }
+
+tr { page-break-inside: avoid; }
+
+/* ---------- الاقتباس ---------- */
+blockquote {
+  margin: 4mm 0 5mm;
+  padding: 3.2mm 5mm;
+  background: var(--soft);
+  border-right: 3px solid var(--navy-mid);
+  color: #26313c;
+  font-size: 12pt;
+}
+
+blockquote p:last-child { margin-bottom: 0; }
+
+/* ---------- الصناديق الثلاثة ---------- */
+.callout {
+  margin: 4.5mm 0 5mm;
+  padding: 3.2mm 4.5mm 3.2mm 4.5mm;
+  border-radius: 2px;
+  border-right: 3px solid var(--navy-mid);
+  background: var(--soft);
+  page-break-inside: avoid;
+  font-size: 11.8pt;
+  line-height: 1.8;
+}
+
+.callout p { margin-bottom: 2mm; }
+.callout p:last-child { margin-bottom: 0; }
+
+.callout__label {
+  display: inline-block;
+  font-weight: 700;
+  margin-left: 2mm;
+  padding: 0 2mm;
+  border-radius: 2px;
+  font-size: 10.5pt;
+  line-height: 1.9;
+}
+
+.callout--farq {
+  background: #fbf6ea;
+  border-right-color: var(--gold);
+}
+.callout--farq .callout__label { background: var(--gold); color: #fff; }
+
+.callout--tanbih {
+  background: #fbefee;
+  border-right-color: #9c3b32;
+}
+.callout--tanbih .callout__label { background: #9c3b32; color: #fff; }
+
+.callout--mulahaza {
+  background: #eef4fa;
+  border-right-color: var(--navy-mid);
+}
+.callout--mulahaza .callout__label { background: var(--navy-mid); color: #fff; }
+
+/* ---------- سطر المصادر ---------- */
+p.sources {
+  font-size: 10.4pt;
+  line-height: 1.8;
+  color: var(--muted);
+  background: var(--soft-2);
+  border-right: 2px solid var(--rule);
+  padding: 2mm 3mm;
+  margin: 3mm 0 6mm;
+  text-align: right;
+  page-break-inside: avoid;
+}
+
+p.sources strong { color: var(--navy-mid); }
+
+p.sources a {
+  color: var(--navy-mid);
+  border-bottom: 1px dotted var(--rule);
+}
+
+/* ---------- الرموز ---------- */
+code {
+  font-family: Consolas, "Courier New", monospace;
+  font-size: 10.6pt;
+  direction: ltr;
+  unicode-bidi: embed;
+  background: var(--soft);
+  padding: 0 1mm;
+  border-radius: 2px;
+}
+
+/* ============================================================
+   نمط الهاتف — يُفعَّل تلقائيًّا على الشاشات الصغيرة (≤ 640px)
+   الغرض: قراءة مريحة فقط؛ قواعد الطبع (@page) لا تتأثر.
+   ============================================================ */
+@media screen and (max-width: 640px) {
+  body {
+    font-size: 18px;
+    line-height: 1.95;
+    text-align: right;          /* الضبط من الطرفين يُحدِث فجوات في العربية على الجوال */
+    padding: 0 16px 40px;
+  }
+
+  .cover {
+    height: auto;
+    padding: 44px 0 28px;
+    page-break-after: auto;
+  }
+  .cover h1 { font-size: 26px; }
+  .cover .subtitle { font-size: 16px; margin-bottom: 10mm; }
+  .cover .kicker { font-size: 13px; margin-bottom: 8mm; }
+  .cover .meta { font-size: 15px; line-height: 2; }
+
+  .toc-page { page-break-after: auto; padding-bottom: 24px; }
+  .toc-page h2 { font-size: 22px; margin-bottom: 6mm; }
+  .toc > ul > li { font-size: 17px; margin: 2.4mm 0; }
+  .toc ul ul { margin-right: 5mm; }
+  .toc ul ul li { font-size: 15.5px; }
+
+  .content h1 { font-size: 24px; }
+  .content h2 { font-size: 20px; margin-top: 10mm; }
+  .content h3 { font-size: 18px; }
+  .content h4 { font-size: 17px; }
+
+  table { display: block; overflow-x: auto; white-space: nowrap; font-size: 15px; }
+  th, td { padding: 8px 10px; }
+
+  blockquote { padding: 10px 14px; margin: 6mm 0; font-size: 16.5px; }
+
+  .callout { font-size: 16.5px; padding: 12px 14px; }
+  p.sources { font-size: 14.5px; }
+
+  ul, ol { padding-right: 6mm; }
+}

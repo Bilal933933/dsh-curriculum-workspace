@@ -1,0 +1,22 @@
+book: demo_book
+title: "كتاب عيّنة (بيانات مصطنعة)"
+pages_total: 2
+
+topics:
+  - title: "الوحدة الأولى: الجملة"
+    pages: "1-2"
+    children:
+      - title: "الدرس الأول: الجملة الاسمية"
+        pages: "1"
+        children:
+          - title: "المبتدأ والخبر"
+            pages: "1"
+          - title: "تدريب"
+            pages: "1"
+      - title: "الدرس الثاني: الجملة الفعلية"
+        pages: "2"
+        children:
+          - title: "الفعل والفاعل"
+            pages: "2"
+          - title: "المفعول به"
+            pages: "2"

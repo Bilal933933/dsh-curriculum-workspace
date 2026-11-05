@@ -1,0 +1,95 @@
+/* ============================================================
+   report.css — أنماط خاصة بمستند «التقرير»: الغلاف، الفهرس، الأقسام
+   ============================================================ */
+
+/* ---------- الغلاف ---------- */
+.cover {
+  height: 247mm;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  page-break-after: always;
+}
+
+.cover .kicker {
+  font-size: 11pt;
+  color: #6b6b6b;
+  margin-bottom: 12mm;
+  letter-spacing: .5px;
+}
+
+.cover h1 {
+  font-size: 30pt;
+  margin: 0 0 6mm;
+  line-height: 1.45;
+  color: #0f2b46;
+}
+
+.cover .subtitle {
+  font-size: 14pt;
+  color: #4a4a4a;
+  margin-bottom: 16mm;
+  line-height: 1.7;
+}
+
+.cover .rule {
+  width: 60mm;
+  height: 2px;
+  background: #0f2b46;
+  margin: 0 auto 16mm;
+}
+
+.cover .meta {
+  font-size: 12pt;
+  color: #333;
+  line-height: 2.2;
+}
+
+/* ---------- الفهرس ---------- */
+.toc-page { page-break-after: always; }
+
+.toc-page h2 {
+  font-size: 20pt;
+  color: #0f2b46;
+  margin: 0 0 9mm;
+  padding: 0;
+  border: 0;
+}
+
+.toc > ul { list-style: none; padding: 0; margin: 0; }
+.toc > ul > li { margin: 3.4mm 0; font-size: 13pt; font-weight: 600; }
+.toc ul ul { margin: 1.6mm 8mm 1.6mm 0; list-style: none; }
+.toc ul ul li { font-weight: 400; font-size: 12pt; margin: 1.3mm 0; }
+.toc a { color: #1b1b1b; }
+
+/* ---------- المحتوى ---------- */
+.content h1 {
+  font-size: 22pt;
+  color: #0f2b46;
+  margin: 0 0 7mm;
+}
+
+.content h2 {
+  font-size: 17pt;
+  color: #0f2b46;
+  margin: 0 0 5mm;
+  padding-bottom: 2mm;
+  border-bottom: 2px solid #0f2b46;
+  page-break-before: always;
+}
+
+/* أول قسم يكمل بعد العنوان بلا صفحة بيضاء */
+.content h2:first-of-type { page-break-before: avoid; }
+
+.content h3 {
+  font-size: 14.5pt;
+  color: #23456a;
+  margin: 7mm 0 3mm;
+}
+
+.content h4 {
+  font-size: 13pt;
+  color: #333;
+  margin: 5mm 0 2mm;
+}

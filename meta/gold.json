@@ -1,0 +1,459 @@
+{
+  "version": 1,
+  "created": "2026-11-05",
+  "method": "موضوعات من toc.yaml، مشروط بظهور كلمتين من العنوان على الصفحة المعلنة (نص norm)",
+  "status": "seed",
+  "count": 50,
+  "items": [
+    {
+      "book": "balagha",
+      "query": "الخبر والإنشاء",
+      "expected_page": 22,
+      "verified_tokens": 2,
+      "of": 2,
+      "id": "g001",
+      "question": "أين يُبحث عن «الخبر والإنشاء» في هذا الكتاب؟"
+    },
+    {
+      "book": "balagha",
+      "query": "الوصل والفصل",
+      "expected_page": 147,
+      "verified_tokens": 2,
+      "of": 2,
+      "id": "g002",
+      "question": "أين يُبحث عن «الوصل والفصل» في هذا الكتاب؟"
+    },
+    {
+      "book": "balagha",
+      "query": "التشبيه التمثيلي",
+      "expected_page": 220,
+      "verified_tokens": 2,
+      "of": 2,
+      "id": "g003",
+      "question": "أين يُبحث عن «التشبيه التمثيلي» في هذا الكتاب؟"
+    },
+    {
+      "book": "balagha",
+      "query": "التشبيه المقلوب",
+      "expected_page": 237,
+      "verified_tokens": 2,
+      "of": 2,
+      "id": "g004",
+      "question": "أين يُبحث عن «التشبيه المقلوب» في هذا الكتاب؟"
+    },
+    {
+      "book": "balagha",
+      "query": "المجاز اللغوي",
+      "expected_page": 253,
+      "verified_tokens": 2,
+      "of": 2,
+      "id": "g005",
+      "question": "أين يُبحث عن «المجاز اللغوي» في هذا الكتاب؟"
+    },
+    {
+      "book": "balagha",
+      "query": "المجاز المرسل",
+      "expected_page": 255,
+      "verified_tokens": 2,
+      "of": 2,
+      "id": "g006",
+      "question": "أين يُبحث عن «المجاز المرسل» في هذا الكتاب؟"
+    },
+    {
+      "book": "balagha",
+      "query": "الاستعارة التمثيلية",
+      "expected_page": 305,
+      "verified_tokens": 2,
+      "of": 2,
+      "id": "g007",
+      "question": "أين يُبحث عن «الاستعارة التمثيلية» في هذا الكتاب؟"
+    },
+    {
+      "book": "balagha",
+      "query": "أقسام الاستعارة بحسب اللفظ المستعار",
+      "expected_page": 311,
+      "verified_tokens": 5,
+      "of": 5,
+      "id": "g008",
+      "question": "أين يُبحث عن «أقسام الاستعارة بحسب اللفظ المستعار» في هذا الكتاب؟"
+    },
+    {
+      "book": "balagha",
+      "query": "تقسيم الاستعارة بحسب الملائم",
+      "expected_page": 316,
+      "verified_tokens": 4,
+      "of": 4,
+      "id": "g009",
+      "question": "أين يُبحث عن «تقسيم الاستعارة بحسب الملائم» في هذا الكتاب؟"
+    },
+    {
+      "book": "balagha",
+      "query": "تقسيم الاستعارة باعتبار الطرفين والجامع",
+      "expected_page": 325,
+      "verified_tokens": 5,
+      "of": 5,
+      "id": "g010",
+      "question": "أين يُبحث عن «تقسيم الاستعارة باعتبار الطرفين والجامع» في هذا الكتاب؟"
+    },
+    {
+      "book": "balagha",
+      "query": "الفرق بين التشبيه التمثيلي والاستعارة التمثيلية",
+      "expected_page": 329,
+      "verified_tokens": 6,
+      "of": 6,
+      "id": "g011",
+      "question": "أين يُبحث عن «الفرق بين التشبيه التمثيلي والاستعارة التمثيلية» في هذا الكتاب؟"
+    },
+    {
+      "book": "balagha",
+      "query": "الفرق بين الطباق والمقابلة",
+      "expected_page": 389,
+      "verified_tokens": 4,
+      "of": 4,
+      "id": "g012",
+      "question": "أين يُبحث عن «الفرق بين الطباق والمقابلة» في هذا الكتاب؟"
+    },
+    {
+      "book": "balagha",
+      "query": "رد العجز على الصدر",
+      "expected_page": 455,
+      "verified_tokens": 3,
+      "of": 3,
+      "id": "g013",
+      "question": "أين يُبحث عن «رد العجز على الصدر» في هذا الكتاب؟"
+    },
+    {
+      "book": "balagha",
+      "query": "الصورة التعبيرية",
+      "expected_page": 487,
+      "verified_tokens": 2,
+      "of": 2,
+      "id": "g014",
+      "question": "أين يُبحث عن «الصورة التعبيرية» في هذا الكتاب؟"
+    },
+    {
+      "book": "balagha",
+      "query": "الوحدة الفنية",
+      "expected_page": 496,
+      "verified_tokens": 2,
+      "of": 2,
+      "id": "g015",
+      "question": "أين يُبحث عن «الوحدة الفنية» في هذا الكتاب؟"
+    },
+    {
+      "book": "erab_muyassar",
+      "query": "تحديد أبعاد الجملة",
+      "expected_page": 33,
+      "verified_tokens": 3,
+      "of": 3,
+      "id": "g016",
+      "question": "أين يُبحث عن «تحديد أبعاد الجملة» في هذا الكتاب؟"
+    },
+    {
+      "book": "erab_muyassar",
+      "query": "أركان الجملة :",
+      "expected_page": 38,
+      "verified_tokens": 2,
+      "of": 2,
+      "id": "g017",
+      "question": "أين يُبحث عن «أركان الجملة :» في هذا الكتاب؟"
+    },
+    {
+      "book": "erab_muyassar",
+      "query": "مكونات الجملة",
+      "expected_page": 47,
+      "verified_tokens": 2,
+      "of": 2,
+      "id": "g018",
+      "question": "أين يُبحث عن «مكونات الجملة» في هذا الكتاب؟"
+    },
+    {
+      "book": "erab_muyassar",
+      "query": "الْمُرَكَّبُ الْفِعْلِيُّ : (م ٠ ف)",
+      "expected_page": 50,
+      "verified_tokens": 2,
+      "of": 2,
+      "id": "g019",
+      "question": "أين يُبحث عن «الْمُرَكَّبُ الْفِعْلِيُّ : (م ٠ ف)» في هذا الكتاب؟"
+    },
+    {
+      "book": "erab_muyassar",
+      "query": "المركب الموصولي :",
+      "expected_page": 109,
+      "verified_tokens": 2,
+      "of": 2,
+      "id": "g020",
+      "question": "أين يُبحث عن «المركب الموصولي :» في هذا الكتاب؟"
+    },
+    {
+      "book": "erab_muyassar",
+      "query": "المركّب الظرفيّ :",
+      "expected_page": 127,
+      "verified_tokens": 2,
+      "of": 2,
+      "id": "g021",
+      "question": "أين يُبحث عن «المركّب الظرفيّ :» في هذا الكتاب؟"
+    },
+    {
+      "book": "erab_muyassar",
+      "query": "مركب الجار والمجرور :",
+      "expected_page": 135,
+      "verified_tokens": 3,
+      "of": 3,
+      "id": "g022",
+      "question": "أين يُبحث عن «مركب الجار والمجرور :» في هذا الكتاب؟"
+    },
+    {
+      "book": "erab_muyassar",
+      "query": "أنواع الجمل",
+      "expected_page": 140,
+      "verified_tokens": 2,
+      "of": 2,
+      "id": "g023",
+      "question": "أين يُبحث عن «أنواع الجمل» في هذا الكتاب؟"
+    },
+    {
+      "book": "erab_muyassar",
+      "query": "الجملة المتشابكة:",
+      "expected_page": 157,
+      "verified_tokens": 2,
+      "of": 2,
+      "id": "g024",
+      "question": "أين يُبحث عن «الجملة المتشابكة:» في هذا الكتاب؟"
+    },
+    {
+      "book": "erab_muyassar",
+      "query": "الإعراب أو تحليل الجملة",
+      "expected_page": 160,
+      "verified_tokens": 3,
+      "of": 3,
+      "id": "g025",
+      "question": "أين يُبحث عن «الإعراب أو تحليل الجملة» في هذا الكتاب؟"
+    },
+    {
+      "book": "nahw",
+      "query": "الكلمة وأقسامها",
+      "expected_page": 11,
+      "verified_tokens": 2,
+      "of": 2,
+      "id": "g026",
+      "question": "أين يُبحث عن «الكلمة وأقسامها» في هذا الكتاب؟"
+    },
+    {
+      "book": "nahw",
+      "query": "علامات الاسم",
+      "expected_page": 13,
+      "verified_tokens": 2,
+      "of": 2,
+      "id": "g027",
+      "question": "أين يُبحث عن «علامات الاسم» في هذا الكتاب؟"
+    },
+    {
+      "book": "nahw",
+      "query": "جمع المذكر السالم",
+      "expected_page": 21,
+      "verified_tokens": 3,
+      "of": 3,
+      "id": "g028",
+      "question": "أين يُبحث عن «جمع المذكر السالم» في هذا الكتاب؟"
+    },
+    {
+      "book": "nahw",
+      "query": "الاسم المعتل",
+      "expected_page": 43,
+      "verified_tokens": 2,
+      "of": 2,
+      "id": "g029",
+      "question": "أين يُبحث عن «الاسم المعتل» في هذا الكتاب؟"
+    },
+    {
+      "book": "nahw",
+      "query": "الممنوع من الصرف",
+      "expected_page": 48,
+      "verified_tokens": 2,
+      "of": 2,
+      "id": "g030",
+      "question": "أين يُبحث عن «الممنوع من الصرف» في هذا الكتاب؟"
+    },
+    {
+      "book": "nahw",
+      "query": "الإعراب والبناء",
+      "expected_page": 62,
+      "verified_tokens": 2,
+      "of": 2,
+      "id": "g031",
+      "question": "أين يُبحث عن «الإعراب والبناء» في هذا الكتاب؟"
+    },
+    {
+      "book": "nahw",
+      "query": "أسماء الاستفهام",
+      "expected_page": 82,
+      "verified_tokens": 2,
+      "of": 2,
+      "id": "g032",
+      "question": "أين يُبحث عن «أسماء الاستفهام» في هذا الكتاب؟"
+    },
+    {
+      "book": "nahw",
+      "query": "المبني من الأفعال",
+      "expected_page": 98,
+      "verified_tokens": 2,
+      "of": 2,
+      "id": "g033",
+      "question": "أين يُبحث عن «المبني من الأفعال» في هذا الكتاب؟"
+    },
+    {
+      "book": "nahw",
+      "query": "رفع الفعل المضارع",
+      "expected_page": 121,
+      "verified_tokens": 3,
+      "of": 3,
+      "id": "g034",
+      "question": "أين يُبحث عن «رفع الفعل المضارع» في هذا الكتاب؟"
+    },
+    {
+      "book": "nahw",
+      "query": "نصب الفعل المضارع",
+      "expected_page": 123,
+      "verified_tokens": 3,
+      "of": 3,
+      "id": "g035",
+      "question": "أين يُبحث عن «نصب الفعل المضارع» في هذا الكتاب؟"
+    },
+    {
+      "book": "nahw",
+      "query": "لا النافية للجنس",
+      "expected_page": 238,
+      "verified_tokens": 2,
+      "of": 2,
+      "id": "g036",
+      "question": "أين يُبحث عن «لا النافية للجنس» في هذا الكتاب؟"
+    },
+    {
+      "book": "nahw",
+      "query": "المفعول المطلق",
+      "expected_page": 267,
+      "verified_tokens": 2,
+      "of": 2,
+      "id": "g037",
+      "question": "أين يُبحث عن «المفعول المطلق» في هذا الكتاب؟"
+    },
+    {
+      "book": "sarf",
+      "query": "أبواب الفعل الثلاثي (فَعَلَ = يَفْعَلُ)",
+      "expected_page": 51,
+      "verified_tokens": 2,
+      "of": 5,
+      "id": "g038",
+      "question": "أين يُبحث عن «أبواب الفعل الثلاثي (فَعَلَ = يَفْعَلُ)» في هذا الكتاب؟"
+    },
+    {
+      "book": "sarf",
+      "query": "أوزان الثلاثي المزيد",
+      "expected_page": 64,
+      "verified_tokens": 3,
+      "of": 3,
+      "id": "g039",
+      "question": "أين يُبحث عن «أوزان الثلاثي المزيد» في هذا الكتاب؟"
+    },
+    {
+      "book": "sarf",
+      "query": "أوزان الرباعي المزيد",
+      "expected_page": 66,
+      "verified_tokens": 3,
+      "of": 3,
+      "id": "g040",
+      "question": "أين يُبحث عن «أوزان الرباعي المزيد» في هذا الكتاب؟"
+    },
+    {
+      "book": "sarf",
+      "query": "زمن الفعل",
+      "expected_page": 81,
+      "verified_tokens": 2,
+      "of": 2,
+      "id": "g041",
+      "question": "أين يُبحث عن «زمن الفعل» في هذا الكتاب؟"
+    },
+    {
+      "book": "sarf",
+      "query": "صياغة المضارع من الماضي",
+      "expected_page": 106,
+      "verified_tokens": 3,
+      "of": 3,
+      "id": "g042",
+      "question": "أين يُبحث عن «صياغة المضارع من الماضي» في هذا الكتاب؟"
+    },
+    {
+      "book": "sarf",
+      "query": "توكيد الفعل",
+      "expected_page": 203,
+      "verified_tokens": 2,
+      "of": 2,
+      "id": "g043",
+      "question": "أين يُبحث عن «توكيد الفعل» في هذا الكتاب؟"
+    },
+    {
+      "book": "sarf",
+      "query": "المذكر والمؤنث",
+      "expected_page": 235,
+      "verified_tokens": 2,
+      "of": 2,
+      "id": "g044",
+      "question": "أين يُبحث عن «المذكر والمؤنث» في هذا الكتاب؟"
+    },
+    {
+      "book": "sarf",
+      "query": "جمع المؤنث السالم",
+      "expected_page": 241,
+      "verified_tokens": 3,
+      "of": 3,
+      "id": "g045",
+      "question": "أين يُبحث عن «جمع المؤنث السالم» في هذا الكتاب؟"
+    },
+    {
+      "book": "sarf",
+      "query": "صيغ المبالغة",
+      "expected_page": 377,
+      "verified_tokens": 2,
+      "of": 2,
+      "id": "g046",
+      "question": "أين يُبحث عن «صيغ المبالغة» في هذا الكتاب؟"
+    },
+    {
+      "book": "sarf",
+      "query": "الفرق بين اسم الفاعل وصيغة المبالغة",
+      "expected_page": 381,
+      "verified_tokens": 6,
+      "of": 6,
+      "id": "g047",
+      "question": "أين يُبحث عن «الفرق بين اسم الفاعل وصيغة المبالغة» في هذا الكتاب؟"
+    },
+    {
+      "book": "sarf",
+      "query": "اسم المفعول",
+      "expected_page": 398,
+      "verified_tokens": 2,
+      "of": 2,
+      "id": "g048",
+      "question": "أين يُبحث عن «اسم المفعول» في هذا الكتاب؟"
+    },
+    {
+      "book": "sarf",
+      "query": "اسم الآلة",
+      "expected_page": 442,
+      "verified_tokens": 2,
+      "of": 2,
+      "id": "g049",
+      "question": "أين يُبحث عن «اسم الآلة» في هذا الكتاب؟"
+    },
+    {
+      "book": "sarf",
+      "query": "قلب الواو والياء ألفًا",
+      "expected_page": 539,
+      "verified_tokens": 4,
+      "of": 4,
+      "id": "g050",
+      "question": "أين يُبحث عن «قلب الواو والياء ألفًا» في هذا الكتاب؟"
+    }
+  ]
+}

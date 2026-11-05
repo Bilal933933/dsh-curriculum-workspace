@@ -1,0 +1,14 @@
+# مدخل عيّنة — لا يُدمج في السجل الحقيقي.
+# الحقول مطابقة لعقد meta/catalog.yaml.
+- id: demo_book
+  title: "كتاب عيّنة (بيانات مصطنعة)"
+  subject: "اللغة العربية"
+  grade: "عينة"
+  term: 1
+  text_dir: "demo_book"
+  index_dir: "demo_book"
+  pdf: null
+  pages_total: 2
+  pages_converted: 2
+  stage: "fixture"
+  notes: "للاختبار فقط — لا يُستشهد به ولا يُعتمد في toc_baseline"

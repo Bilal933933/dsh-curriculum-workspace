@@ -1,0 +1,294 @@
+{
+  "agriculture_skills_p4_t1": {
+    "chapters": 4,
+    "topics": 30
+  },
+  "agriculture_skills_p5_t1": {
+    "chapters": 4,
+    "topics": 31
+  },
+  "agriculture_skills_p6_t1": {
+    "chapters": 6,
+    "topics": 43
+  },
+  "agriculture_skills_prep2_t1": {
+    "chapters": 3,
+    "topics": 41
+  },
+  "arabic_p1_t1": {
+    "chapters": 5,
+    "topics": 63
+  },
+  "arabic_p2_t1": {
+    "chapters": 4,
+    "topics": 50
+  },
+  "arabic_p3_t1": {
+    "chapters": 4,
+    "topics": 50
+  },
+  "arabic_p4_t1": {
+    "chapters": 4,
+    "topics": 50
+  },
+  "arabic_p5_t1": {
+    "chapters": 4,
+    "topics": 50
+  },
+  "arabic_p6_t1": {
+    "chapters": 4,
+    "topics": 50
+  },
+  "arabic_prep1_t1": {
+    "chapters": 4,
+    "topics": 50
+  },
+  "arabic_prep2_t1": {
+    "chapters": 4,
+    "topics": 50
+  },
+  "arabic_prep3_t1": {
+    "chapters": 4,
+    "topics": 50
+  },
+  "arabic_sec1_t1": {
+    "chapters": 7,
+    "topics": 31
+  },
+  "arabic_sec2_t1": {
+    "chapters": 5,
+    "topics": 39
+  },
+  "arabic_sec3_t1": {
+    "chapters": 6,
+    "topics": 39
+  },
+  "balagha": {
+    "chapters": 6,
+    "topics": 59
+  },
+  "drama_p4_t1": {
+    "chapters": 13,
+    "topics": 4
+  },
+  "drama_p5_t1": {
+    "chapters": 14,
+    "topics": 4
+  },
+  "drama_prep1_t1": {
+    "chapters": 1,
+    "topics": 63
+  },
+  "drama_prep3_t1": {
+    "chapters": 1,
+    "topics": 64
+  },
+  "erab_muyassar": {
+    "chapters": 5,
+    "topics": 27
+  },
+  "family_skills_p4_t1": {
+    "chapters": 4,
+    "topics": 23
+  },
+  "family_skills_p5_t1": {
+    "chapters": 3,
+    "topics": 24
+  },
+  "family_skills_p6_t1": {
+    "chapters": 3,
+    "topics": 22
+  },
+  "ict_p4_t1": {
+    "chapters": 3,
+    "topics": 30
+  },
+  "ict_p5_t1": {
+    "chapters": 3,
+    "topics": 26
+  },
+  "ict_p6_t1": {
+    "chapters": 3,
+    "topics": 33
+  },
+  "ict_prep1_t1": {
+    "chapters": 1,
+    "topics": 103
+  },
+  "ict_prep2_t1": {
+    "chapters": 3,
+    "topics": 13
+  },
+  "ict_prep3_t1": {
+    "chapters": 2,
+    "topics": 5
+  },
+  "industry_skills_prep1_t1": {
+    "chapters": 1,
+    "topics": 16
+  },
+  "industry_skills_prep2_t1": {
+    "chapters": 3,
+    "topics": 12
+  },
+  "library_skills_p4_t1": {
+    "chapters": 2,
+    "topics": 20
+  },
+  "library_skills_p5_t1": {
+    "chapters": 12,
+    "topics": 29
+  },
+  "library_skills_p6_t1": {
+    "chapters": 13,
+    "topics": 27
+  },
+  "library_skills_prep1_t1": {
+    "chapters": 1,
+    "topics": 44
+  },
+  "library_skills_prep2_t1": {
+    "chapters": 1,
+    "topics": 50
+  },
+  "math_p1_t1": {
+    "chapters": 10,
+    "topics": 46
+  },
+  "math_p2_t1": {
+    "chapters": 10,
+    "topics": 38
+  },
+  "math_p3_t1": {
+    "chapters": 11,
+    "topics": 66
+  },
+  "math_p4_t1": {
+    "chapters": 9,
+    "topics": 54
+  },
+  "math_p5_t1": {
+    "chapters": 7,
+    "topics": 46
+  },
+  "math_p6_t1": {
+    "chapters": 8,
+    "topics": 36
+  },
+  "math_prep1_t1": {
+    "chapters": 6,
+    "topics": 58
+  },
+  "math_prep2_t1": {
+    "chapters": 5,
+    "topics": 27
+  },
+  "math_prep3_t1": {
+    "chapters": 5,
+    "topics": 60
+  },
+  "media_edu_p6_t1": {
+    "chapters": 13,
+    "topics": 25
+  },
+  "media_edu_prep1_t1": {
+    "chapters": 1,
+    "topics": 40
+  },
+  "media_edu_prep3_t1": {
+    "chapters": 1,
+    "topics": 2
+  },
+  "nahw": {
+    "chapters": 10,
+    "topics": 42
+  },
+  "religion_islamic_p1_t1": {
+    "chapters": 4,
+    "topics": 40
+  },
+  "religion_islamic_p2_t1": {
+    "chapters": 4,
+    "topics": 38
+  },
+  "religion_islamic_p3_t1": {
+    "chapters": 4,
+    "topics": 34
+  },
+  "religion_islamic_p4_t1": {
+    "chapters": 4,
+    "topics": 38
+  },
+  "religion_islamic_p5_t1": {
+    "chapters": 4,
+    "topics": 34
+  },
+  "religion_islamic_p6_t1": {
+    "chapters": 4,
+    "topics": 38
+  },
+  "religion_islamic_prep1_t1": {
+    "chapters": 2,
+    "topics": 13
+  },
+  "religion_islamic_prep2_t1": {
+    "chapters": 4,
+    "topics": 27
+  },
+  "religion_islamic_prep3_t1": {
+    "chapters": 4,
+    "topics": 44
+  },
+  "sarf": {
+    "chapters": 10,
+    "topics": 55
+  },
+  "science_p4_t1": {
+    "chapters": 9,
+    "topics": 47
+  },
+  "science_p5_t1": {
+    "chapters": 11,
+    "topics": 44
+  },
+  "science_p6_t1": {
+    "chapters": 11,
+    "topics": 26
+  },
+  "science_prep1_t1": {
+    "chapters": 3,
+    "topics": 19
+  },
+  "science_prep2_t1": {
+    "chapters": 5,
+    "topics": 60
+  },
+  "science_prep3_t1": {
+    "chapters": 5,
+    "topics": 66
+  },
+  "studies_p4_t1": {
+    "chapters": 4,
+    "topics": 49
+  },
+  "studies_p5_t1": {
+    "chapters": 4,
+    "topics": 44
+  },
+  "studies_p6_t1": {
+    "chapters": 4,
+    "topics": 48
+  },
+  "studies_prep1_t1": {
+    "chapters": 2,
+    "topics": 18
+  },
+  "studies_prep2_t1": {
+    "chapters": 5,
+    "topics": 47
+  },
+  "studies_prep3_t1": {
+    "chapters": 5,
+    "topics": 63
+  }
+}
