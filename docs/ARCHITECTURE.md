@@ -83,6 +83,7 @@ meta/catalog.yaml + meta/books/<slug>/toc.yaml   ← سجل الكتب وبني�
 | كشف فوري | `validate_all.py --write-hash` / `--check-hash` + `meta/output.hash` | `output/` و`index/` على الجهاز |
 | منع الالتزام | `.githooks/pre-commit` (يُفعَّل بـ`git config core.hooksPath .githooks`) | منع رفع بيانات أو أسرار |
 | حارس المنشور | `.github/workflows/validate.yml` (`--ci`) | المستودع على GitHub |
+| اختبار العقد | `tests/test_normalize.py` (unittest في CI) | قواعد التطبيع والبحث في `build_index.py` |
 
 `--ci` يتخطى ما يحتاج طبقة البيانات المحلية (`pages_converted`، ومراجع `output/` و`index/` في الوثائق).
 `meta/output.hash` يُحفظ مع الالتزام، ويُعاد ضبطه بعد كل تحويل **معتمد** بأمر واحد.

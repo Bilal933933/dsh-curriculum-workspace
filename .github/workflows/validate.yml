@@ -29,5 +29,8 @@ jobs:
             exit 1
           fi
 
+      - name: اختبارات الوحدة (عقد التطبيع)
+        run: python -m unittest discover -s tests -v
+
       - name: حارس مساحة العمل (وضع CI)
         run: python scripts/validate_all.py --ci

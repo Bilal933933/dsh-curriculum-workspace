@@ -104,3 +104,12 @@ python scripts/validate_all.py --write-hash     # بعد: اعتماد التغ�
 ```
 
 الخطاف `.githooks/pre-commit` يمنع أي التزام يُغيّر البصمة دون اعتماد صريح.
+
+## 7. الاختبارات
+
+```bash
+python -m unittest discover -s tests -v
+```
+
+`tests/test_normalize.py` يثبّت عقد `build_index.normalize` و`normalize_page` على `fixtures/demo_book` ويعمل في CI.
+تعديل قواعد التطبيع يستلزم تعديل الاختبار **عن قصد** لا بانحدار صامت.
