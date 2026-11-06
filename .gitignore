@@ -32,7 +32,6 @@ __pycache__/
 
 # --- 4) سجلات تشغيل عابرة (السجلات التوثيقية في logs/chapters تُتتبَّع) ----------
 *.log
-logs/
 # ملفات pip المؤقتة (تنزل في cwd أثناء التثبيت)
 /tmp*
 pip-*/
@@ -40,7 +39,11 @@ pip-*
 
 # --- 5) طبقة البيانات: الكتب والفهارس والخطط تبقى محلية ولا تُشارك -------------
 # (قرار 2026-11-06: المستودع يحمل المنطق فقط: scripts + skills + meta + docs + fixtures)
-output/
-index/
-plans/
-plans_src/
+# مثبَّتة على جذر المساحة (/) كي لا تستثني مجلدًا بالاسم نفسه داخل scripts/
+/output/
+/index/
+/plans/
+/plans_src/
+/curriculum_raw/
+/logs/
+/scripts/logs/

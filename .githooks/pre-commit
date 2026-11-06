@@ -1,0 +1,33 @@
+#!/bin/sh
+# خطاف pre-commit — طبقة أولى من حراسة المصادر المقدّسة.
+# يفعل شيئين فقط:
+#   1) يرفض أي مسار محلي أو سرّ يدخل الالتزام (output/ index/ curriculum_raw/ plans/ .env .venv).
+#   2) يشغّل حارس المساحة (validate_all.py --quiet) إن وُجد مفسّر بايثون.
+# التفعيل: git config core.hooksPath .githooks
+
+bad=$(git diff --cached --name-only --diff-filter=ACMR \
+  | grep -E '^(output|index|curriculum_raw|plans|plans_src)/|(^|/)\.env$|(^|/)\.venv/|__pycache__/')
+
+if [ -n "$bad" ]; then
+  echo "[خطاف] رُفض الالتزام: مسارات محلية أو أسرار لا تدخل المستودع:" >&2
+  echo "$bad" | sed 's/^/   - /' >&2
+  echo "[خطاف] أزل الملفات من الالتزام: git restore --staged <path>" >&2
+  exit 1
+fi
+
+py=""
+if [ -x "scripts/.venv/Scripts/python.exe" ]; then py="scripts/.venv/Scripts/python.exe"
+elif [ -x "scripts/.venv/bin/python" ]; then py="scripts/.venv/bin/python"
+elif command -v python >/dev/null 2>&1; then py="python"
+fi
+
+if [ -z "$py" ]; then
+  echo "[خطاف] لا مفسّر بايثون — تخطّي حارس المساحة" >&2
+  exit 0
+fi
+
+if ! "$py" scripts/validate_all.py --hash-only --quiet; then
+  echo "[خطاف] بصمة المصادر المقدّسة تغيّرت — أصلح أو اعتمد التغيير:" >&2
+  echo "[خطاف]   اعتماد: python scripts/validate_all.py --write-hash" >&2
+  exit 1
+fi

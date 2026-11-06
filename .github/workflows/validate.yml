@@ -1,0 +1,33 @@
+name: validate
+
+# حارس المستودع المنشور. لا يرى output/ ولا index/ (غير مرفوعين)،
+# فحراسة البيانات المحلية تقع على بصمة meta/output.hash على جهاز المالك.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  guard:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: منع المسارات المحلية والأسرار من التتبّع
+        run: |
+          leaked=$(git ls-files \
+            | grep -E '^(output|index|curriculum_raw|plans|plans_src)/|(^|/)\.env$|(^|/)\.venv/|__pycache__/' || true)
+          if [ -n "$leaked" ]; then
+            echo "::error::مسارات محلية أو أسرار متتبَّعة داخل المستودع"
+            echo "$leaked"
+            exit 1
+          fi
+
+      - name: حارس مساحة العمل (وضع CI)
+        run: python scripts/validate_all.py --ci

@@ -14,6 +14,7 @@
 5. pages_converted       : pages_converted في catalog.yaml يطابق عدد الملفات الفعلي.
 6. topics_baseline       : عدد موضوعات كل toc.yaml لم ينحدر عن خط الأساس.
 7. orphan_dirs           : (تحذير) مجلدات في output/ أو index/ بلا اعتماد في المرجع.
+8. source_hash           : (بـ --check-hash) بصمة output/ و index/ لم تتغيّر بلا تصريح.
 
 الفلسفة
 -------
@@ -33,15 +34,19 @@
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import re
 import subprocess
 import sys
+import time
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 CATALOG = ROOT / "meta" / "catalog.yaml"
 BASELINE = ROOT / "meta" / "toc_baseline.json"
+HASH_FILE = ROOT / "meta" / "output.hash"
+HASH_SOURCES = ("output", "index")
 BOOKS_META = ROOT / "meta" / "books"
 SKILLS = ROOT / ".agents" / "skills"
 OUTPUT_DIR = ROOT / "output"
@@ -55,6 +60,8 @@ SILENT_DEFAULT_SCRIPTS = (
 
 # مسارات تُذكر كنماذج لا كملفات حقيقية: تُستثنى من فحص الوجود.
 PLACEHOLDER = re.compile(r"[$<>{}*…]")
+# مسارات طبقة البيانات المحلية: لا تُفحص في CI (غير مرفوعة إلى المستودع).
+DATA_PREFIXES = ("output/", "index/", "curriculum_raw/", "curriculum/", "plans/", "logs/")
 PATH_REF = re.compile(
     r"(?:scripts|meta|curriculum_raw|curriculum|output|index|logs|plans)[\\/]"
     r"[^\s`\"'()\[\]،,؛;<>|*]+"
@@ -165,7 +172,7 @@ def check_env_hygiene() -> dict:
     return result("env_hygiene", "S1", "ok", ".env مستثنى وغير متتبَّع")
 
 
-def check_doc_paths() -> dict:
+def check_doc_paths(ci: bool = False) -> dict:
     docs = [ROOT / "AGENTS.md"] + sorted(SKILLS.glob("*/SKILL.md"))
     dead, refs = [], 0
     for doc in docs:
@@ -177,6 +184,8 @@ def check_doc_paths() -> dict:
             ref = m.group(0).rstrip(".,:؛،")
             if PLACEHOLDER.search(ref):
                 continue
+            if ci and ref.startswith(DATA_PREFIXES):
+                continue  # في CI لا توجد طبقة البيانات المحلية أصلًا
             refs += 1
             target = ROOT / ref.replace("\\", "/")
             if not target.exists():
@@ -233,7 +242,9 @@ def check_no_silent_book_default() -> dict:
     return result("no_silent_book_default", "S1", "ok", "لا كتاب افتراضي: --book إلزامي")
 
 
-def check_pages_converted(books: list[dict]) -> dict:
+def check_pages_converted(books: list[dict], ci: bool = False) -> dict:
+    if ci:
+        return result("pages_converted", "S1", "skip", "مُتخطّى في CI: يتطلب output/ المحلي")
     problems, checked = [], 0
     for b in books:
         if not b["text_dir"]:
@@ -265,7 +276,9 @@ def check_pages_converted(books: list[dict]) -> dict:
     return result("pages_converted", "S1", "ok", f"{checked} كتابًا: العدّ مطابق والفقود مطابق")
 
 
-def check_topics_baseline(books: list[dict]) -> dict:
+def check_topics_baseline(books: list[dict], ci: bool = False) -> dict:
+    if ci:
+        return result("topics_baseline", "S1", "skip", "مُتخطّى في CI: يعتمد على اكتمال طبقة البيانات")
     if not BASELINE.exists():
         return result(
             "topics_baseline", "S1", "fail",
@@ -332,6 +345,114 @@ def check_orphan_dirs(books: list[dict]) -> dict:
     )
 
 
+# --------------------------------------------------------------------------- بصمة المصادر
+def file_digest(path: Path) -> bytes:
+    h = hashlib.sha256()
+    with path.open("rb") as f:
+        for chunk in iter(lambda: f.read(1 << 20), b""):
+            h.update(chunk)
+    return h.digest()
+
+
+def tree_digest(root: Path) -> dict:
+    """بصمة مجمّعة لكل شجرة: اسم المسار + بصمة المحتوى، بترتيب ثابت."""
+    h = hashlib.sha256()
+    files = total = 0
+    for p in sorted(root.rglob("*")):
+        if not p.is_file() or ".cache" in p.parts:
+            continue
+        h.update(p.relative_to(root).as_posix().encode("utf-8"))
+        h.update(b"\0")
+        h.update(file_digest(p))
+        files += 1
+        total += p.stat().st_size
+    return {"files": files, "bytes": total, "digest": h.hexdigest()}
+
+
+def compute_hash() -> dict:
+    sources = {}
+    for name in HASH_SOURCES:
+        path = ROOT / name
+        if path.is_dir():
+            sources[name] = tree_digest(path)
+    return {
+        "version": 1,
+        "created": time.strftime("%Y-%m-%dT%H:%M:%S%z"),
+        "created_epoch": time.time(),
+        "sources": sources,
+    }
+
+
+def write_hash() -> int:
+    data = compute_hash()
+    if not data["sources"]:
+        print("[!] لا مجلدات بيانات محلية (output/ أو index/) — لم تُكتب بصمة")
+        return 1
+    HASH_FILE.write_text(
+        json.dumps(data, ensure_ascii=False, indent=2, sort_keys=True) + "\n", encoding="utf-8"
+    )
+    print(f"[i] كُتبت البصمة: {HASH_FILE.relative_to(ROOT)}")
+    for name, info in data["sources"].items():
+        print(f"    {name}: {info['files']} ملفًا / {info['bytes']} بايت / {info['digest'][:16]}…")
+    return 0
+
+
+def newer_files(name: str, since: float, limit: int = 20) -> list[str]:
+    """أسماء الملفات التي تغيّرت بعد لحظة البصمة — لتحديد الخلل لا مجرد كشفه."""
+    root = ROOT / name
+    if not root.is_dir():
+        return []
+    out: list[str] = []
+    for p in sorted(root.rglob("*")):
+        if not p.is_file():
+            continue
+        try:
+            if p.stat().st_mtime > since - 1:
+                out.append(p.relative_to(ROOT).as_posix())
+        except OSError:
+            continue
+        if len(out) > limit:
+            break
+    return out
+
+
+def check_source_hash(ci: bool = False) -> dict:
+    present = [n for n in HASH_SOURCES if (ROOT / n).is_dir()]
+    if ci or not present:
+        return result("source_hash", "S1", "skip", "مُتخطّى: لا طبقة بيانات محلية")
+    if not HASH_FILE.exists():
+        return result(
+            "source_hash", "S1", "fail",
+            "البصمة مفقودة — شغّل: python scripts/validate_all.py --write-hash",
+        )
+    try:
+        saved = json.loads(HASH_FILE.read_text(encoding="utf-8"))
+    except json.JSONDecodeError as exc:
+        return result("source_hash", "S1", "fail", f"ملف البصمة تالف ({exc})")
+
+    problems: list[str] = []
+    details: list[str] = []
+    for name, old in saved.get("sources", {}).items():
+        if not (ROOT / name).is_dir():
+            problems.append(f"{name}/: المجلد مفقود كليًا")
+            continue
+        new = tree_digest(ROOT / name)
+        if new["digest"] != old.get("digest") or new["files"] != old.get("files"):
+            problems.append(f"{name}/: متوقع {old.get('files')} ملفًا، والواقع {new['files']}")
+            details += newer_files(name, float(saved.get("created_epoch", 0)))
+    for name in present:
+        if name not in saved.get("sources", {}):
+            problems.append(f"{name}/: ظهر بعد أخذ البصمة")
+
+    if problems:
+        return result(
+            "source_hash", "S1", "fail",
+            f"{len(problems)} شجرة بيانات تغيّرت بلا تصريح",
+            problems + details,
+        )
+    return result("source_hash", "S1", "ok", "بصمة output/ و index/ مطابقة")
+
+
 # --------------------------------------------------------------------------- التشغيل
 def write_baseline(books: list[dict]) -> int:
     data = {}
@@ -345,17 +466,19 @@ def write_baseline(books: list[dict]) -> int:
     return 0
 
 
-def run(json_out: bool = False, quiet: bool = False) -> int:
+def run(json_out: bool = False, quiet: bool = False, ci: bool = False, hash_check: bool = False) -> int:
     books = parse_catalog()
     checks = [
         check_env_hygiene(),
-        check_doc_paths(),
+        check_doc_paths(ci=ci),
         check_skill_frontmatter(),
         check_no_silent_book_default(),
-        check_pages_converted(books),
-        check_topics_baseline(books),
+        check_pages_converted(books, ci=ci),
+        check_topics_baseline(books, ci=ci),
         check_orphan_dirs(books),
     ]
+    if hash_check:
+        checks.append(check_source_hash(ci=ci))
     s1 = [c for c in checks if c["severity"] == "S1" and c["status"] == "fail"]
     s2 = [c for c in checks if c["severity"] == "S2" and c["status"] == "warn"]
     ok = not s1
@@ -385,15 +508,40 @@ def run(json_out: bool = False, quiet: bool = False) -> int:
     return 0 if ok else 1
 
 
+def hash_only(quiet: bool = False) -> int:
+    """نداء مخصّص لخطاف pre-commit: يحرس البصمة وحدها (سريع، لا يتأثر بدَين البيانات)."""
+    c = check_source_hash()
+    if c["status"] == "skip":
+        print("[بصمة] لا طبقة بيانات محلية — تخطٍ")
+        return 0
+    if c["status"] == "ok":
+        if not quiet:
+            print(f"[✓] {c['summary']}")
+        return 0
+    print(f"[✗] {c['summary']}")
+    for line in c["details"][:20]:
+        print(f"    - {line}")
+    print("[i] إن كان التغيير معتمدًا: python scripts/validate_all.py --write-hash")
+    return 1
+
+
 def main() -> int:
-    parser = argparse.ArgumentParser(description="حارس مساحة العمل: سبع قواعد في نداء واحد")
+    parser = argparse.ArgumentParser(description="حارس مساحة العمل: ثماني قواعد في نداء واحد")
     parser.add_argument("--json", action="store_true", help="مخرَج JSON آلي")
     parser.add_argument("--quiet", action="store_true", help="سطر واحد فقط")
     parser.add_argument("--write-baseline", action="store_true", help="إعادة ضبط خط أساس الموضوعات")
+    parser.add_argument("--write-hash", action="store_true", help="حفظ بصمة output/ و index/ في meta/output.hash")
+    parser.add_argument("--check-hash", action="store_true", help="مقارنة البصمة المحفوظة بالواقع")
+    parser.add_argument("--hash-only", action="store_true", help="فحص البصمة وحده (لخطاف pre-commit)")
+    parser.add_argument("--ci", action="store_true", help="وضع CI: يتخطى ما يحتاج طبقة البيانات المحلية")
     args = parser.parse_args()
     if args.write_baseline:
         return write_baseline(parse_catalog())
-    return run(json_out=args.json, quiet=args.quiet)
+    if args.write_hash:
+        return write_hash()
+    if args.hash_only:
+        return hash_only(quiet=args.quiet)
+    return run(json_out=args.json, quiet=args.quiet, ci=args.ci, hash_check=args.check_hash)
 
 
 if __name__ == "__main__":

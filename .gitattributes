@@ -1,0 +1,3 @@
+# خطافات git تُنفَّذ بـ sh: يجب أن تبقى LF مهما كان نظام النسخ.
+.githooks/* text eol=lf
+*.sh            text eol=lf

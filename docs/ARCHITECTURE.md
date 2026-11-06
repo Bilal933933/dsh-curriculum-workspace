@@ -72,12 +72,24 @@ meta/catalog.yaml + meta/books/<slug>/toc.yaml   ← سجل الكتب وبني�
 | 5 | `pages_converted` | العدد في `catalog.yaml` يطابق الملفات الفعلية |
 | 6 | `topics_baseline` | عدد موضوعات `toc.yaml` لم ينحدر عن `meta/toc_baseline.json` |
 | 7 | `orphan_dirs` | (تحذير) مجلدات بلا اعتماد في السجل |
+| 8 | `source_hash` | (بـ`--check-hash`) بصمة `output/` و`index/` لم تتغيّر بلا تصريح |
 
 `S1` = يفشل برمز خروج · `S2` = تحذير لا يوقف.
 
+## 5ب) حراسة المصادر — ثلاث طبقات
+
+| الطبقة | الأداة | تحمي |
+|---|---|---|
+| كشف فوري | `validate_all.py --write-hash` / `--check-hash` + `meta/output.hash` | `output/` و`index/` على الجهاز |
+| منع الالتزام | `.githooks/pre-commit` (يُفعَّل بـ`git config core.hooksPath .githooks`) | منع رفع بيانات أو أسرار |
+| حارس المنشور | `.github/workflows/validate.yml` (`--ci`) | المستودع على GitHub |
+
+`--ci` يتخطى ما يحتاج طبقة البيانات المحلية (`pages_converted`، ومراجع `output/` و`index/` في الوثائق).
+`meta/output.hash` يُحفظ مع الالتزام، ويُعاد ضبطه بعد كل تحويل **معتمد** بأمر واحد.
+
 ## 6. حدود المستودع
 
-يُرفَع إلى git: `scripts/` · `.agents/` · `meta/` · `manifest/` · `docs/` · `fixtures/` · ملفات الجذر.
+يُرفَع إلى git: `scripts/` · `.agents/` · `meta/` · `manifest/` · `docs/` · `fixtures/` · `.githooks/` · `.github/` · ملفات الجذر.
 **لا يُرفَع:** `curriculum_raw/` · `output/` · `index/` · `plans/` · `plans_src/` · `logs/` · `.env` · `.venv/`.
 
 السبب: الحجم (18GB + 38MB) + حقوق المحتوى + أن المشتقات تُعاد بناؤها من المصدر.
