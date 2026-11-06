@@ -184,8 +184,9 @@ def check_doc_paths(ci: bool = False) -> dict:
             ref = m.group(0).rstrip(".,:؛،")
             if PLACEHOLDER.search(ref):
                 continue
-            if ci and ref.startswith(DATA_PREFIXES):
-                continue  # في CI لا توجد طبقة البيانات المحلية أصلًا
+            ref_norm = ref.replace("\\", "/")
+            if ci and (ref_norm.startswith(DATA_PREFIXES) or ".venv" in ref_norm):
+                continue  # في CI: لا طبقة بيانات محلية ولا بيئة افتراضية
             refs += 1
             target = ROOT / ref.replace("\\", "/")
             if not target.exists():
