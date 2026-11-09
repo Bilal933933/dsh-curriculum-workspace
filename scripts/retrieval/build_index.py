@@ -25,6 +25,7 @@ build_index.py — بناء طبقة الفهرسة المعجمية لكتب ا
 الاستخدام:
     python scripts/build_index.py
     python scripts/build_index.py --book "كيف_تتقن_البلاغة"
+    python scripts/build_index.py --dry-run          # فحص بلا كتابة
 """
 
 from __future__ import annotations
@@ -40,6 +41,13 @@ WORKSPACE = Path(__file__).resolve().parent.parent.parent
 OUTPUT_DIR = WORKSPACE / "output"
 INDEX_DIR = WORKSPACE / "index"
 CATALOG = WORKSPACE / "meta" / "catalog.yaml"
+
+# وحدة تحكّم ويندوز قد تكون cp1256 فلا تُرمِّز ✓ — نحوّل المخرجات إلى UTF-8 بدل الانهيار.
+for _stream in (sys.stdout, sys.stderr):
+    try:
+        _stream.reconfigure(encoding="utf-8", errors="replace")
+    except Exception:  # noqa: BLE001
+        pass
 
 
 def printed_page_offset(book_name: str) -> int | str:
@@ -74,8 +82,10 @@ LETTER_MAP = str.maketrans({
 DIGIT_MAP = str.maketrans({**{chr(0x0660 + i): str(i) for i in range(10)},
                            **{chr(0x06F0 + i): str(i) for i in range(10)}})
 
-# كل ما ليس حرفًا عربيًّا أو رقمًا أو مسافة يصبح مسافة.
-NON_WORD_RE = re.compile(r"[^\w\s\u0600-\u06FF]", re.UNICODE)
+# كل ما ليس حرفًا (عربيًّا أو لاتينيًّا) أو رقمًا أو شرطة سفلية أو مسافة يصبح مسافة.
+# \w في بايثون يغطّي الحروف العربية والأرقام أصلًا؛ فإضافة نطاق \u0600-\u06FF كانت
+# تُعيد إدخال علامات الترقيم العربية (، ؛ ؟ ٪) فتختلف نتائج المطابقة بين نصّين متطابقين معنى.
+NON_WORD_RE = re.compile(r"[^\w\s]", re.UNICODE)
 
 # ترويسة الصفحة الجارية: "49 | **كَيْفَ تُقِنُّ البَلَاغَةَ؟**"
 RUNNING_HEADER_RE = re.compile(r"^\s*[\d\u0660-\u0669]+\s*\|\s*")
@@ -153,15 +163,19 @@ def page_number(path: Path) -> int | None:
     return int(m.group(1)) if m else None
 
 
-def build_book(book_dir: Path) -> dict:
-    """يبني فهرس كتاب واحد ويُرجع تقريره."""
+def build_book(book_dir: Path, dry_run: bool = False) -> dict:
+    """يبني فهرس كتاب واحد ويُرجع تقريره.
+
+    dry_run=True: يحسب كل شيء ويُرجع التقرير بلا كتابة أي ملف في index/.
+    """
     pages = [(page_number(p), p) for p in book_dir.glob("page_*.md")]
     pages = sorted((n, p) for n, p in pages if n is not None)
     if not pages:
         return {"book": book_dir.name, "status": "لا توجد صفحات"}
 
     norm_dir = INDEX_DIR / book_dir.name / "norm"
-    norm_dir.mkdir(parents=True, exist_ok=True)
+    if not dry_run:
+        norm_dir.mkdir(parents=True, exist_ok=True)
 
     headings_rows: list[str] = []
     total_chars = 0
@@ -170,7 +184,8 @@ def build_book(book_dir: Path) -> dict:
     for n, path in pages:
         raw = path.read_text(encoding="utf-8", errors="replace")
         norm, headings = normalize_page(raw)
-        (norm_dir / f"page_{n:03d}.txt").write_text(norm + "\n", encoding="utf-8")
+        if not dry_run:
+            (norm_dir / f"page_{n:03d}.txt").write_text(norm + "\n", encoding="utf-8")
         total_chars += len(norm)
         if len(norm) < 40:
             empty_pages.append(n)
@@ -193,12 +208,13 @@ def build_book(book_dir: Path) -> dict:
         "printed_page_offset": printed_page_offset(book_dir.name),
         "normalized_dir": str((INDEX_DIR / book_dir.name / "norm").relative_to(WORKSPACE)).replace("\\", "/"),
     }
-    (INDEX_DIR / book_dir.name / "manifest.json").write_text(
-        json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8"
-    )
-    (INDEX_DIR / book_dir.name / "headings_draft.tsv").write_text(
-        "\n".join(headings_rows) + "\n", encoding="utf-8"
-    )
+    if not dry_run:
+        (INDEX_DIR / book_dir.name / "manifest.json").write_text(
+            json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8"
+        )
+        (INDEX_DIR / book_dir.name / "headings_draft.tsv").write_text(
+            "\n".join(headings_rows) + "\n", encoding="utf-8"
+        )
     return manifest
 
 
@@ -214,6 +230,11 @@ def run_guard() -> int:
 def main() -> int:
     parser = argparse.ArgumentParser(description="بناء فهرس معجمي لكتب output/")
     parser.add_argument("--book", help="اسم كتاب واحد فقط (افتراضي: كل الكتب)")
+    parser.add_argument(
+        "--dry-run",
+        action="store_true",
+        help="فحص فقط: يحسب الصفحات والفجوات بلا كتابة أي ملف في index/",
+    )
     args = parser.parse_args()
 
     if not OUTPUT_DIR.exists():
@@ -225,11 +246,13 @@ def main() -> int:
     )
 
     print("=" * 60)
+    if args.dry_run:
+        print("[i] وضع الفحص (--dry-run): لن يُكتب أي ملف في index/.")
     for book_dir in books:
         if not book_dir.exists():
             print(f"[!] كتاب غير موجود: {book_dir.name}")
             continue
-        m = build_book(book_dir)
+        m = build_book(book_dir, dry_run=args.dry_run)
         print(f"[✓] {m['book']}: {m.get('pages_indexed', 0)} صفحة | "
               f"{m.get('normalized_chars', 0):,} حرف | "
               f"فجوات: {len(m.get('missing_pages', []))}")
@@ -238,6 +261,9 @@ def main() -> int:
             shown = ", ".join(str(x) for x in mp[:12]) + (" ..." if len(mp) > 12 else "")
             print(f"    صفحات ناقصة: {shown}")
     print("=" * 60)
+    if args.dry_run:
+        print("[i] انتهى الفحص بلا كتابة. للحفظ: أعد التشغيل بلا --dry-run.")
+        return 0
     print(f"[i] المخرجات في: {INDEX_DIR.relative_to(WORKSPACE)}/")
     return run_guard()
 

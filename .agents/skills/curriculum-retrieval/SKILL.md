@@ -25,16 +25,12 @@ description: "الإجابة عن سؤال تعليمي من المقرر الم
 | `output/<book>/page_XXX.md` | النص الأصلي المُشكَّل — هو المرجع للقراءة والاقتباس |
 | `index/<book>/manifest.json` | الصفحات الناقصة والمتفرقة |
 
-- `<id>` مفتاح منطقي يُستخدم في مسار `meta/books/<id>/`:
-  - المراجع: `balagha` / `nahw` / `sarf` / `erab_muyassar`.
-  - الابتدائي: `arabic_p1_t1` … `arabic_p6_t1`.
-  - الإعدادي: `arabic_prep1_t1` / `arabic_prep2_t1` / `arabic_prep3_t1`.
-  - مواد الإعدادي الأخرى (ترم أول): `agriculture_skills_prep2_t1` / `math_prep2_t1` / `math_prep3_t1` / `science_prep2_t1` / `science_prep3_t1` / `studies_prep2_t1` / `studies_prep3_t1` / `ict_prep2_t1` / `ict_prep3_t1` / `industry_skills_prep2_t1` / `media_edu_prep3_t1` / `religion_islamic_prep2_t1` / `religion_islamic_prep3_t1`.
-  - الابتدائي: `arabic_p1_t1` / `arabic_p2_t1` / `arabic_p3_t1` / `arabic_p4_t1` / `arabic_p5_t1` / `arabic_p6_t1` / `agriculture_skills_p4_t1` / `agriculture_skills_p5_t1` / `agriculture_skills_p6_t1` / `drama_p4_t1` / `drama_p5_t1` / `family_skills_p4_t1` / `family_skills_p5_t1` / `family_skills_p6_t1` / `ict_p4_t1` / `ict_p5_t1` / `ict_p6_t1` / `library_skills_p4_t1` / `library_skills_p5_t1` / `library_skills_p6_t1` / `math_p1_t1` / `math_p2_t1` / `math_p3_t1` / `math_p4_t1` / `math_p5_t1` / `math_p6_t1` / `media_edu_p6_t1` / `religion_islamic_p1_t1` / `religion_islamic_p2_t1` / `religion_islamic_p3_t1` / `religion_islamic_p4_t1` / `religion_islamic_p5_t1` / `religion_islamic_p6_t1` / `science_p4_t1` / `science_p5_t1` / `science_p6_t1` / `studies_p4_t1` / `studies_p5_t1` / `studies_p6_t1`.
-  - الثانوي: `arabic_sec1_t1` / `arabic_sec2_t1` / `arabic_sec3_t1`.
+- `<id>` مفتاح لاتيني قصير يُستخدم في مسار `meta/books/<id>/` وفي حقل `id` بالمرجع.
+  **لا توجد قائمة معرّفات محفوظة هنا** — اقرأ القائمة الحالية من `meta/catalog.yaml` كل مرة،
+  فالتسميات تتغيّر (مثلًا `arabic_p1_t1` بجانب `adwaa_ar_p1_t1`) والقائمة الثابتة تتقادم بصمت.
 - `<book>` **اسم المجلد العربي كما هو**: `كيف_تتقن_البلاغة` أو `كيف_تتقن_النحو` أو `اللغة_العربية_الصف_السادس_ت1`.
   استخدم حقل `text_dir` و`index_dir` من `catalog.yaml` بدل تخمين المسار.
-- **قاعدة:** لا تعتمد على هذه القائمة؛ `meta/catalog.yaml` هو المصدر الوحيد لمعرّفات الكتب، فاقرأه أولًا.
+- **قاعدة:** `meta/catalog.yaml` هو المصدر الوحيد للعنوان و`id` و`text_dir`، فاقرأه أولًا ولا تخمّن.
 
 ## 4. خطوات التنفيذ
 
