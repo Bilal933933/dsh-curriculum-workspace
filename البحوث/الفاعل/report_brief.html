@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>الفاعل: خلاصة مرجعية</title>
+<style>
+/* ==== base.css ==== */
+/* ============================================================
+   base.css — الأساس الطباعي والهوية البصرية لكل مستند
+   يعتمد متغيّرات في :root، فيكفي تعديلها لتغيير الهوية كلها.
+   تُدمج داخل <style> عند البناء، فلا حاجة لمسار خارجي عند الطبع.
+   ============================================================ */
+
+:root {
+  /* الهوية */
+  --ink:        #18222c;   /* نص المتن */
+  --navy:       #0e2740;   /* العناوين الرئيسية */
+  --navy-mid:   #1c4a72;   /* العناوين الفرعية */
+  --gold:       #8a6414;   /* لمسة تمييز */
+  --rule:       #d5dde5;   /* خطوط فاصلة */
+  --soft:       #f3f6f9;   /* خلفية خفيفة */
+  --soft-2:     #eaf0f5;
+  --muted:      #5d6b78;
+
+  /* المقاسات */
+  --body-size:  12.6pt;
+  --body-lh:    1.95;
+}
+
+@page {
+  size: A4;
+  margin: 22mm 18mm 20mm 18mm;
+}
+
+* { box-sizing: border-box; }
+
+html, body { margin: 0; padding: 0; }
+
+body {
+  font-family: "Segoe UI", "Traditional Arabic", "Arial", sans-serif;
+  font-size: var(--body-size);
+  line-height: var(--body-lh);
+  color: var(--ink);
+  text-align: justify;
+  text-justify: inter-word;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ---------- النص ---------- */
+p {
+  margin: 0 0 3.4mm;
+  orphans: 2;
+  widows: 2;
+}
+
+strong { color: #0b1520; font-weight: 700; }
+
+em { color: var(--navy-mid); font-style: normal; }
+
+a { color: var(--navy-mid); text-decoration: none; }
+
+hr {
+  border: 0;
+  height: 1px;
+  background: var(--rule);
+  margin: 8mm 0;
+}
+
+/* ---------- العناوين ---------- */
+h1, h2, h3, h4 {
+  line-height: 1.45;
+  page-break-after: avoid;
+  color: var(--navy);
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 14.2pt;
+  color: var(--navy-mid);
+  margin: 7mm 0 2.5mm;
+}
+
+h4 {
+  font-size: 13pt;
+  color: var(--ink);
+  margin: 5mm 0 2mm;
+}
+
+/* ---------- القوائم ---------- */
+ul, ol {
+  margin: 0 0 3.8mm;
+  padding-right: 7mm;
+}
+
+li { margin: 1.2mm 0; }
+
+li::marker { color: var(--navy-mid); }
+
+/* ---------- الجداول ---------- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 4mm 0 6mm;
+  font-size: 11.4pt;
+  line-height: 1.65;
+  page-break-inside: avoid;
+}
+
+thead { display: table-header-group; }
+
+th, td {
+  border: 1px solid var(--rule);
+  padding: 2.4mm 2.6mm;
+  vertical-align: top;
+  text-align: right;
+}
+
+th {
+  background: var(--navy);
+  color: #fff;
+  font-weight: 700;
+  border-color: var(--navy);
+}
+
+tbody tr:nth-child(even) { background: var(--soft); }
+
+tr { page-break-inside: avoid; }
+
+/* ---------- الاقتباس ---------- */
+blockquote {
+  margin: 4mm 0 5mm;
+  padding: 3.2mm 5mm;
+  background: var(--soft);
+  border-right: 3px solid var(--navy-mid);
+  color: #26313c;
+  font-size: 12pt;
+}
+
+blockquote p:last-child { margin-bottom: 0; }
+
+/* ---------- الصناديق الثلاثة ---------- */
+.callout {
+  margin: 4.5mm 0 5mm;
+  padding: 3.2mm 4.5mm 3.2mm 4.5mm;
+  border-radius: 2px;
+  border-right: 3px solid var(--navy-mid);
+  background: var(--soft);
+  page-break-inside: avoid;
+  font-size: 11.8pt;
+  line-height: 1.8;
+}
+
+.callout p { margin-bottom: 2mm; }
+.callout p:last-child { margin-bottom: 0; }
+
+.callout__label {
+  display: inline-block;
+  font-weight: 700;
+  margin-left: 2mm;
+  padding: 0 2mm;
+  border-radius: 2px;
+  font-size: 10.5pt;
+  line-height: 1.9;
+}
+
+.callout--farq {
+  background: #fbf6ea;
+  border-right-color: var(--gold);
+}
+.callout--farq .callout__label { background: var(--gold); color: #fff; }
+
+.callout--tanbih {
+  background: #fbefee;
+  border-right-color: #9c3b32;
+}
+.callout--tanbih .callout__label { background: #9c3b32; color: #fff; }
+
+.callout--mulahaza {
+  background: #eef4fa;
+  border-right-color: var(--navy-mid);
+}
+.callout--mulahaza .callout__label { background: var(--navy-mid); color: #fff; }
+
+/* ---------- سطر المصادر ---------- */
+p.sources {
+  font-size: 10.4pt;
+  line-height: 1.8;
+  color: var(--muted);
+  background: var(--soft-2);
+  border-right: 2px solid var(--rule);
+  padding: 2mm 3mm;
+  margin: 3mm 0 6mm;
+  text-align: right;
+  page-break-inside: avoid;
+}
+
+p.sources strong { color: var(--navy-mid); }
+
+p.sources a {
+  color: var(--navy-mid);
+  border-bottom: 1px dotted var(--rule);
+}
+
+/* ---------- الرموز ---------- */
+code {
+  font-family: Consolas, "Courier New", monospace;
+  font-size: 10.6pt;
+  direction: ltr;
+  unicode-bidi: embed;
+  background: var(--soft);
+  padding: 0 1mm;
+  border-radius: 2px;
+}
+
+/* ============================================================
+   نمط الهاتف — يُفعَّل تلقائيًّا على الشاشات الصغيرة (≤ 640px)
+   الغرض: قراءة مريحة فقط؛ قواعد الطبع (@page) لا تتأثر.
+   ============================================================ */
+@media screen and (max-width: 640px) {
+  body {
+    font-size: 18px;
+    line-height: 1.95;
+    text-align: right;          /* الضبط من الطرفين يُحدِث فجوات في العربية على الجوال */
+    padding: 0 16px 40px;
+  }
+
+  .cover {
+    height: auto;
+    padding: 44px 0 28px;
+    page-break-after: auto;
+  }
+  .cover h1 { font-size: 26px; }
+  .cover .subtitle { font-size: 16px; margin-bottom: 10mm; }
+  .cover .kicker { font-size: 13px; margin-bottom: 8mm; }
+  .cover .meta { font-size: 15px; line-height: 2; }
+
+  .toc-page { page-break-after: auto; padding-bottom: 24px; }
+  .toc-page h2 { font-size: 22px; margin-bottom: 6mm; }
+  .toc > ul > li { font-size: 17px; margin: 2.4mm 0; }
+  .toc ul ul { margin-right: 5mm; }
+  .toc ul ul li { font-size: 15.5px; }
+
+  .content h1 { font-size: 24px; }
+  .content h2 { font-size: 20px; margin-top: 10mm; }
+  .content h3 { font-size: 18px; }
+  .content h4 { font-size: 17px; }
+
+  table { display: block; overflow-x: auto; white-space: nowrap; font-size: 15px; }
+  th, td { padding: 8px 10px; }
+
+  blockquote { padding: 10px 14px; margin: 6mm 0; font-size: 16.5px; }
+
+  .callout { font-size: 16.5px; padding: 12px 14px; }
+  p.sources { font-size: 14.5px; }
+
+  ul, ol { padding-right: 6mm; }
+}
+
+
+/* ==== report.css ==== */
+/* ============================================================
+   report.css — أنماط خاصة بمستند «التقرير»: الغلاف، الفهرس، الأقسام
+   ============================================================ */
+
+/* ---------- الغلاف ---------- */
+.cover {
+  height: 247mm;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  page-break-after: always;
+}
+
+.cover .kicker {
+  font-size: 11pt;
+  color: #6b6b6b;
+  margin-bottom: 12mm;
+  letter-spacing: .5px;
+}
+
+.cover h1 {
+  font-size: 30pt;
+  margin: 0 0 6mm;
+  line-height: 1.45;
+  color: #0f2b46;
+}
+
+.cover .subtitle {
+  font-size: 14pt;
+  color: #4a4a4a;
+  margin-bottom: 16mm;
+  line-height: 1.7;
+}
+
+.cover .rule {
+  width: 60mm;
+  height: 2px;
+  background: #0f2b46;
+  margin: 0 auto 16mm;
+}
+
+.cover .meta {
+  font-size: 12pt;
+  color: #333;
+  line-height: 2.2;
+}
+
+/* ---------- الفهرس ---------- */
+.toc-page { page-break-after: always; }
+
+.toc-page h2 {
+  font-size: 20pt;
+  color: #0f2b46;
+  margin: 0 0 9mm;
+  padding: 0;
+  border: 0;
+}
+
+.toc > ul { list-style: none; padding: 0; margin: 0; }
+.toc > ul > li { margin: 3.4mm 0; font-size: 13pt; font-weight: 600; }
+.toc ul ul { margin: 1.6mm 8mm 1.6mm 0; list-style: none; }
+.toc ul ul li { font-weight: 400; font-size: 12pt; margin: 1.3mm 0; }
+.toc a { color: #1b1b1b; }
+
+/* ---------- المحتوى ---------- */
+.content h1 {
+  font-size: 22pt;
+  color: #0f2b46;
+  margin: 0 0 7mm;
+}
+
+.content h2 {
+  font-size: 17pt;
+  color: #0f2b46;
+  margin: 0 0 5mm;
+  padding-bottom: 2mm;
+  border-bottom: 2px solid #0f2b46;
+  page-break-before: always;
+}
+
+/* أول قسم يكمل بعد العنوان بلا صفحة بيضاء */
+.content h2:first-of-type { page-break-before: avoid; }
+
+.content h3 {
+  font-size: 14.5pt;
+  color: #23456a;
+  margin: 7mm 0 3mm;
+}
+
+.content h4 {
+  font-size: 13pt;
+  color: #333;
+  margin: 5mm 0 2mm;
+}
+
+</style>
+</head>
+<body>
+
+  <!-- ================= الغلاف ================= -->
+  <section class="cover">
+    <div class="kicker">ملفّ بحثيّ مُعدّ للطبع</div>
+    <h1>الفاعل: خلاصة مرجعية</h1>
+    <div class="subtitle">نسخة موجزة: الجوهر والجداول والمصادر بلا فروع</div>
+    <div class="rule"></div>
+    <div class="meta">إعداد: معلّم اللغة العربية<br>التاريخ: 2026-11-05</div>
+  </section>
+
+  <!-- ================= الفهرس ================= -->
+  <section class="toc-page">
+    <h2>فهرس المحتويات</h2>
+    <div class="toc"><div class="toc">
+<ul>
+<li><a href="#_1">١. حدّ الفاعل وموقعه</a></li>
+<li><a href="#_2">٢. أنواع الفاعل: ظاهر ومضمر</a></li>
+<li><a href="#_3">٣. العامل في الفاعل</a></li>
+<li><a href="#_4">٤. التقديم والتأخير بين الفاعل والمفعول</a></li>
+<li><a href="#_5">٥. حذف الفاعل ونائبه</a></li>
+<li><a href="#_6">٦. أخطاء شائعة وتطبيق</a></li>
+</ul>
+</div>
+</div>
+  </section>
+
+  <!-- ================= المحتوى ================= -->
+  <section class="content">
+<h2 id="_1">١. حدّ الفاعل وموقعه</h2>
+<p>الفاعل في اصطلاح النحاة هو المسند إليه الفعل أو شبهه، المقدَّم عليه، على جهة قيامه به أو وقوعه منه. هذا ما نصّ عليه الأزهري في حدّه بقوله: «الاسم الصريح أو المؤوَّل المسند إليه فعل أو شبهه مقدَّم عليه على جهة قيامه به أو وقوعه منه» (<a href="https://shamela.ws/book/96610/22">شرح الأزهرية (ص ٢١)</a>). ولكل لفظة في هذا الحدّ عملٌ في نفي ما ليس من الباب:</p>
+<table>
+<thead>
+<tr>
+<th>القيد</th>
+<th>ما يُخرجه</th>
+<th>التمثيل</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>«الاسم»</td>
+<td>الفعل والحرف</td>
+<td>«قام» وحده لا فاعل فيه</td>
+</tr>
+<tr>
+<td>«الصريح أو المؤوَّل»</td>
+<td>ما لا يكون اسمًا صريحًا</td>
+<td>«وأن تصوموا» مؤوَّل بالمصدر</td>
+</tr>
+<tr>
+<td>«المسند إليه»</td>
+<td>ما ليس مسندًا إليه</td>
+<td>المفعول به</td>
+</tr>
+<tr>
+<td>«فعل أو شبهه»</td>
+<td>ما لا يعمل عمل الفعل</td>
+<td>«زيدٌ قائمٌ»: الرفع بالابتداء</td>
+</tr>
+<tr>
+<td>«مقدَّم عليه»</td>
+<td>ما تقدّم لفظًا من غير فاعلية</td>
+<td>«زيدًا ضربتُ»</td>
+</tr>
+<tr>
+<td>«على جهة قيامه به أو وقوعه منه»</td>
+<td>الإسناد إلى غير ما يقوم به المعنى</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout--tanbih"><span class="callout__label">تنبيه</span>«مات زيدٌ» و«زَهَرَ الزرعُ» و«شَحُبَ لونُه» فيها فاعل نحوي لا فاعل حقيقي؛ فتعريف الطالب بأن الفاعل «من قام بالفعل» تعريفٌ ناقص، والصواب: من أُسند إليه الفعل.</div>
+<p class="sources"><strong>المصادر:</strong> <a href="https://shamela.ws/book/96610/22">شرح الأزهرية (ص ٢١)</a> · <a href="https://shamela.ws/book/23635/43">تفسير الرازي (١/٦٣)</a> · <a href="https://shamela.ws/book/17719/93">شرح المكودي (ص ٩٤)</a> · <a href="https://shamela.ws/book/7368/62">حاشية الآجرومية (ص ٦٦)</a> · <a href="https://shamela.ws/book/10641/2089">النحو الوافي (٤/١٥٧)</a> · <a href="https://shamela.ws/book/9976/164">التطبيق النحوي (ص ١٧٤)</a> · <a href="https://shamela.ws/book/9976/165">التطبيق النحوي (ص ١٧٥)</a> · <a href="https://shamela.ws/book/17687/112">الكناش (١/١١٨)</a></p>
+<h2 id="_2">٢. أنواع الفاعل: ظاهر ومضمر</h2>
+<p>ينقسم الفاعل عند النحاة قسمين لا ثالث لهما: <strong>ظاهرًا</strong> و<strong>مضمرًا</strong>. فالظاهر ما دلّ على مسمّاه بلفظه، نحو «قام زيدٌ» و«أكرمَ اللهُ الصابرين»؛ والمضمر ما دلّ على متكلم أو مخاطب أو غائب، وهو اثنا عشر نوعًا: اثنان للمتكلم، وخمسة للمخاطب، وخمسة للغائب (<a href="https://shamela.ws/book/96610/23">شرح الأزهرية (ص ٢٢)</a>).</p>
+<table>
+<thead>
+<tr>
+<th>الفاعل</th>
+<th>المثال</th>
+<th>إعرابه</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>اسم ظاهر</td>
+<td>قام زيدٌ</td>
+<td>زيدٌ: فاعل مرفوع بالضمة</td>
+</tr>
+<tr>
+<td>ضمير متصل للمتكلم</td>
+<td>أكرمتُ الضيفَ</td>
+<td>التاء: فاعل مبني على الضم في محل رفع</td>
+</tr>
+<tr>
+<td>ضمير متصل للمخاطب</td>
+<td>أكرمتُم الضيفَ</td>
+<td>الميم: فاعل مبني في محل رفع</td>
+</tr>
+<tr>
+<td>ضمير متصل للغائب</td>
+<td>أكرموا الضيفَ</td>
+<td>الواو: فاعل مبني في محل رفع</td>
+</tr>
+<tr>
+<td>ضمير مستتر جوازًا</td>
+<td>زيدٌ يقومُ</td>
+<td>فاعل «يقوم» ضمير مستتر تقديره «هو»</td>
+</tr>
+<tr>
+<td>ضمير مستتر وجوبًا</td>
+<td>صه</td>
+<td>فاعل «صه» ضمير مستتر وجوبًا تقديره «أنت»</td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout--farq"><span class="callout__label">فرق</span>الفاعل المستتر لا يُنطق به، ومع ذلك يُعرب في محل رفع؛ ولهذا يجب على المعلّم أن يُدرّب الطالب على تقديره: «هو» في الغائب، و«أنا» في المتكلم، و«أنت» في المخاطب.</div>
+<p class="sources"><strong>المصادر:</strong> <a href="https://shamela.ws/book/96610/23">شرح الأزهرية (ص ٢٢)</a> · <a href="https://shamela.ws/book/10641/2089">النحو الوافي (٤/١٥٧)</a> · <a href="https://shamela.ws/book/6972/281">مغني اللبيب (ص ٢٩٣)</a> · <a href="https://shamela.ws/book/9976/164">التطبيق النحوي (ص ١٧٤)</a> · <a href="https://shamela.ws/book/9976/165">التطبيق النحوي (ص ١٧٥)</a> · <a href="https://shamela.ws/book/9976/166">التطبيق النحوي (ص ١٧٦)</a></p>
+<h2 id="_3">٣. العامل في الفاعل</h2>
+<p>السؤال الذي يجب أن يجيبه المعلّم قبل طلابه: <strong>ما الذي رفع الفاعل؟</strong> والجواب المشهور عند جمهور البصريين أن العامل فيه هو الفعل أو شبهه. نصّ التبيين على ذلك في مسألة صريحة: «العاملُ في الفاعلِ والمفعولِ الفعلُ. وقال بعضُ الكوفيين: العاملُ في المفعولِ الفعلُ والفاعلُ معًا. ومنهم من قال: الفعلُ عاملٌ في الفاعلِ، والفاعلُ عاملٌ في المفعولِ. ومنهم من قال: كلُّ واحدٍ منهما معمولُ معناه» (<a href="https://shamela.ws/book/13786/152">التبيين عن مذاهب النحويين (ص ٢٦٣)</a>).</p>
+<table>
+<thead>
+<tr>
+<th>المذهب</th>
+<th>العامل في الفاعل</th>
+<th>العامل في المفعول</th>
+<th>حجّته</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>جمهور البصريين</td>
+<td>الفعل (أو شبهه)</td>
+<td>الفعل</td>
+<td>الفعل هو المؤثّر فيهما؛ فبه ينتقل الاسم من المبتدأ إلى الفاعل، ومن الفاعل إلى المفعول</td>
+</tr>
+<tr>
+<td>بعض الكوفيين</td>
+<td>الفعل</td>
+<td>الفعل والفاعل معًا</td>
+<td>الفعل والفاعل كالشيء الواحد في الدلالة على الحدث</td>
+</tr>
+<tr>
+<td>قول ثالث</td>
+<td>الفعل</td>
+<td>الفاعل</td>
+<td>الفاعل يفصل بين الفعل والمفعول فكان عاملًا فيه</td>
+</tr>
+<tr>
+<td>قول رابع</td>
+<td>معمول المعنى</td>
+<td>معمول المعنى</td>
+<td>كل واحد منهما معمول معناه</td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout--tanbih"><span class="callout__label">تنبيه</span>المذهب الراجح في التعليم هو مذهب الجمهور: الفعل هو الرافع للفاعل والناصب للمفعول. ومذهب الكوفيين مسألة نظرية تُذكر في مجلس العلم، ولا تُشغل بها طالب المدرسة؛ فإن الخلاف لا يغيّر إعرابًا واحدًا في الأمثلة.</div>
+<p class="sources"><strong>المصادر:</strong> <a href="https://shamela.ws/book/13786/152">التبيين عن مذاهب النحويين (ص ٢٦٣)</a> · <a href="https://shamela.ws/book/13786/153">التبيين (ص ٢٦٤)</a> · <a href="https://shamela.ws/book/17687/35">الكناش (١/٣٩)</a> · <a href="https://shamela.ws/book/17687/36">الكناش (١/٤٠)</a> · <a href="https://shamela.ws/book/96610/22">شرح الأزهرية (ص ٢١)</a> · <a href="https://shamela.ws/book/10641/2089">النحو الوافي (٤/١٥٧)</a> · <a href="https://shamela.ws/book/7368/62">حاشية الآجرومية (ص ٦٦)</a> · <a href="https://shamela.ws/book/9976/167">التطبيق النحوي (ص ١٧٧)</a> · <a href="https://shamela.ws/book/9976/169">التطبيق النحوي (ص ١٧٩)</a> · <a href="https://shamela.ws/book/9976/171">التطبيق النحوي (ص ١٨١)</a></p>
+<h2 id="_4">٤. التقديم والتأخير بين الفاعل والمفعول</h2>
+<p>الأصل في الجملة الفعلية أن يتقدّم الفاعل على المفعول؛ لأن الفاعل كالجزء من فعله بخلاف المفعول، وتقديم المفعول خروج عن هذا الأصل وإن كان كثيرًا في الكلام (<a href="https://shamela.ws/book/17719/93">شرح المكودي (ص ٩٤)</a>). لكن هذا الأصل لا يُترك للذوق وحده، بل له مواضع يجب فيها بقاء الترتيب، ومواضع يجب فيها خلافه، ومواضع يجوز فيها الوجهان. وهذا الباب هو أكثر ما يُسأل عنه المعلّم في «إنما يخشى اللهَ من عباده العلماءُ» وأمثالها.</p>
+<table>
+<thead>
+<tr>
+<th>الموضع</th>
+<th>الحكم</th>
+<th>المثال</th>
+<th>التعليل</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>خفاء الإعراب مع عدم القرينة</td>
+<td>يجب تقديم الفاعل</td>
+<td>ضرب موسى عيسى</td>
+<td>دفع اللبس بين الفاعل والمفعول</td>
+</tr>
+<tr>
+<td>الفاعل ضمير غير محصور</td>
+<td>يجب تقديم الفاعل</td>
+<td>ضربتُ زيدًا</td>
+<td>لزوم اتصال الضمير بالفعل</td>
+</tr>
+<tr>
+<td>المفعول ضمير متصل والفاعل ظاهر</td>
+<td>يجب تأخير الفاعل</td>
+<td>ضربني زيدٌ</td>
+<td>إمكان اتصال الضمير يمنع فصله</td>
+</tr>
+<tr>
+<td>للمفعول صدر الكلام</td>
+<td>يجب تقديم المفعول على عامله</td>
+<td>فأيَّ آيات الله تُنكرون</td>
+<td>للاسم صدر الصدر فلا يُؤخَّر</td>
+</tr>
+<tr>
+<td>عامل المفعول بعد الفاء</td>
+<td>يجب تقديم المفعول على عامله</td>
+<td>وربَّك فكبِّر</td>
+<td>حذار أن تلي الفاء «أما»</td>
+</tr>
+<tr>
+<td>المحصور بإلا أو إنما</td>
+<td>يجب تأخير المحصور</td>
+<td>إنما يخشى اللهَ من عباده العلماءُ</td>
+<td>الحصر يفيد بتأخير المحصور</td>
+</tr>
+<tr>
+<td>وجود قرينة تزيل اللبس</td>
+<td>يجوز الوجهان</td>
+<td>أكل موسى الكمثرى / أكل الكمثرى موسى</td>
+<td>انتفاء علة المنع</td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout--farq"><span class="callout__label">فرق</span>تأخير الفاعل في «إنما يخشى اللهَ من عباده العلماءُ» ليس لأن «العلماء» مفعول، بل لأنه محصور بـ«إنما» واجب التأخير؛ فمن قدّره مبتدأً أو مفعولًا فقد أخطأ من وجهين. والمحصور في الآية هو الفاعل، ولذلك نُصب «لفظ الجلالة» على المفعولية.</div>
+<p class="sources"><strong>المصادر:</strong> <a href="https://shamela.ws/book/17719/93">شرح المكودي (ص ٩٤)</a> · <a href="https://shamela.ws/book/9904/486">شرح ابن عقيل (٢/٩٩)</a> · <a href="https://shamela.ws/book/9904/487">شرح ابن عقيل (٢/١٠٠)</a> · <a href="https://shamela.ws/book/12037/453">ضياء السالك (٢/٣٥)</a> · <a href="https://shamela.ws/book/12037/454">ضياء السالك (٢/٣٦)</a> · <a href="https://shamela.ws/book/17378/296">إرشاد السالك (١/٣١٢)</a> · <a href="https://shamela.ws/book/17378/297">إرشاد السالك (١/٣١٣)</a> · <a href="https://shamela.ws/book/17116/1974">التذييل والتكميل (٦/٢٨٣)</a> · <a href="https://shamela.ws/book/17116/1975">التذييل والتكميل (٦/٢٨٤)</a> · <a href="https://shamela.ws/book/9976/169">التطبيق النحوي (ص ١٧٩)</a> · <a href="https://shamela.ws/book/9976/170">التطبيق النحوي (ص ١٨٠)</a></p>
+<h2 id="_5">٥. حذف الفاعل ونائبه</h2>
+<p>حكم الفاعل أنه لا يُحذف؛ لأنه المسند إليه الذي به يتمّ الكلام، بل يستتر جوازًا أو وجوبًا على ما بيّناه في الضمير (<a href="https://shamela.ws/book/9976/167">التطبيق النحوي (ص ١٧٧)</a>). ومع ذلك فقد يُحذف الفاعل ويُقام غيره مقامه، فيأخذ هذا القائم أحكام الفاعل كلها ويُسمّى «نائب الفاعل». وهذا القسم يعالج الحالتين: متى يُحذف الفاعل، وما الذي ينوب عنه، وما أحكام النائب.</p>
+<table>
+<thead>
+<tr>
+<th>السبب</th>
+<th>التمثيل</th>
+<th>البيان</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>العلم به</td>
+<td>﴿وَخُلِقَ الْإِنسَانُ ضَعِيفًا﴾</td>
+<td>الفاعل معلوم فلا حاجة إلى ذكره</td>
+</tr>
+<tr>
+<td>الجهل به</td>
+<td>سُرِقَ البيتُ</td>
+<td>لا يمكن تعيين السارق</td>
+</tr>
+<tr>
+<td>الرغبة في إخفائه</td>
+<td>رُكِبَ الحصانُ</td>
+<td>الراكب معلوم لكن لا يُراد إظهاره</td>
+</tr>
+<tr>
+<td>الخوف عليه</td>
+<td>ضُرب فلانٌ</td>
+<td>الضارب معلوم لكن يُخشى عليه</td>
+</tr>
+<tr>
+<td>الخوف منه</td>
+<td>سُرِقَ الحصانُ</td>
+<td>السارق معلوم لكن يُخشى منه</td>
+</tr>
+<tr>
+<td>الشرف</td>
+<td>عُمِلَ عملٌ منكرٌ</td>
+<td>العامل معلوم لكن يُصان عن الذكر</td>
+</tr>
+<tr>
+<td>عدم تعلّق الفائدة بذكره</td>
+<td>﴿وَإِذَا حُيِّيتُم بِتَحِيَّةٍ﴾</td>
+<td>الغرض وجوب ردّ التحية لا تعيين المُحيِّي</td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout--tanbih"><span class="callout__label">تنبيه</span>«المبني للمجهول» مصطلح لا يعني دائمًا أن الفاعل مجهول؛ فقد يكون معلومًا للمتكلّم ولكنه محذوف لعلّة بلاغية؛ ففي «وخُلق الإنسان ضعيفًا» الفاعل معلوم قطعًا، وهو الله تعالى. فالتسمية اصطلاحية لا وصفية.</div>
+<p class="sources"><strong>المصادر:</strong> <a href="https://shamela.ws/book/9976/167">التطبيق النحوي (ص ١٧٧)</a> · <a href="https://shamela.ws/book/9976/176">التطبيق النحوي (ص ١٨٦)</a> · <a href="https://shamela.ws/book/3284/464">جامع الدروس (٢/٢٤٧)</a> · <a href="https://shamela.ws/book/11825/486">أوضح المسالك (٢/١١٩–١٢٠)</a> · <a href="https://shamela.ws/book/11825/488">أوضح المسالك (٢/١٢١)</a> · <a href="https://shamela.ws/book/6987/27">اللمع (ص ٣٣)</a> · <a href="https://shamela.ws/book/6987/28">اللمع (ص ٣٤)</a></p>
+<h2 id="_6">٦. أخطاء شائعة وتطبيق</h2>
+<p>هذا القسم يجمع الأخطاء التي تتكرّر في دفاتر الطلاب وفي إعراب المعلّمين، ويضع لكل خطأ تصحيحه وتعليله ومصدره، ثم يختم بتدريب عملي ومفتاحه. وليست الأخطاء هنا مأخوذة من التخمين، بل كلها مواضع نصّ النحاة على خلافها أو على ضابطها.</p>
+<table>
+<thead>
+<tr>
+<th>الخطأ</th>
+<th>الصواب</th>
+<th>العلة</th>
+<th>المصدر</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>«سُرِقَ البيتَ»</td>
+<td>سُرِقَ البيتُ</td>
+<td>ما بعد المبني للمجهول نائب فاعل مرفوع</td>
+<td><a href="https://shamela.ws/book/6987/27">اللمع (ص ٣٣)</a></td>
+</tr>
+<tr>
+<td>«زيدٌ» في «زيدٌ كتبَ» فاعل</td>
+<td>زيدٌ: مبتدأ، والجملة خبره</td>
+<td>تقدّم الفاعل على فعله ينقله إلى الابتداء</td>
+<td><a href="https://shamela.ws/book/9976/169">التطبيق النحوي (ص ١٧٩)</a></td>
+</tr>
+<tr>
+<td>«جاءا الطالبان»</td>
+<td>جاء الطالبان</td>
+<td>الفعل يبقى مفردًا مع الفاعل الظاهر</td>
+<td><a href="https://shamela.ws/book/9976/170">التطبيق النحوي (ص ١٨٠)</a></td>
+</tr>
+<tr>
+<td>«قام زيدٌ وعمرٌو»: فاعلان</td>
+<td>عمرو: معطوف على الفاعل</td>
+<td>الفاعل لا يتعدّد</td>
+<td><a href="https://shamela.ws/book/9976/167">التطبيق النحوي (ص ١٧٧)</a></td>
+</tr>
+<tr>
+<td>«قِيمَ» في «قام زيد»</td>
+<td>لا يُبنى اللازم للمجهول</td>
+<td>يُحدَّث عن غير مُحدَّث عنه</td>
+<td><a href="https://shamela.ws/book/6987/28">اللمع (ص ٣٤)</a></td>
+</tr>
+<tr>
+<td>جعل «عيسى» فاعلًا في «عيسى ضرب موسى»</td>
+<td>عيسى: مفعول، موسى: فاعل</td>
+<td>وجوب تقديم الفاعل عند اللبس</td>
+<td><a href="https://shamela.ws/book/9904/486">شرح ابن عقيل (٢/٩٩)</a></td>
+</tr>
+<tr>
+<td>«اللهَ» في «إنما يخشى اللهَ من عباده العلماءُ» فاعل</td>
+<td>مفعول به مقدَّم</td>
+<td>المحصور بـ«إنما» واجب التأخير</td>
+<td><a href="https://shamela.ws/book/17378/297">إرشاد السالك (١/٣١٣)</a></td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout--mulahaza"><span class="callout__label">ملاحظة</span>هذه الأسئلة الستة تغطي الباب كله تقريبًا: الحذف، والحصر، والمطابقة، وعلامات الرفع، والضمير الفاعل، والنيابة بالجار والمجرور. فمن أتقنها أتقن إعراب الفاعل، ومن أخطأ في واحدها دُلَّ الخطأ على بابه.</div>
+<p class="sources"><strong>المصادر:</strong> <a href="https://shamela.ws/book/9976/164">التطبيق النحوي (ص ١٧٤)</a> · <a href="https://shamela.ws/book/9976/167">التطبيق النحوي (ص ١٧٧)</a> · <a href="https://shamela.ws/book/9976/169">التطبيق النحوي (ص ١٧٩)</a> · <a href="https://shamela.ws/book/9976/170">التطبيق النحوي (ص ١٨٠)</a> · <a href="https://shamela.ws/book/23635/43">تفسير الرازي (١/٦٣)</a> · <a href="https://shamela.ws/book/6987/27">اللمع (ص ٣٣)</a> · <a href="https://shamela.ws/book/6987/28">اللمع (ص ٣٤)</a> · <a href="https://shamela.ws/book/11825/487">أوضح المسالك (٢/١٢٠)</a> · <a href="https://shamela.ws/book/9904/486">شرح ابن عقيل (٢/٩٩)</a> · <a href="https://shamela.ws/book/17378/297">إرشاد السالك (١/٣١٣)</a> · <a href="https://shamela.ws/book/17687/112">الكناش (١/١١٨)</a> · <a href="https://shamela.ws/book/11371/6">الآجرومية (ص ٩)</a></p>
+  </section>
+
+</body>
+</html>

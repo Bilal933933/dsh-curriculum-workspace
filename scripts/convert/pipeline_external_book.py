@@ -54,11 +54,25 @@ def log(line: str) -> None:
     LOG_DIR.mkdir(parents=True, exist_ok=True)
 
 
+MARKERS = ("نُقلت يدويًا", "صفحة بيضاء في المصدر")
+
+
+def _is_done(p: Path) -> bool:
+    """صفحة منجزة؟ >100 بايت، أو صفحة بيضاء/منقولة يدويًا (نصّها قصير بطبيعته)."""
+    if p.stat().st_size > 100:
+        return True
+    try:
+        head = p.read_text(encoding="utf-8", errors="ignore")[:400]
+    except OSError:
+        return False
+    return any(m in head for m in MARKERS)
+
+
 def done_pages(book: str) -> set[int]:
     d = ROOT / "output" / book
     if not d.is_dir():
         return set()
-    return {int(p.stem[5:8]) for p in d.glob("page_*.md") if p.stat().st_size > 100}
+    return {int(p.stem[5:8]) for p in d.glob("page_*.md") if _is_done(p)}
 
 
 def main() -> int:

@@ -1,16 +1,16 @@
 {
-  "created": "2026-11-06T09:35:26+0200",
-  "created_epoch": 1793950526.6299956,
+  "created": "2026-11-09T19:20:50+0200",
+  "created_epoch": 1794244850.1008203,
   "sources": {
     "index": {
-      "bytes": 18419944,
-      "digest": "2b168a85830546cf0324c453b1cda29979a3690108a3a86a8a6534632c821790",
-      "files": 10043
+      "bytes": 30836741,
+      "digest": "0a426cf7c6b85bd48dace6a4eeb430445c720adb2c2168523b8e206a3ee3d365",
+      "files": 15338
     },
     "output": {
-      "bytes": 25081463,
-      "digest": "e340ac295cbf57c9d06b85563e322bf2bc024578b07027007bdf999b7705063a",
-      "files": 10122
+      "bytes": 40326036,
+      "digest": "468696e337c2681bd8d8154625ef4cdb1b162b210dd9f6eb81e638ca2d34fb2c",
+      "files": 15389
     }
   },
   "version": 1

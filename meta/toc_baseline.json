@@ -1,4 +1,52 @@
 {
+  "adwaa_ar_p1_t1": {
+    "chapters": 3,
+    "topics": 34
+  },
+  "adwaa_ar_p2_t1": {
+    "chapters": 4,
+    "topics": 50
+  },
+  "adwaa_ar_p3_t1": {
+    "chapters": 4,
+    "topics": 50
+  },
+  "adwaa_ar_p4_t1": {
+    "chapters": 4,
+    "topics": 50
+  },
+  "adwaa_ar_p5_t1": {
+    "chapters": 4,
+    "topics": 50
+  },
+  "adwaa_ar_p6_t1": {
+    "chapters": 4,
+    "topics": 50
+  },
+  "adwaa_ar_prep1_t1": {
+    "chapters": 4,
+    "topics": 48
+  },
+  "adwaa_ar_prep2_t1": {
+    "chapters": 4,
+    "topics": 48
+  },
+  "adwaa_ar_prep3_t1": {
+    "chapters": 4,
+    "topics": 49
+  },
+  "adwaa_ar_sec1_t1": {
+    "chapters": 5,
+    "topics": 50
+  },
+  "adwaa_ar_sec2_t1": {
+    "chapters": 5,
+    "topics": 65
+  },
+  "adwaa_ar_sec3_t1": {
+    "chapters": 7,
+    "topics": 82
+  },
   "agriculture_skills_p4_t1": {
     "chapters": 4,
     "topics": 30
@@ -202,6 +250,26 @@
   "nahw": {
     "chapters": 10,
     "topics": 42
+  },
+  "pedagogy_ar_lugha": {
+    "chapters": 10,
+    "topics": 61
+  },
+  "pedagogy_ar_simat": {
+    "chapters": 5,
+    "topics": 21
+  },
+  "pedagogy_ar_strategies": {
+    "chapters": 13,
+    "topics": 91
+  },
+  "pedagogy_ar_tr1": {
+    "chapters": 7,
+    "topics": 60
+  },
+  "pedagogy_ar_tr2": {
+    "chapters": 9,
+    "topics": 59
   },
   "religion_islamic_p1_t1": {
     "chapters": 4,

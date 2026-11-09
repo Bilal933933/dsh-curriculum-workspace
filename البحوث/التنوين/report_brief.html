@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>التنوين: خلاصة مرجعية</title>
+<style>
+/* ==== base.css ==== */
+/* ============================================================
+   base.css — الأساس الطباعي والهوية البصرية لكل مستند
+   يعتمد متغيّرات في :root، فيكفي تعديلها لتغيير الهوية كلها.
+   تُدمج داخل <style> عند البناء، فلا حاجة لمسار خارجي عند الطبع.
+   ============================================================ */
+
+:root {
+  /* الهوية */
+  --ink:        #18222c;   /* نص المتن */
+  --navy:       #0e2740;   /* العناوين الرئيسية */
+  --navy-mid:   #1c4a72;   /* العناوين الفرعية */
+  --gold:       #8a6414;   /* لمسة تمييز */
+  --rule:       #d5dde5;   /* خطوط فاصلة */
+  --soft:       #f3f6f9;   /* خلفية خفيفة */
+  --soft-2:     #eaf0f5;
+  --muted:      #5d6b78;
+
+  /* المقاسات */
+  --body-size:  12.6pt;
+  --body-lh:    1.95;
+}
+
+@page {
+  size: A4;
+  margin: 22mm 18mm 20mm 18mm;
+}
+
+* { box-sizing: border-box; }
+
+html, body { margin: 0; padding: 0; }
+
+body {
+  font-family: "Segoe UI", "Traditional Arabic", "Arial", sans-serif;
+  font-size: var(--body-size);
+  line-height: var(--body-lh);
+  color: var(--ink);
+  text-align: justify;
+  text-justify: inter-word;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ---------- النص ---------- */
+p {
+  margin: 0 0 3.4mm;
+  orphans: 2;
+  widows: 2;
+}
+
+strong { color: #0b1520; font-weight: 700; }
+
+em { color: var(--navy-mid); font-style: normal; }
+
+a { color: var(--navy-mid); text-decoration: none; }
+
+hr {
+  border: 0;
+  height: 1px;
+  background: var(--rule);
+  margin: 8mm 0;
+}
+
+/* ---------- العناوين ---------- */
+h1, h2, h3, h4 {
+  line-height: 1.45;
+  page-break-after: avoid;
+  color: var(--navy);
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 14.2pt;
+  color: var(--navy-mid);
+  margin: 7mm 0 2.5mm;
+}
+
+h4 {
+  font-size: 13pt;
+  color: var(--ink);
+  margin: 5mm 0 2mm;
+}
+
+/* ---------- القوائم ---------- */
+ul, ol {
+  margin: 0 0 3.8mm;
+  padding-right: 7mm;
+}
+
+li { margin: 1.2mm 0; }
+
+li::marker { color: var(--navy-mid); }
+
+/* ---------- الجداول ---------- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 4mm 0 6mm;
+  font-size: 11.4pt;
+  line-height: 1.65;
+  page-break-inside: avoid;
+}
+
+thead { display: table-header-group; }
+
+th, td {
+  border: 1px solid var(--rule);
+  padding: 2.4mm 2.6mm;
+  vertical-align: top;
+  text-align: right;
+}
+
+th {
+  background: var(--navy);
+  color: #fff;
+  font-weight: 700;
+  border-color: var(--navy);
+}
+
+tbody tr:nth-child(even) { background: var(--soft); }
+
+tr { page-break-inside: avoid; }
+
+/* ---------- الاقتباس ---------- */
+blockquote {
+  margin: 4mm 0 5mm;
+  padding: 3.2mm 5mm;
+  background: var(--soft);
+  border-right: 3px solid var(--navy-mid);
+  color: #26313c;
+  font-size: 12pt;
+}
+
+blockquote p:last-child { margin-bottom: 0; }
+
+/* ---------- الصناديق الثلاثة ---------- */
+.callout {
+  margin: 4.5mm 0 5mm;
+  padding: 3.2mm 4.5mm 3.2mm 4.5mm;
+  border-radius: 2px;
+  border-right: 3px solid var(--navy-mid);
+  background: var(--soft);
+  page-break-inside: avoid;
+  font-size: 11.8pt;
+  line-height: 1.8;
+}
+
+.callout p { margin-bottom: 2mm; }
+.callout p:last-child { margin-bottom: 0; }
+
+.callout__label {
+  display: inline-block;
+  font-weight: 700;
+  margin-left: 2mm;
+  padding: 0 2mm;
+  border-radius: 2px;
+  font-size: 10.5pt;
+  line-height: 1.9;
+}
+
+.callout--farq {
+  background: #fbf6ea;
+  border-right-color: var(--gold);
+}
+.callout--farq .callout__label { background: var(--gold); color: #fff; }
+
+.callout--tanbih {
+  background: #fbefee;
+  border-right-color: #9c3b32;
+}
+.callout--tanbih .callout__label { background: #9c3b32; color: #fff; }
+
+.callout--mulahaza {
+  background: #eef4fa;
+  border-right-color: var(--navy-mid);
+}
+.callout--mulahaza .callout__label { background: var(--navy-mid); color: #fff; }
+
+/* ---------- سطر المصادر ---------- */
+p.sources {
+  font-size: 10.4pt;
+  line-height: 1.8;
+  color: var(--muted);
+  background: var(--soft-2);
+  border-right: 2px solid var(--rule);
+  padding: 2mm 3mm;
+  margin: 3mm 0 6mm;
+  text-align: right;
+  page-break-inside: avoid;
+}
+
+p.sources strong { color: var(--navy-mid); }
+
+p.sources a {
+  color: var(--navy-mid);
+  border-bottom: 1px dotted var(--rule);
+}
+
+/* ---------- الرموز ---------- */
+code {
+  font-family: Consolas, "Courier New", monospace;
+  font-size: 10.6pt;
+  direction: ltr;
+  unicode-bidi: embed;
+  background: var(--soft);
+  padding: 0 1mm;
+  border-radius: 2px;
+}
+
+/* ============================================================
+   نمط الهاتف — يُفعَّل تلقائيًّا على الشاشات الصغيرة (≤ 640px)
+   الغرض: قراءة مريحة فقط؛ قواعد الطبع (@page) لا تتأثر.
+   ============================================================ */
+@media screen and (max-width: 640px) {
+  body {
+    font-size: 18px;
+    line-height: 1.95;
+    text-align: right;          /* الضبط من الطرفين يُحدِث فجوات في العربية على الجوال */
+    padding: 0 16px 40px;
+  }
+
+  .cover {
+    height: auto;
+    padding: 44px 0 28px;
+    page-break-after: auto;
+  }
+  .cover h1 { font-size: 26px; }
+  .cover .subtitle { font-size: 16px; margin-bottom: 10mm; }
+  .cover .kicker { font-size: 13px; margin-bottom: 8mm; }
+  .cover .meta { font-size: 15px; line-height: 2; }
+
+  .toc-page { page-break-after: auto; padding-bottom: 24px; }
+  .toc-page h2 { font-size: 22px; margin-bottom: 6mm; }
+  .toc > ul > li { font-size: 17px; margin: 2.4mm 0; }
+  .toc ul ul { margin-right: 5mm; }
+  .toc ul ul li { font-size: 15.5px; }
+
+  .content h1 { font-size: 24px; }
+  .content h2 { font-size: 20px; margin-top: 10mm; }
+  .content h3 { font-size: 18px; }
+  .content h4 { font-size: 17px; }
+
+  table { display: block; overflow-x: auto; white-space: nowrap; font-size: 15px; }
+  th, td { padding: 8px 10px; }
+
+  blockquote { padding: 10px 14px; margin: 6mm 0; font-size: 16.5px; }
+
+  .callout { font-size: 16.5px; padding: 12px 14px; }
+  p.sources { font-size: 14.5px; }
+
+  ul, ol { padding-right: 6mm; }
+}
+
+
+/* ==== report.css ==== */
+/* ============================================================
+   report.css — أنماط خاصة بمستند «التقرير»: الغلاف، الفهرس، الأقسام
+   ============================================================ */
+
+/* ---------- الغلاف ---------- */
+.cover {
+  height: 247mm;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  page-break-after: always;
+}
+
+.cover .kicker {
+  font-size: 11pt;
+  color: #6b6b6b;
+  margin-bottom: 12mm;
+  letter-spacing: .5px;
+}
+
+.cover h1 {
+  font-size: 30pt;
+  margin: 0 0 6mm;
+  line-height: 1.45;
+  color: #0f2b46;
+}
+
+.cover .subtitle {
+  font-size: 14pt;
+  color: #4a4a4a;
+  margin-bottom: 16mm;
+  line-height: 1.7;
+}
+
+.cover .rule {
+  width: 60mm;
+  height: 2px;
+  background: #0f2b46;
+  margin: 0 auto 16mm;
+}
+
+.cover .meta {
+  font-size: 12pt;
+  color: #333;
+  line-height: 2.2;
+}
+
+/* ---------- الفهرس ---------- */
+.toc-page { page-break-after: always; }
+
+.toc-page h2 {
+  font-size: 20pt;
+  color: #0f2b46;
+  margin: 0 0 9mm;
+  padding: 0;
+  border: 0;
+}
+
+.toc > ul { list-style: none; padding: 0; margin: 0; }
+.toc > ul > li { margin: 3.4mm 0; font-size: 13pt; font-weight: 600; }
+.toc ul ul { margin: 1.6mm 8mm 1.6mm 0; list-style: none; }
+.toc ul ul li { font-weight: 400; font-size: 12pt; margin: 1.3mm 0; }
+.toc a { color: #1b1b1b; }
+
+/* ---------- المحتوى ---------- */
+.content h1 {
+  font-size: 22pt;
+  color: #0f2b46;
+  margin: 0 0 7mm;
+}
+
+.content h2 {
+  font-size: 17pt;
+  color: #0f2b46;
+  margin: 0 0 5mm;
+  padding-bottom: 2mm;
+  border-bottom: 2px solid #0f2b46;
+  page-break-before: always;
+}
+
+/* أول قسم يكمل بعد العنوان بلا صفحة بيضاء */
+.content h2:first-of-type { page-break-before: avoid; }
+
+.content h3 {
+  font-size: 14.5pt;
+  color: #23456a;
+  margin: 7mm 0 3mm;
+}
+
+.content h4 {
+  font-size: 13pt;
+  color: #333;
+  margin: 5mm 0 2mm;
+}
+
+</style>
+</head>
+<body>
+
+  <!-- ================= الغلاف ================= -->
+  <section class="cover">
+    <div class="kicker">ملفّ بحثيّ مُعدّ للطبع</div>
+    <h1>التنوين: خلاصة مرجعية</h1>
+    <div class="subtitle">نسخة موجزة: الجوهر والجداول والمصادر بلا فروع</div>
+    <div class="rule"></div>
+    <div class="meta">إعداد: معلّم اللغة العربية<br>التاريخ: 2026-11-05</div>
+  </section>
+
+  <!-- ================= الفهرس ================= -->
+  <section class="toc-page">
+    <h2>فهرس المحتويات</h2>
+    <div class="toc"><div class="toc">
+<ul>
+<li><a href="#_1">١. الحدّ والتسمية والقيود</a></li>
+<li><a href="#_2">٢. أنواع التنوين</a></li>
+<li><a href="#_3">٣. تنوين العوض</a></li>
+<li><a href="#_4">٤. أحكام التنوين ومواضع حذفه</a></li>
+<li><a href="#_5">٥. الفروق والرسم</a></li>
+<li><a href="#_6">٦. التنوين في التجويد، والأخطاء الشائعة، والتطبيق</a></li>
+</ul>
+</div>
+</div>
+  </section>
+
+  <!-- ================= المحتوى ================= -->
+  <section class="content">
+<h2 id="_1">١. الحدّ والتسمية والقيود</h2>
+<p>التنوين في اصطلاح النحاة نون ساكنة زائدة تلحق آخر الاسم، تُنطق ولا تُرسم، وتسقط في الوقف، ولا تُؤتى للتوكيد (<a href="https://shamela.ws/book/7368/7">حاشية الآجرومية (ص ١١)</a>). وهذا الحدّ لم يستقرّ على صيغة واحدة، بل تعدّدت صيغه بتعدّد ما أراد كلّ واضع أن يحترس منه؛ فمنهم من اقتصر على «نون تثبت لفظًا لا خطًّا» (<a href="https://shamela.ws/book/18280/248">شرح كتاب الحدود في النحو (ص ٢٨١)</a>)، ومنهم من أضاف «لغير توكيد» (<a href="https://shamela.ws/book/26099/126">الجنى الداني في حروف المعاني (ص ١٤٤)</a>).</p>
+<table>
+<thead>
+<tr>
+<th>الصيغة</th>
+<th>موضعها</th>
+<th>ما تميّزت به</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>نون ساكنة زائدة تلحق آخر الاسم لفظًا وتفارقه خطًّا ووقفًا لغير توكيد</td>
+<td>حاشية الآجرومية</td>
+<td>أوفى الصيغ قيودًا، وأصرحها في نفي التوكيد</td>
+</tr>
+<tr>
+<td>نون ساكنة تتبع حركة الآخر لا لتوكيد الفعل</td>
+<td>الجنى الداني</td>
+<td>استبدال «آخر الاسم» بـ«حركة الآخر» جمعًا لتنوينَي الترنّم والغالي</td>
+</tr>
+<tr>
+<td>نون ساكنة زائدة تثبت لفظًا لا خطًّا</td>
+<td>شرح الحدود</td>
+<td>أخصر الصيغ وأحسنها عند صاحبها</td>
+</tr>
+<tr>
+<td>نون ساكنة تتبع حركة آخر الكلمة لا لتأكيد الفعل</td>
+<td>كشاف اصطلاحات الفنون</td>
+<td>تعليل اختيار «حركة آخر الكلمة»</td>
+</tr>
+<tr>
+<td>نون ساكنة تلحق الآخر تثبت وصلًا وتحذف خطًّا ووقفًا</td>
+<td>شرح الأزهرية</td>
+<td>إدخال «غالبًا» لمراعاة الشاذّ</td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout--tanbih"><span class="callout__label">تنبيه</span>الاقتصار على «آخر الاسم» يُفسد جمع الحدّ، لأن تنوين الترنّم والغالي قد يلحقان الفعل والحرف؛ ومن شواهده «أصابن» في الفعل و«قدن» في الحرف (<a href="https://shamela.ws/book/12017/455">سر صناعة الإعراب (٢/ ١٥٦)</a>).</div>
+<p class="sources"><strong>المصادر:</strong> <a href="https://shamela.ws/book/7368/7">حاشية الآجرومية (ص ١١)</a> · <a href="https://shamela.ws/book/96610/6">شرح الأزهرية (ص ٥)</a> · <a href="https://shamela.ws/book/18280/248">شرح كتاب الحدود في النحو (ص ٢٨١)</a> · <a href="https://shamela.ws/book/26099/126">الجنى الداني في حروف المعاني (ص ١٤٤)</a> · <a href="https://shamela.ws/book/2573/562">كشاف اصطلاحات الفنون والعلوم (١/ ٥١٩)</a> · <a href="https://shamela.ws/book/13301/2092">شرح المفصل لابن يعيش (٥/ ١٥٤)</a> · <a href="https://shamela.ws/book/6986/36">اللباب في علل البناء والإعراب (١/ ٧٤)</a> · <a href="https://shamela.ws/book/613/45">نتائج الفكر في النحو (ص ٦٨)</a> · <a href="https://shamela.ws/book/23018/12">الكتاب لسيبويه (١/ ١٤)</a> · <a href="https://shamela.ws/book/10641/2134">النحو الوافي (٤/ ٢٠٢)</a></p>
+<h2 id="_2">٢. أنواع التنوين</h2>
+<p>التنوين اسمٌ واحد، تتعدّد أنواعه بتعدّد المعاني التي يؤدّيها في مواضعه. وقد جعل ابن عقيل أقسامه أربعةً، وكلّها من خواصّ الاسم: التمكين، والتنكير، والمقابلة، والعوض <a href="https://shamela.ws/book/9904/16">شرح ابن عقيل (١/١٧)</a>. وزاد غيرُه نوعين لا يختصّان بالاسم: الترنّم والغالي <a href="https://shamela.ws/book/18115/7">شرح ابن الناظم (ص ٩)</a>. فلا يكفي اشتراكها في الاسم للحكم على نوع التنوين في كلمة بعينها، وإنما يُعرف النوع بالدلالة التي يؤديها في سياقه، وبقبول الكلمة له أو امتناعها عنه <a href="https://shamela.ws/book/13257/10">شرح التسهيل (١/١٠)</a>. وفي عدد الأنواع نفسها خلافٌ سيأتي في آخر القسم.</p>
+<table>
+<thead>
+<tr>
+<th>المثال</th>
+<th>نوع التنوين</th>
+<th>ما يدلّ عليه</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>رجلٍ</td>
+<td>تمكين</td>
+<td>ثبوت الاسم على أصالته في الاسمية</td>
+</tr>
+<tr>
+<td>زيدٍ</td>
+<td>تمكين</td>
+<td>تمكّن العلم المنصرف</td>
+</tr>
+<tr>
+<td>قاضٍ</td>
+<td>تمكين</td>
+<td>تمكّن المنقوص المنصرف</td>
+</tr>
+<tr>
+<td>أحمدَ</td>
+<td>لا تنوين</td>
+<td>منع الصرف لعلّتين</td>
+</tr>
+<tr>
+<td>مسلماتٍ</td>
+<td>مقابلة</td>
+<td>مقابلة نون جمع المذكر</td>
+</tr>
+<tr>
+<td>سيبويهٍ</td>
+<td>تنكير</td>
+<td>تحويل المبني المعرفة إلى نكرة</td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout--tanbih"><span class="callout__label">تنبيه</span>التنوين والْألف واللام والإضافة لا يجتمعان؛ فإذا دخلت «أل» أو الإضافة على الاسم جرى الإعرابُ بحاله وسقط التنوينُ لفظًا، نحو «الرجل» و«غلام زيد» <a href="https://shamela.ws/book/17905/178">البديع في علم العربية (١/١٨)</a>.</div>
+<p class="sources"><strong>المصادر:</strong> <a href="https://shamela.ws/book/16595/667">ارتشاف الضرب (٢/٦٦٧)</a> · <a href="https://shamela.ws/book/9904/16">شرح ابن عقيل (١/١٧)</a> · <a href="https://shamela.ws/book/17687/521">الكناش (٢/١٢٤)</a> · <a href="https://shamela.ws/book/23358/96">شمس العلوم (١/٩٠)</a></p>
+<h2 id="_3">٣. تنوين العوض</h2>
+<p>تنوين العوض هو التنوين الذي ينوب عن شيء محذوف من اللفظ، لا عن معنى في الاسم نفسه، وحدّه عند ابن هشام أنه «اللاحق عوضًا من حرف أصلي أو زائد أو مضاف إليه مفردًا أو جملة» (<a href="https://shamela.ws/book/6972/434">مغني اللبيب (ص ٤٤٦)</a>). ودليله المطّرد أن التنوين والمعوَّض عنه لا يجتمعان، فمتى جاء التنوين امتنع ذكر المعوَّض عنه (<a href="https://shamela.ws/book/17116/2343">التذييل والتكميل (٧/٢٩٤)</a>). ويسمّيه ابن يعيش «تنوين العِوَض» ويجعله ثالث أضرب التنوين في «إذٍ» و«يومئذٍ» و«ساعتَئِذٍ» (<a href="https://shamela.ws/book/13301/2093">شرح المفصل (٥/١٥٥)</a>).</p>
+<table>
+<thead>
+<tr>
+<th>نوع العوض</th>
+<th>المعوَّض عنه</th>
+<th>المثال</th>
+<th>الإعراب</th>
+<th>المصدر</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>عن حرف</td>
+<td>ياء الكلمة المحذوفة لثقل الحركة عليها</td>
+<td>«مررت بجوارٍ»</td>
+<td>اسم مجرور بالفتحة المقدرة على الياء المحذوفة، والتنوين عوض عن الياء</td>
+<td><a href="https://shamela.ws/book/12037/1190">ضياء السالك (٣/٣٦٧)</a></td>
+</tr>
+<tr>
+<td>عن اسم</td>
+<td>المضاف إليه المفرد المحذوف</td>
+<td>«مررت بكلٍّ قائمًا»</td>
+<td>«كلٍّ» اسم مجرور بالكسرة الظاهرة، والتنوين عوض عن «هم» المحذوفة</td>
+<td><a href="https://shamela.ws/book/150600/156">العدة في إعراب العمدة (١/١٥٩)</a></td>
+</tr>
+<tr>
+<td>عن جملة</td>
+<td>الجملة التي كانت «إذ» تضاف إليها</td>
+<td>«يومئذٍ» و«حينئذٍ»</td>
+<td>ظرف مضاف إلى «إذ» المبنية على السكون، والكسرة لالتقاء الساكنين لا للجر</td>
+<td><a href="https://shamela.ws/book/6972/435">مغني اللبيب (ص ٤٤٧)</a></td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout--farq"><span class="callout__label">فرق</span>«قاضٍ» منقوص منصرف: يُجرّ بكسرة مقدرة وتنوينه تنوين صرف؛ و«جوارٍ» منقوص ممنوع من الصرف: يُجرّ بفتحة مقدرة وتنوينه تنوين عوض (<a href="https://shamela.ws/book/12037/1190">ضياء السالك (٣/٣٦٧)</a>). فاتفاقهما في صورة التنوين لا يعني اتفاقهما في نوعه.</div>
+<p class="sources"><strong>المصادر:</strong> <a href="https://shamela.ws/book/6972/434">مغني اللبيب (ص ٤٤٦–٤٤٧)</a> · <a href="https://shamela.ws/book/16595/668">ارتشاف الضرب (٢/٦٦٨–٦٦٩)</a> · <a href="https://shamela.ws/book/13301/2093">شرح المفصل (٥/١٥٥–١٥٦)</a> · <a href="https://shamela.ws/book/17687/522">الكناش (٢/١٢٥)</a> · <a href="https://shamela.ws/book/17116/2343">التذييل والتكميل (٧/٢٩٤)</a> · <a href="https://shamela.ws/book/12024/944">شرح الكافية الشافية (٢/٩٣٩)</a> · <a href="https://shamela.ws/book/26099/127">الجنى الداني (ص ١٤٥)</a> · <a href="https://shamela.ws/book/12037/1190">ضياء السالك (٣/٣٦٧)</a> · <a href="https://shamela.ws/book/22916/1825">الجدول في إعراب القرآن (٤/٤٠٩)</a> · <a href="https://shamela.ws/book/150578/4869">الإعراب المفصل (١١/٣٧٤)</a> · <a href="https://shamela.ws/book/9057/5866">الدر المصون (٧/٤٢٩)</a> · <a href="https://shamela.ws/book/23627/1399">الكشاف (٢/٧٠٠)</a> · <a href="https://shamela.ws/book/150600/156">العدة في إعراب العمدة (١/١٥٩)</a> · <a href="https://shamela.ws/book/2122/37">شرح الآجرومية — حسن حفظي (ص ٣٧)</a> · <a href="https://shamela.ws/book/11539/52">حاشية الصبان (١/٥٣–٥٤)</a> · <a href="https://shamela.ws/book/17726/941">شرح كتاب سيبويه للسيرافي (٢/٤٤٣)</a></p>
+<h2 id="_4">٤. أحكام التنوين ومواضع حذفه</h2>
+<p>التنوين في أصله علامةُ تمكُّنِ الاسمِ في باب الاسمية، ودليلُ بقائه على أصله لم يشبه الفعلَ فيُمنع، ولا الحرفَ فيُبنى. فمتى فارق الاسمَ تنوينُه فالسببُ إمّا عارضٌ لفظي يزول بزواله فيعود التنوين، وإمّا مانعٌ قياسي هو منع الصرف. والتمييز بينهما مفتاح هذا القسم؛ لأن العارض يسلُب العلامةَ وحدها، والمانع يسلُبها ويسلُب معها حقَّ الاسم في الجر بالكسرة. <a href="https://shamela.ws/book/9988/1147">توضيح المقاصد (٣/ ١١٩٠)</a> · <a href="https://shamela.ws/book/11742/1071">شرح الأشموني (٣/ ١٣٣)</a></p>
+<table>
+<thead>
+<tr>
+<th>العلة</th>
+<th>نوعها</th>
+<th>ما تنضمّ إليه</th>
+<th>المثال</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>العلمية</td>
+<td>معنوية</td>
+<td>لا تستقل، بل تنضم إلى إحدى العلل</td>
+<td>أحمد، إبراهيم</td>
+</tr>
+<tr>
+<td>الوصفية</td>
+<td>معنوية</td>
+<td>لا تستقل</td>
+<td>أحمر، سكران</td>
+</tr>
+<tr>
+<td>العدل</td>
+<td>لفظية</td>
+<td>العلمية أو الوصفية</td>
+<td>عمر (عن عامر)، مثنى (عن اثنين اثنين)</td>
+</tr>
+<tr>
+<td>وزن الفعل</td>
+<td>لفظية</td>
+<td>العلمية أو الوصفية</td>
+<td>أحمد، أحمر</td>
+</tr>
+<tr>
+<td>زيادة الألف والنون</td>
+<td>لفظية</td>
+<td>العلمية أو الوصفية</td>
+<td>عثمان، سكران</td>
+</tr>
+<tr>
+<td>التأنيث</td>
+<td>لفظية</td>
+<td>العلمية، إلا ألف التأنيث فتستقل</td>
+<td>طلحة، سلمى، صحراء</td>
+</tr>
+<tr>
+<td>العجمة</td>
+<td>لفظية</td>
+<td>العلمية</td>
+<td>إبراهيم، إسماعيل</td>
+</tr>
+<tr>
+<td>التركيب المزجي</td>
+<td>لفظية</td>
+<td>العلمية</td>
+<td>بعلبك، معديكرب</td>
+</tr>
+<tr>
+<td>صيغة منتهى الجموع</td>
+<td>لفظية</td>
+<td>تستقلّ وحدها</td>
+<td>مساجد، مصابيح</td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout--farq"><span class="callout__label">فرق</span>الإضافة المحضة تُفيد تعريف المضاف أو تخصيصه، وأما الإضافة اللفظية — كإضافة اسم الفاعل إلى معموله في «مررت برجلٍ ضاربِ زيدٍ» — فالتنوين فيها مقدَّر لا محذوف حقيقةً، لأن الإضافة «في تقدير الانفصال»، وغايتها التخفيف بحذف التنوين. <a href="https://shamela.ws/book/7502/190">أسرار العربية (ص ٢٠٧)</a> · <a href="https://shamela.ws/book/2099/545">النحو المصفى (ص ٥٤٩)</a></div>
+<p class="sources"><strong>المصادر:</strong> <a href="https://shamela.ws/book/9988/1146">توضيح المقاصد (٣/ ١١٤٦)</a> · <a href="https://shamela.ws/book/13257/454">شرح التسهيل (٢/ ٥٨)</a> · <a href="https://shamela.ws/book/7502/189">أسرار العربية (ص ٢٠٦)</a> · <a href="https://shamela.ws/book/613/46">نتائج الفكر (ص ٦٩)</a> · <a href="https://shamela.ws/book/23018/661">الكتاب لسيبويه (٢/ ٢٢٦)</a> · <a href="https://shamela.ws/book/14246/320">الاقتراح (ص ٣٤٣)</a> · <a href="https://shamela.ws/book/13786/327">التبيين (ص ٤٣٨)</a> · <a href="https://shamela.ws/book/560/1139">حاشيتان لابن هشام (٢/ ١١٤٠)</a> · <a href="https://shamela.ws/book/6975/611">همع الهوامع (٢/ ٣٩)</a> · <a href="https://shamela.ws/book/18262/109">المرتجل (ص ١١٠)</a> · <a href="https://shamela.ws/book/9904/934">شرح ابن عقيل (٣/ ٢٦١)</a> · <a href="https://shamela.ws/book/17726/1738">شرح السيرافي (٤/ ٢٤٥)</a> · <a href="https://shamela.ws/book/16595/2178">ارتشاف الضرب (٤/ ٢١٨٨)</a> · <a href="https://shamela.ws/book/11742/1073">شرح الأشموني (٣/ ١٣٥)</a> · <a href="https://shamela.ws/book/36954/89">شرح العثيمين (٧/ ٧)</a> · <a href="https://shamela.ws/book/174/129">شرح الفارضي (١/ ١٣٣)</a> · <a href="https://shamela.ws/book/96610/14">شرح الأزهرية (ص ١٣)</a></p>
+<h2 id="_5">٥. الفروق والرسم</h2>
+<p>يفترق التنوين عن الحركة في اللفظ والخط والوظيفة، وعن النونات الثلاث في الثبوت والوقف والموضع، ويترتب على كونه لا يثبت وقفًا أنه لا يُكتب نونًا، وأن رسمه حركتان مضاعفتان، وأن ألف تنوين النصب تُزاد أو تُحذف بضوابط. هذا القسم يثبت هذه الفروق ويجمعها في جداول ثم يردّها إلى أثرها في القراءة والشعر والخط.</p>
+<table>
+<thead>
+<tr>
+<th>الوجه</th>
+<th>الحركة</th>
+<th>التنوين</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>الصورة اللفظية</td>
+<td>صوت قصير واحد</td>
+<td>نون ساكنة تُنطق في الوصل</td>
+</tr>
+<tr>
+<td>الرسم</td>
+<td>علامة واحدة فوق الحرف أو تحته</td>
+<td>علامتان مضاعفتان من جنس الحركة</td>
+</tr>
+<tr>
+<td>الوظيفة</td>
+<td>بيان الموقع الإعرابي</td>
+<td>بيان صرف الاسم وتمكينه</td>
+</tr>
+<tr>
+<td>العلاقة</td>
+<td>أصل يثبت وصلًا ويسقط وقفًا</td>
+<td>تابع للحركة لا يوجد إلا بعدها</td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout--farq"><span class="callout__label">فرق</span>الحركة علامة على الإعراب، والتنوين علامة على الصرف، وليس أحدهما عين الآخر: «فثبات حركته دليل على رفعه أو نصبه أو جره، وثبات تنوينه دليل على صرفه» (<a href="https://shamela.ws/book/18278/18">شرح المقدمة المحسبة (١/١٠٤)</a>).</div>
+<p class="sources"><strong>المصادر:</strong> <a href="https://shamela.ws/book/12754/13">العميد في علم التجويد (ص ١٥)</a> · <a href="https://shamela.ws/book/18278/18">شرح المقدمة المحسبة (١/١٠٤)</a> · <a href="https://shamela.ws/book/7003/18">علل النحو (ص ١٥٤)</a> · <a href="https://shamela.ws/book/1011/1425">التخمير (٤/١٨٣)</a> · <a href="https://shamela.ws/book/23018/1372">الكتاب لسيبويه (٣/٥٢١)</a> · <a href="https://shamela.ws/book/17726/2041">شرح كتاب سيبويه للسيرافي (٥/٣٧)</a> · <a href="https://shamela.ws/book/16826/5208">تمهيد القواعد (١٠/٥٢٩٠)</a> · <a href="https://shamela.ws/book/26140/282">الحجة في القراءات السبع (ص ٢٨٩)</a> · <a href="https://shamela.ws/book/2112/79">قاموس الإملاء (ص ٧٩)</a> · <a href="https://shamela.ws/book/97799/271">المطالع النصرية (ص ٢٧٩)</a></p>
+<h2 id="_6">٦. التنوين في التجويد، والأخطاء الشائعة، والتطبيق</h2>
+<p>يدخل التنوين في علم التجويد من باب واحد: أنه نون ساكنة زائدة تُنطق ولا تُكتب، فيجري عليها ما يجري على النون الساكنة من أحكام عند ملاقاة حروف الهجاء (<a href="https://shamela.ws/book/12754/13">العميد في علم التجويد (ص ١٥)</a>). ويثبت هذا القسم حدّ التنوين عند أهل التجويد وعلاماته وحكم الوقف عليه، وأحكامه الأربعة وحروف كل حكم وأمثلته القرآنية، والفروق بينه وبين النون الساكنة لفظًا ورسمًا، ثم الأخطاء الشائعة في نطقه وكتابته وإعرابه مع تصويبها وتدريبات عليها. والحدّ الاصطلاحي العامّ للتنوين في القسم الأول، فلا يُعاد هنا.</p>
+<table>
+<thead>
+<tr>
+<th>الحالة</th>
+<th>العلامة</th>
+<th>المثال</th>
+<th>حكم الوقف</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>الرفع</td>
+<td>ضمتان</td>
+<td>كتابٌ</td>
+<td>يُحذف التنوين ويُوقف بالسكون: كتابْ</td>
+</tr>
+<tr>
+<td>الجر</td>
+<td>كسرتان</td>
+<td>كتابٍ</td>
+<td>يُحذف التنوين ويُوقف بالسكون: كتابْ</td>
+</tr>
+<tr>
+<td>النصب</td>
+<td>فتحتان</td>
+<td>كتابًا</td>
+<td>تُبدَّل الفتحتان ألفًا: كتابَا</td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout--tanbih"><span class="callout__label">تنبيه</span>نون التوكيد الخفيفة في ﴿وَلِيَكُونًا مِنَ الصَّاغِرِينَ﴾ و﴿لَنَسْفَعًا بِالنَّاصِيَةِ﴾ ليست تنوينًا، بل هي نون لاتصالها بالفعل، وإن كانت غير ثابتة خطًّا ووقفًا كالتنوين، فهي نون ساكنة شبيهة بالتنوين (<a href="https://shamela.ws/book/7311/67">غاية المريد في علم التجويد (ص ٥٢)</a>). فمن أعربها تنوينًا أو حكم لها بحكمه في الأسماء أخطأ، إذ التنوين لا يكون إلا في الأسماء (<a href="https://shamela.ws/book/12754/13">العميد في علم التجويد (ص ١٥)</a>).</div>
+<p class="sources"><strong>المصادر:</strong> <a href="https://shamela.ws/book/7311/66">غاية المريد في علم التجويد (ص ٥١)</a> · <a href="https://shamela.ws/book/7311/67">ص ٥٢</a> · <a href="https://shamela.ws/book/12754/13">العميد في علم التجويد (ص ١٥)</a> · <a href="https://shamela.ws/book/12754/14">ص ١٦</a> · <a href="https://shamela.ws/book/5464/16">الوجيز في علم التجويد (ص ١٦)</a> · <a href="https://shamela.ws/book/5464/17">ص ١٧</a> · <a href="https://shamela.ws/book/5464/18">ص ١٨</a> · <a href="https://shamela.ws/book/5464/19">ص ١٩</a> · <a href="https://shamela.ws/book/38104/102">الميزان في أحكام تجويد القرآن (ص ١٠٩)</a> · <a href="https://shamela.ws/book/38104/103">ص ١١٠</a> · <a href="https://shamela.ws/book/38104/104">ص ١١١</a> · <a href="https://shamela.ws/book/21580/43">فتح رب البرية (ص ٧١)</a> · <a href="https://shamela.ws/book/21580/44">ص ٧٢</a> · <a href="https://shamela.ws/book/21580/45">ص ٧٣</a> · <a href="https://shamela.ws/book/17674/32">بغية المستفيد (ص ٣٤)</a> · <a href="https://shamela.ws/book/96301/367">الموسوعة القرآنية المتخصصة (ص ٣٧٦)</a> · <a href="https://shamela.ws/book/2112/22">قاموس الإملاء (ص ٢٢)</a> · <a href="https://shamela.ws/book/2112/23">ص ٢٣</a> · <a href="https://shamela.ws/book/97799/271">المطالع النصرية (ص ٢٧٩)</a> · <a href="https://shamela.ws/book/10641/26">النحو الوافي (١/٢٧)</a> · <a href="https://shamela.ws/book/7341/111">اللمحة في شرح الملحة (١/١٥٥)</a> · <a href="https://shamela.ws/book/11742/1071">شرح الأشموني (٣/١٣٣)</a> · <a href="https://shamela.ws/book/12037/32">ضياء السالك (١/٢٩)</a> · <a href="https://shamela.ws/book/9988/1147">توضيح المقاصد (٣/١١٩٠)</a></p>
+  </section>
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+lesson: "الدرس الرابع: النص الشعري — بُناةُ المَجْد"
+grade: "الصف السادس الابتدائي"
+subject: "اللغة العربية"
+term: "الفصل الدراسي الأول"
+unit: "الوحدة الثانية: أنا مسئول"
+book: "arabic_p6_t1"
+
+sources:
+  - book: "arabic_p6_t1"
+    pages_file: [87, 88, 89, 90, 91, 92]
+    pages_printed: "غير معروف (offset: unknown) — المطبوع الظاهر أسفل بعض الصفحات: ٨٦، ٨٩، ٩٠، ٩١"
+  - book: "adwaa_ar_p6_t1"
+    pages_file: [164, 165, 166, 167, 168, 169, 170, 171, 172, 173]
+    pages_printed: "١٦٦–١٧٥ (offset: 2)"
+    layer: "محلي — مرجع مساعد (الأضواء): يُستأنس به ولا يُستشهد به بدل المقرر؛ محصور في 01/02/05"
+    sections: ["تمهيد", "قاموس الأضواء", "شرح النص", "مواطن الجمال", "أضواء على النص (١١ سؤالًا)", "تدريبات وأنشطة", "امتحانات المحافظات ٢٠٢٦", "تطبيقات متحررة"]
+  - book: "balagha"
+    pages_file: [204, 251]
+    pages_printed: "غير معروف (offset: unknown)"
+    layer: "محلي — مرجع (بند «ما لا يُقال في هذا الصف» فقط)"
+  - book: "shamela"
+    layer: "خارجي — معاجم (طبقة الإثراء المعجمية)"
+    citations:
+      - "https://shamela.ws/book/29613/3127"
+      - "https://shamela.ws/book/29511/10502"
+      - "https://shamela.ws/book/1682/2594"
+      - "https://shamela.ws/book/21017/294"
+      - "https://shamela.ws/book/23235/664"
+      - "https://shamela.ws/book/1682/2023"
+      - "https://shamela.ws/book/29613/811"
+      - "https://shamela.ws/book/7030/17292"
+      - "https://shamela.ws/book/1682/2359"
+
+range_note: "toc الصف السادس لا يحوي مدخلًا للدرس الرابع؛ حُدِّد النطاق بمطابقة «بناه المجد» في index/norm ثم تحقّق الحدود: page_086 نهاية الدرس الثالث، page_092 نهاية الدرس الرابع."
+status: "مسوّدة"
+created: "2026-11-05"
+updated: "2026-11-06"

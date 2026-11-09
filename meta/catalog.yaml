@@ -1562,11 +1562,353 @@ books:
     index_dir: "index/الأضواء_اللغة_العربية_الصف_الخامس_الابتدائي_ت1/norm"
     toc: "meta/books/adwaa_ar_p5_t1/toc.yaml"
 
+    printed_page_offset: 2
     pages_total: 468
     pages_converted: 468
     missing_pages: []
     status: converted
     status_note: "اكتمل التحويل: 468/468."
+
+  - id: adwaa_ar_p6_t1
+    title: "الأضواء — اللغة العربية — الصف السادس الابتدائي — الفصل الدراسي الأول"
+    title_normalized: "الاضواء اللغه العربيه الصف السادس الابتدايي الفصل الدراسي الاول"
+    author: "نخبة من خبراء المناهج والتعليم"
+    publisher: "نهضة مصر — سلسلة الأضواء"
+    subject: "اللغة العربية: قراءة ونصوص ونحو وإملاء وتعبير"
+    notes: "كتاب خارجي (مساعد تعليمي) لا مقرر وزاري؛ يُذكر بوصفه مصدرًا مساعدًا ولا يُستشهد به بدل المقرر."
+
+    source_pdf: "curriculum_raw/الأضواء_اللغة_العربية_الصف_السادس_الابتدائي_ت1.pdf"
+    source_images: "curriculum_raw/الأضواء_اللغة_العربية_الصف_السادس_الابتدائي_ت1_images"
+    text_dir: "output/الأضواء_اللغة_العربية_الصف_السادس_الابتدائي_ت1"
+    index_dir: "index/الأضواء_اللغة_العربية_الصف_السادس_الابتدائي_ت1/norm"
+    toc: "meta/books/adwaa_ar_p6_t1/toc.yaml"
+
+    printed_page_offset: 2
+    pages_total: 466
+    pages_converted: 466
+    missing_pages: []
+    status: converted
+    status_note: "اكتمل التحويل: 466/466."
+
+  - id: adwaa_ar_p4_t1
+    title: "الأضواء — اللغة العربية — الصف الرابع الابتدائي — الفصل الدراسي الأول"
+    title_normalized: "الاضواء اللغه العربيه الصف الرابع الابتدايي الفصل الدراسي الاول"
+    author: "نخبة من خبراء المناهج والتعليم"
+    publisher: "نهضة مصر — سلسلة الأضواء"
+    subject: "اللغة العربية: قراءة ونصوص ونحو وإملاء وتعبير"
+    notes: "كتاب خارجي (مساعد تعليمي) لا مقرر وزاري؛ يُذكر بوصفه مصدرًا مساعدًا ولا يُستشهد به بدل المقرر."
+
+    source_pdf: "curriculum_raw/الأضواء_اللغة_العربية_الصف_الرابع_الابتدائي_ت1.pdf"
+    source_images: "curriculum_raw/الأضواء_اللغة_العربية_الصف_الرابع_الابتدائي_ت1_images"
+    text_dir: "output/الأضواء_اللغة_العربية_الصف_الرابع_الابتدائي_ت1"
+    index_dir: "index/الأضواء_اللغة_العربية_الصف_الرابع_الابتدائي_ت1/norm"
+    toc: "meta/books/adwaa_ar_p4_t1/toc.yaml"
+
+    printed_page_offset: 2
+    pages_total: 446
+    pages_converted: 446
+    missing_pages: []
+    status: converted
+    status_note: "اكتمل التحويل: 446/446."
+
+  - id: adwaa_ar_p1_t1
+    title: "الأضواء — اللغة العربية — الصف الأول الابتدائي — الفصل الدراسي الأول"
+    title_normalized: "الاضواء اللغه العربيه الصف الاول الابتدايي الفصل الدراسي الاول"
+    author: "نخبة من خبراء المناهج والتعليم"
+    publisher: "نهضة مصر — سلسلة الأضواء"
+    subject: "اللغة العربية: قراءة ونصوص ونحو وإملاء وتعبير"
+    notes: "كتاب خارجي (مساعد تعليمي) لا مقرر وزاري؛ يُذكر بوصفه مصدرًا مساعدًا ولا يُستشهد به بدل المقرر."
+
+    source_pdf: "curriculum_raw/الأضواء_اللغة_العربية_الصف_الأول_الابتدائي_ت1.pdf"
+    source_images: "curriculum_raw/الأضواء_اللغة_العربية_الصف_الأول_الابتدائي_ت1_images"
+    text_dir: "output/الأضواء_اللغة_العربية_الصف_الأول_الابتدائي_ت1"
+    index_dir: "index/الأضواء_اللغة_العربية_الصف_الأول_الابتدائي_ت1/norm"
+    toc: "meta/books/adwaa_ar_p1_t1/toc.yaml"
+
+    printed_page_offset: 2
+    pages_total: 270
+    pages_converted: 270
+    missing_pages: []
+    status: converted
+    status_note: "اكتمل التحويل: 270/270."
+
+  - id: adwaa_ar_p2_t1
+    title: "الأضواء — اللغة العربية — الصف الثاني الابتدائي — الفصل الدراسي الأول"
+    title_normalized: "الاضواء اللغه العربيه الصف الثاني الابتدايي الفصل الدراسي الاول"
+    author: "نخبة من خبراء المناهج والتعليم"
+    publisher: "نهضة مصر — سلسلة الأضواء"
+    subject: "اللغة العربية: قراءة ونصوص ونحو وإملاء وتعبير"
+    notes: "كتاب خارجي (مساعد تعليمي) لا مقرر وزاري؛ يُذكر بوصفه مصدرًا مساعدًا ولا يُستشهد به بدل المقرر."
+
+    source_pdf: "curriculum_raw/الأضواء_اللغة_العربية_الصف_الثاني_الابتدائي_ت1.pdf"
+    source_images: "curriculum_raw/الأضواء_اللغة_العربية_الصف_الثاني_الابتدائي_ت1_images"
+    text_dir: "output/الأضواء_اللغة_العربية_الصف_الثاني_الابتدائي_ت1"
+    index_dir: "index/الأضواء_اللغة_العربية_الصف_الثاني_الابتدائي_ت1/norm"
+    toc: "meta/books/adwaa_ar_p2_t1/toc.yaml"
+
+    printed_page_offset: 2
+    pages_total: 330
+    pages_converted: 330
+    missing_pages: []
+    status: converted
+    status_note: "اكتمل التحويل: 330/330."
+
+  - id: adwaa_ar_p3_t1
+    title: "الأضواء — اللغة العربية — الصف الثالث الابتدائي — الفصل الدراسي الأول"
+    title_normalized: "الاضواء اللغه العربيه الصف الثالث الابتدايي الفصل الدراسي الاول"
+    author: "نخبة من خبراء المناهج والتعليم"
+    publisher: "نهضة مصر — سلسلة الأضواء"
+    subject: "اللغة العربية: قراءة ونصوص ونحو وإملاء وتعبير"
+    notes: "كتاب خارجي (مساعد تعليمي) لا مقرر وزاري؛ يُذكر بوصفه مصدرًا مساعدًا ولا يُستشهد به بدل المقرر."
+
+    source_pdf: "curriculum_raw/الأضواء_اللغة_العربية_الصف_الثالث_الابتدائي_ت1.pdf"
+    source_images: "curriculum_raw/الأضواء_اللغة_العربية_الصف_الثالث_الابتدائي_ت1_images"
+    text_dir: "output/الأضواء_اللغة_العربية_الصف_الثالث_الابتدائي_ت1"
+    index_dir: "index/الأضواء_اللغة_العربية_الصف_الثالث_الابتدائي_ت1/norm"
+    toc: "meta/books/adwaa_ar_p3_t1/toc.yaml"
+
+    printed_page_offset: 2
+    pages_total: 395
+    pages_converted: 395
+    missing_pages: []
+    status: converted
+    status_note: "اكتمل التحويل: 395/395."
+
+  - id: adwaa_ar_prep1_t1
+    title: "الأضواء — اللغة العربية — الصف الأول الإعدادي — الفصل الدراسي الأول"
+    title_normalized: "الاضواء اللغه العربيه الصف الاول الاعدادي الفصل الدراسي الاول"
+    author: "نخبة من خبراء المناهج والتعليم"
+    publisher: "نهضة مصر — سلسلة الأضواء"
+    subject: "اللغة العربية: قراءة ونصوص ونحو وإملاء وتعبير"
+    notes: "كتاب خارجي (مساعد تعليمي) لا مقرر وزاري؛ يُذكر بوصفه مصدرًا مساعدًا ولا يُستشهد به بدل المقرر."
+
+    source_pdf: "curriculum_raw/الأضواء_اللغة_العربية_الصف_الأول_الإعدادي_ت1.pdf"
+    source_images: "curriculum_raw/الأضواء_اللغة_العربية_الصف_الأول_الإعدادي_ت1_images"
+    text_dir: "output/الأضواء_اللغة_العربية_الصف_الأول_الإعدادي_ت1"
+    index_dir: "index/الأضواء_اللغة_العربية_الصف_الأول_الإعدادي_ت1/norm"
+    toc: "meta/books/adwaa_ar_prep1_t1/toc.yaml"
+
+    printed_page_offset: 2
+    pages_total: 445
+    pages_converted: 445
+    missing_pages: []
+    status: converted
+    status_note: "اكتمل التحويل: 445/445."
+
+  - id: adwaa_ar_prep2_t1
+    title: "الأضواء — اللغة العربية — الصف الثاني الإعدادي — الفصل الدراسي الأول"
+    title_normalized: "الاضواء اللغه العربيه الصف الثاني الاعدادي الفصل الدراسي الاول"
+    author: "نخبة من خبراء المناهج والتعليم"
+    publisher: "نهضة مصر — سلسلة الأضواء"
+    subject: "اللغة العربية: قراءة ونصوص ونحو وإملاء وتعبير"
+    notes: "كتاب خارجي (مساعد تعليمي) لا مقرر وزاري؛ يُذكر بوصفه مصدرًا مساعدًا ولا يُستشهد به بدل المقرر."
+
+    source_pdf: "curriculum_raw/الأضواء_اللغة_العربية_الصف_الثاني_الإعدادي_ت1.pdf"
+    source_images: "curriculum_raw/الأضواء_اللغة_العربية_الصف_الثاني_الإعدادي_ت1_images"
+    text_dir: "output/الأضواء_اللغة_العربية_الصف_الثاني_الإعدادي_ت1"
+    index_dir: "index/الأضواء_اللغة_العربية_الصف_الثاني_الإعدادي_ت1/norm"
+    toc: "meta/books/adwaa_ar_prep2_t1/toc.yaml"
+
+    printed_page_offset: 3
+    pages_total: 444
+    pages_converted: 444
+    missing_pages: []
+    status: converted
+    status_note: "اكتمل التحويل: 444/444."
+
+  - id: adwaa_ar_prep3_t1
+    title: "الأضواء — اللغة العربية — الصف الثالث الإعدادي — الفصل الدراسي الأول"
+    title_normalized: "الاضواء اللغه العربيه الصف الثالث الاعدادي الفصل الدراسي الاول"
+    author: "نخبة من خبراء المناهج والتعليم"
+    publisher: "نهضة مصر — سلسلة الأضواء"
+    subject: "اللغة العربية: قراءة ونصوص ونحو وإملاء وتعبير"
+    notes: "كتاب خارجي (مساعد تعليمي) لا مقرر وزاري؛ يُذكر بوصفه مصدرًا مساعدًا ولا يُستشهد به بدل المقرر."
+
+    source_pdf: "curriculum_raw/الأضواء_اللغة_العربية_الصف_الثالث_الإعدادي_ت1.pdf"
+    source_images: "curriculum_raw/الأضواء_اللغة_العربية_الصف_الثالث_الإعدادي_ت1_images"
+    text_dir: "output/الأضواء_اللغة_العربية_الصف_الثالث_الإعدادي_ت1"
+    index_dir: "index/الأضواء_اللغة_العربية_الصف_الثالث_الإعدادي_ت1/norm"
+    toc: "meta/books/adwaa_ar_prep3_t1/toc.yaml"
+
+    printed_page_offset: 2
+    pages_total: 572
+    pages_converted: 572
+    missing_pages: []
+    status: converted
+    status_note: "اكتمل التحويل: 572/572."
+
+  - id: adwaa_ar_sec1_t1
+    title: "الأضواء — اللغة العربية — الصف الأول الثانوي — الفصل الدراسي الأول"
+    title_normalized: "الاضواء اللغه العربيه الصف الاول الثانوي الفصل الدراسي الاول"
+    author: "نخبة من خبراء المناهج والتعليم"
+    publisher: "نهضة مصر — سلسلة الأضواء"
+    subject: "اللغة العربية: قراءة ونصوص ونحو وبلاغة وأدب وتعبير"
+    notes: "كتاب خارجي (مساعد تعليمي) لا مقرر وزاري؛ يُذكر بوصفه مصدرًا مساعدًا ولا يُستشهد به بدل المقرر."
+
+    source_pdf: "curriculum_raw/الأضواء_اللغة_العربية_الصف_الأول_الثانوي_ت1.pdf"
+    source_images: "curriculum_raw/الأضواء_اللغة_العربية_الصف_الأول_الثانوي_ت1_images"
+    text_dir: "output/الأضواء_اللغة_العربية_الصف_الأول_الثانوي_ت1"
+    index_dir: "index/الأضواء_اللغة_العربية_الصف_الأول_الثانوي_ت1/norm"
+    toc: "meta/books/adwaa_ar_sec1_t1/toc.yaml"
+
+    printed_page_offset: 2
+    pages_total: 461
+    pages_converted: 461
+    missing_pages: []
+    status: converted
+    status_note: "اكتمل التحويل: 461/461."
+
+  - id: adwaa_ar_sec2_t1
+    title: "الأضواء — اللغة العربية — الصف الثاني الثانوي — الفصل الدراسي الأول"
+    title_normalized: "الاضواء اللغه العربيه الصف الثاني الثانوي الفصل الدراسي الاول"
+    author: "نخبة من خبراء المناهج والتعليم"
+    publisher: "نهضة مصر — سلسلة الأضواء"
+    subject: "اللغة العربية: قراءة ونصوص ونحو وبلاغة وأدب وتعبير"
+    notes: "كتاب خارجي (مساعد تعليمي) لا مقرر وزاري؛ يُذكر بوصفه مصدرًا مساعدًا ولا يُستشهد به بدل المقرر."
+
+    source_pdf: "curriculum_raw/الأضواء_اللغة_العربية_الصف_الثاني_الثانوي_ت1.pdf"
+    source_images: "curriculum_raw/الأضواء_اللغة_العربية_الصف_الثاني_الثانوي_ت1_images"
+    text_dir: "output/الأضواء_اللغة_العربية_الصف_الثاني_الثانوي_ت1"
+    index_dir: "index/الأضواء_اللغة_العربية_الصف_الثاني_الثانوي_ت1/norm"
+    toc: "meta/books/adwaa_ar_sec2_t1/toc.yaml"
+
+    printed_page_offset: 2
+    pages_total: 461
+    pages_converted: 461
+    missing_pages: []
+    status: converted
+    status_note: "اكتمل التحويل: 461/461."
+
+  - id: adwaa_ar_sec3_t1
+    title: "الأضواء — اللغة العربية — الصف الثالث الثانوي — الفصل الدراسي الأول"
+    title_normalized: "الاضواء اللغه العربيه الصف الثالث الثانوي الفصل الدراسي الاول"
+    author: "نخبة من خبراء المناهج والتعليم"
+    publisher: "نهضة مصر — سلسلة الأضواء"
+    subject: "اللغة العربية: قراءة ونصوص ونحو وبلاغة وأدب وتعبير"
+    notes: "كتاب خارجي (مساعد تعليمي) لا مقرر وزاري؛ يُذكر بوصفه مصدرًا مساعدًا ولا يُستشهد به بدل المقرر."
+
+    source_pdf: "curriculum_raw/الأضواء_اللغة_العربية_الصف_الثالث_الثانوي_ت1.pdf"
+    source_images: "curriculum_raw/الأضواء_اللغة_العربية_الصف_الثالث_الثانوي_ت1_images"
+    text_dir: "output/الأضواء_اللغة_العربية_الصف_الثالث_الثانوي_ت1"
+    index_dir: "index/الأضواء_اللغة_العربية_الصف_الثالث_الثانوي_ت1/norm"
+    toc: "meta/books/adwaa_ar_sec3_t1/toc.yaml"
+
+    printed_page_offset: -1
+    pages_total: 386
+    pages_converted: 386
+    missing_pages: []
+    status: converted
+    status_note: "اكتمل التحويل: 386/386."
+
+  - id: pedagogy_ar_tr1
+    title: "طرائق تدريس اللغة العربية (1)"
+    title_normalized: "طرايق تدريس اللغه العربيه 1"
+    author: "د. محمود أحمد السيّد"
+    publisher: "منشورات جامعة دمشق — كلية التربية"
+    subject: "طرائق تدريس اللغة العربية"
+    notes: "كتاب تربوي (معرفة تربوية) لا مقرر وزاري؛ يُستشهد به في طرق التدريس فقط."
+
+    source_pdf: "curriculum_raw/طرائق_تدريس_اللغة_العربية_1_جامعة_دمشق.pdf"
+    source_images: "curriculum_raw/طرائق_تدريس_اللغة_العربية_1_جامعة_دمشق_images"
+    text_dir: "output/طرائق_تدريس_اللغة_العربية_1_جامعة_دمشق"
+    index_dir: "index/طرائق_تدريس_اللغة_العربية_1_جامعة_دمشق/norm"
+    toc: "meta/books/pedagogy_ar_tr1/toc.yaml"
+    collection: pedagogy
+
+    printed_page_offset: -1
+    pages_total: 240
+    pages_converted: 240
+    missing_pages: []
+    status: converted
+    status_note: "اكتمل التحويل: 240/240."
+
+  - id: pedagogy_ar_tr2
+    title: "طرائق تدريس اللغة العربية (2)"
+    title_normalized: "طرايق تدريس اللغه العربيه 2"
+    author: "د. محمود أحمد السيّد"
+    publisher: "منشورات جامعة دمشق — كلية التربية"
+    subject: "طرائق تدريس اللغة العربية"
+    notes: "كتاب تربوي (معرفة تربوية) لا مقرر وزاري؛ يُستشهد به في طرق التدريس فقط."
+
+    source_pdf: "curriculum_raw/طرائق_تدريس_اللغة_العربية_2_جامعة_دمشق.pdf"
+    source_images: "curriculum_raw/طرائق_تدريس_اللغة_العربية_2_جامعة_دمشق_images"
+    text_dir: "output/طرائق_تدريس_اللغة_العربية_2_جامعة_دمشق"
+    index_dir: "index/طرائق_تدريس_اللغة_العربية_2_جامعة_دمشق/norm"
+    toc: "meta/books/pedagogy_ar_tr2/toc.yaml"
+    collection: pedagogy
+
+    printed_page_offset: -1
+    pages_total: 217
+    pages_converted: 217
+    missing_pages: []
+    status: converted
+    status_note: "اكتمل التحويل: 217/217."
+
+  - id: pedagogy_ar_simat
+    title: "من سمات اللغة العربية ولطائفها"
+    title_normalized: "من سمات اللغه العربيه ولطايفها"
+    author: "د. محمود أحمد السيّد"
+    publisher: "منشورات جامعة دمشق — كلية التربية"
+    subject: "سمات اللغة العربية ولطائفها"
+    notes: "مرجع لغوي مساند داخل الطبقة التربوية (لطائف لغوية)؛ لا مقرر وزاري. الصفحات بلا ترقيم مطبوع ⇒ الاستشهاد برقم ملف الصفحة."
+
+    source_pdf: "curriculum_raw/من_سمات_اللغة_العربية_ولطائفها_جامعة_دمشق.pdf"
+    source_images: "curriculum_raw/من_سمات_اللغة_العربية_ولطائفها_جامعة_دمشق_images"
+    text_dir: "output/من_سمات_اللغة_العربية_ولطائفها_جامعة_دمشق"
+    index_dir: "index/من_سمات_اللغة_العربية_ولطائفها_جامعة_دمشق/norm"
+    toc: "meta/books/pedagogy_ar_simat/toc.yaml"
+    collection: pedagogy
+
+    printed_page_offset: "unknown"
+    pages_total: 39
+    pages_converted: 39
+    missing_pages: []
+    status: converted
+    status_note: "اكتمل التحويل: 39/39."
+
+  - id: pedagogy_ar_strategies
+    title: "إستراتيجيات تدريس اللغة العربية — المجلدات الأول والثاني والثالث"
+    title_normalized: "استراتيجيات تدريس اللغه العربيه المجلدات الاول والثاني والثالث"
+    author: "مكتب التربية العربي لدول الخليج"
+    publisher: "مكتب التربية العربي لدول الخليج"
+    subject: "استراتيجيات تدريس اللغة العربية"
+    notes: "كتاب تربوي (معرفة تربوية) لا مقرر وزاري؛ استراتيجيات تعليم اللغة العربية وتقويمها. الملف مجموع ثلاثة مجلدات: م1 ملفات 1–274 (مطبوع = ملف − 1) · م2 ملفات 275–455 (مطبوع = ملف − 271) · م3 ملفات 456–784 (مطبوع = ملف − 451). الترقيم المطبوع يعيد البدء في كل مجلد، فلا إزاحة واحدة؛ الاستشهاد بأرقام ملفات page_XXX.md. الصفحات الزخرفية: 111، 281، 419، 421، 435، 459، 461؛ وفاصل المراجع 434."
+
+    source_pdf: "curriculum_raw/استراتيجيات_تدريس_اللغة_العربية_مكتب_التربية_العربي_ج1.pdf"
+    source_images: "curriculum_raw/استراتيجيات_تدريس_اللغة_العربية_مكتب_التربية_العربي_ج1_images"
+    text_dir: "output/استراتيجيات_تدريس_اللغة_العربية_مكتب_التربية_العربي_ج1"
+    index_dir: "index/استراتيجيات_تدريس_اللغة_العربية_مكتب_التربية_العربي_ج1/norm"
+    toc: "meta/books/pedagogy_ar_strategies/toc.yaml"
+    collection: pedagogy
+
+    printed_page_offset: "unknown"
+    pages_total: 784
+    pages_converted: 784
+    missing_pages: []
+    status: converted
+    status_note: "اكتمل التحويل: 784/784."
+
+  - id: pedagogy_ar_lugha
+    title: "في رحاب لغتنا العربية"
+    title_normalized: "في رحاب لغتنا العربيه"
+    author: "محمود أحمد السيد"
+    publisher: "غير موثّق في الملفات المتاحة"
+    subject: "اللغة العربية — واقع وتجديد"
+    notes: "كتاب تربوي/لغوي مساعد (معرفة تربوية) لا مقرر وزاري؛ واقع اللغة العربية وسبل النهوض بها. بلا ترقيم مطبوع ⇒ الاستشهاد بأرقام ملفات page_XXX.md."
+
+    source_pdf: "curriculum_raw/في_رحاب_لغتنا_العربية_جامعة_دمشق.pdf"
+    source_images: "curriculum_raw/في_رحاب_لغتنا_العربية_جامعة_دمشق_images"
+    text_dir: "output/في_رحاب_لغتنا_العربية_جامعة_دمشق"
+    index_dir: "index/في_رحاب_لغتنا_العربية_جامعة_دمشق/norm"
+    toc: "meta/books/pedagogy_ar_lugha/toc.yaml"
+    collection: pedagogy
+
+    printed_page_offset: "unknown"
+    pages_total: 223
+    pages_converted: 223
+    missing_pages: []
+    status: converted
+    status_note: "اكتمل التحويل: 223/223."
 
 # المصادر الخارجية (غير الكتب المحلية). تُستدعى كطبقة ثالثة بعد المنهج
 # والمراجع المحلية — لا تُغني عنهما ولا تعارض المقرر.

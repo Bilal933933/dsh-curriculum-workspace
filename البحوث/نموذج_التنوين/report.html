@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>التنوين: حدّه وأنواعه وأحكامه</title>
+<style>
+/* ==== base.css ==== */
+/* ============================================================
+   base.css — الأنماط المشتركة لكل مستند (نصوص، جداول، قوائم)
+   تُدمج داخل <style> عند البناء، فلا حاجة لمسار خارجي عند الطبع.
+   ============================================================ */
+
+@page {
+  size: A4;
+  margin: 20mm 16mm 18mm 16mm;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  font-family: "Segoe UI", "Traditional Arabic", "Arial", sans-serif;
+  font-size: 13.5pt;
+  line-height: 1.95;
+  color: #1b1b1b;
+  margin: 0;
+  text-align: justify;
+}
+
+p {
+  margin: 0 0 3.5mm;
+  orphans: 2;
+  widows: 2;
+}
+
+h1, h2, h3, h4 {
+  line-height: 1.5;
+  page-break-after: avoid;
+}
+
+ul, ol {
+  margin: 0 0 4mm;
+  padding-right: 8mm;
+}
+
+li { margin: 1.3mm 0; }
+
+strong { color: #111; }
+
+a {
+  color: #0f2b46;
+  text-decoration: none;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid #d8dee4;
+  margin: 7mm 0;
+}
+
+/* ---------- الجداول ---------- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 4mm 0 6mm;
+  font-size: 12pt;
+  line-height: 1.7;
+}
+
+th, td {
+  border: 1px solid #c9d2da;
+  padding: 2.2mm 2.8mm;
+  vertical-align: top;
+  text-align: right;
+}
+
+th {
+  background: #eef3f7;
+  color: #0f2b46;
+  font-weight: 700;
+}
+
+tr { page-break-inside: avoid; }
+
+/* ---------- الاقتباسات ---------- */
+blockquote {
+  margin: 4mm 0 5mm;
+  padding: 3mm 5mm;
+  background: #f7f9fb;
+  border-right: 4px solid #0f2b46;
+  color: #2a2a2a;
+}
+
+blockquote p:last-child { margin-bottom: 0; }
+
+/* ---------- الرموز البرمجية ---------- */
+code {
+  font-family: Consolas, "Courier New", monospace;
+  font-size: 11pt;
+  direction: ltr;
+  unicode-bidi: embed;
+  background: #f1f3f5;
+  padding: 0 1mm;
+  border-radius: 2px;
+}
+
+/* ============================================================
+   نمط الهاتف — يُفعَّل تلقائيًّا على الشاشات الصغيرة (≤ 640px)
+   الغرض: قراءة مريحة فقط؛ قواعد الطبع (@page) لا تتأثر.
+   ============================================================ */
+@media screen and (max-width: 640px) {
+  body {
+    font-size: 18px;
+    line-height: 1.95;
+    text-align: right;          /* الضبط من الطرفين يُحدِث فجوات في العربية على الجوال */
+    padding: 0 16px 40px;
+  }
+
+  /* الغلاف: بلا ارتفاع ثابت حتى لا تهدر أول شاشة */
+  .cover {
+    height: auto;
+    padding: 44px 0 28px;
+    page-break-after: auto;
+  }
+  .cover h1 { font-size: 26px; }
+  .cover .subtitle { font-size: 16px; margin-bottom: 10mm; }
+  .cover .kicker { font-size: 13px; margin-bottom: 8mm; }
+  .cover .meta { font-size: 15px; line-height: 2; }
+  .cover .rule { margin-bottom: 10mm; }
+
+  /* الفهرس */
+  .toc-page { page-break-after: auto; padding-bottom: 24px; }
+  .toc-page h2 { font-size: 22px; margin-bottom: 6mm; }
+  .toc > ul > li { font-size: 17px; margin: 2.4mm 0; }
+  .toc ul ul { margin-right: 5mm; }
+  .toc ul ul li { font-size: 15.5px; }
+
+  /* المحتوى */
+  .content h1 { font-size: 24px; }
+  .content h2 { font-size: 20px; margin-top: 10mm; }
+  .content h3 { font-size: 18px; }
+  .content h4 { font-size: 17px; }
+
+  /* الجداول: تمرير أفقي بدل ضغط الأعمدة */
+  table { display: block; overflow-x: auto; white-space: nowrap; font-size: 15px; }
+  th, td { padding: 8px 10px; }
+
+  blockquote { padding: 10px 14px; margin: 6mm 0; font-size: 16.5px; }
+
+  ul, ol { padding-right: 6mm; }
+}
+
+
+/* ==== report.css ==== */
+/* ============================================================
+   report.css — أنماط خاصة بمستند «التقرير»: الغلاف، الفهرس، الأقسام
+   ============================================================ */
+
+/* ---------- الغلاف ---------- */
+.cover {
+  height: 247mm;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  page-break-after: always;
+}
+
+.cover .kicker {
+  font-size: 11pt;
+  color: #6b6b6b;
+  margin-bottom: 12mm;
+  letter-spacing: .5px;
+}
+
+.cover h1 {
+  font-size: 30pt;
+  margin: 0 0 6mm;
+  line-height: 1.45;
+  color: #0f2b46;
+}
+
+.cover .subtitle {
+  font-size: 14pt;
+  color: #4a4a4a;
+  margin-bottom: 16mm;
+  line-height: 1.7;
+}
+
+.cover .rule {
+  width: 60mm;
+  height: 2px;
+  background: #0f2b46;
+  margin: 0 auto 16mm;
+}
+
+.cover .meta {
+  font-size: 12pt;
+  color: #333;
+  line-height: 2.2;
+}
+
+/* ---------- الفهرس ---------- */
+.toc-page { page-break-after: always; }
+
+.toc-page h2 {
+  font-size: 20pt;
+  color: #0f2b46;
+  margin: 0 0 9mm;
+  padding: 0;
+  border: 0;
+}
+
+.toc > ul { list-style: none; padding: 0; margin: 0; }
+.toc > ul > li { margin: 3.4mm 0; font-size: 13pt; font-weight: 600; }
+.toc ul ul { margin: 1.6mm 8mm 1.6mm 0; list-style: none; }
+.toc ul ul li { font-weight: 400; font-size: 12pt; margin: 1.3mm 0; }
+.toc a { color: #1b1b1b; }
+
+/* ---------- المحتوى ---------- */
+.content h1 {
+  font-size: 22pt;
+  color: #0f2b46;
+  margin: 0 0 7mm;
+}
+
+.content h2 {
+  font-size: 17pt;
+  color: #0f2b46;
+  margin: 0 0 5mm;
+  padding-bottom: 2mm;
+  border-bottom: 2px solid #0f2b46;
+  page-break-before: always;
+}
+
+/* أول قسم يكمل بعد العنوان بلا صفحة بيضاء */
+.content h2:first-of-type { page-break-before: avoid; }
+
+.content h3 {
+  font-size: 14.5pt;
+  color: #23456a;
+  margin: 7mm 0 3mm;
+}
+
+.content h4 {
+  font-size: 13pt;
+  color: #333;
+  margin: 5mm 0 2mm;
+}
+
+</style>
+</head>
+<body>
+
+  <!-- ================= الغلاف ================= -->
+  <section class="cover">
+    <div class="kicker">ملفّ بحثيّ مُعدّ للطبع</div>
+    <h1>التنوين: حدّه وأنواعه وأحكامه</h1>
+    <div class="subtitle">ملف مرجعي مصغّر — نموذج لتجربة المحرّك</div>
+    <div class="rule"></div>
+    <div class="meta">إعداد: معلّم اللغة العربية<br>التاريخ: 2026-11-05</div>
+  </section>
+
+  <!-- ================= الفهرس ================= -->
+  <section class="toc-page">
+    <h2>فهرس المحتويات</h2>
+    <div class="toc"><div class="toc">
+<ul>
+<li><a href="#_1">١. الحدّ وسبب التسمية</a></li>
+<li><a href="#_3">٢. الأنواع الأربعة المشهورة</a></li>
+<li><a href="#_5">٣. الأحكام المجملة</a></li>
+<li><a href="#_6">المصادر</a></li>
+</ul>
+</div>
+</div>
+  </section>
+
+  <!-- ================= المحتوى ================= -->
+  <section class="content">
+<h2 id="_1">١. الحدّ وسبب التسمية</h2>
+<p>التنوين في الاصطلاح: <strong>نونٌ ساكنة زائدة تلحق آخر الاسم لفظًا لا خطًّا لغير توكيد</strong>.</p>
+<p>قال ابن هشام في حدّه: «نونٌ ساكنة تلحق الآخر، تثبت وصلًا، وتحذف خطًّا ووقفًا».</p>
+<p>وسبب التسمية: كان الأصل أن تُكتب الكلمة بنون ساكنة في آخرها تُحدث رنينًا وتنغيمًا، فسُمّيت التنوين؛ أي التصويت والترنيم؛ لأنها سببه.</p>
+<h3 id="_2">ما يُخرجه كل قيد</h3>
+<table>
+<thead>
+<tr>
+<th>القيد</th>
+<th>ما يُخرجه</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>نون</td>
+<td>الحركات والسواكن الأخرى</td>
+</tr>
+<tr>
+<td>ساكنة</td>
+<td>النون المتحركة</td>
+</tr>
+<tr>
+<td>زائدة</td>
+<td>النون الأصلية</td>
+</tr>
+<tr>
+<td>لفظًا لا خطًّا</td>
+<td>النون المكتوبة</td>
+</tr>
+<tr>
+<td>لغير توكيد</td>
+<td>نون التوكيد الخفيفة في ﴿لَنَسْفَعًا بِالنَّاصِيَةِ﴾</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>ملاحظة للطبع: التنوين يُثبت في الوصل ويُحذف في الوقف والخطّ؛ فتقول «كتابٌ» وصلًا، و«كتابْ» وقفًا.</p>
+</blockquote>
+<h2 id="_3">٢. الأنواع الأربعة المشهورة</h2>
+<table>
+<thead>
+<tr>
+<th>النوع</th>
+<th>تعريفه</th>
+<th>المثال</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>التمكين (الصرف)</td>
+<td>اللاحق للأسماء المعربة المنصرفة</td>
+<td>زيدٍ · رجلٍ · قاضٍ</td>
+</tr>
+<tr>
+<td>التنكير</td>
+<td>اللاحق لبعض الأسماء المبنية فرقًا بين معرفتها ونكرتها</td>
+<td>سيبويهٍ · صهٍ</td>
+</tr>
+<tr>
+<td>العوض</td>
+<td>عوض عن حرف أو اسم أو جملة</td>
+<td>جوارٍ · كلٌّ · يومئذٍ</td>
+</tr>
+<tr>
+<td>المقابلة</td>
+<td>اللاحق لجمع المؤنث السالم</td>
+<td>مسلماتٍ</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_4">أمثلة تطبيقية</h3>
+<ul>
+<li><strong>التمكين:</strong> «جاء رجلٌ كريمٌ» — التنوين دليل على تمام الاسمية.</li>
+<li><strong>التنكير:</strong> «مررتُ بسيبويه» لمعيَّن، و«سيبويهٍ آخر» لنكرة.</li>
+<li><strong>العوض عن جملة:</strong> ﴿وَأَنتُمْ حِينَئِذٍ تَنظُرُونَ﴾ — التنوين عوض عن الجملة التي تُضاف إليها «إذ».</li>
+<li><strong>المقابلة:</strong> «مؤمناتٌ» — تنوينها في مقابلة نون «مؤمنين».</li>
+</ul>
+<h2 id="_5">٣. الأحكام المجملة</h2>
+<ol>
+<li>التنوين من خواصّ الأسماء المعربة؛ لا يدخل الحروف ولا أكثر الأفعال.</li>
+<li>يزول التنوين لطارئ معارض: الإضافة، و«أل»، والنداء، ووقوعه اسمًا لـ«لا» النافية للجنس.</li>
+<li>التنوين والإضافة <strong>ضدّان</strong>؛ لأن التنوين مؤذنٌ بالتمام، والإضافة حاكمة بالنقص.</li>
+<li>الممنوع من الصرف هو الممنوع من التنوين؛ فالصرف والتنوين والإجراء بمعنى واحد.</li>
+</ol>
+<h2 id="_6">المصادر</h2>
+<ul>
+<li>شرح شذور الذهب لابن هشام — ص١٣٣.</li>
+<li>النحو الوافي لعباس حسن — ٤/٢٠٠–٢٠٢.</li>
+<li>شرح الأزهرية لخالد الأزهري — ص٥.</li>
+<li>شرح الأشموني على الألفية — ١/٣١.</li>
+<li>معجم القواعد العربية لعبد الغني الدقر — ص٢٢١.</li>
+</ul>
+<blockquote>
+<p>هذا المستند <strong>نموذج</strong> لاختبار محرّك التوليد؛ يمكن حذف مجلده بعد المعاينة.</p>
+</blockquote>
+  </section>
+
+</body>
+</html>
